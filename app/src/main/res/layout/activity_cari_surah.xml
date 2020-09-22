@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".Quran.CariSurahActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_surah"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/tv_surah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/surah"/>
+        <Spinner
+            android:id="@+id/surah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_surah"
+            android:entries="@array/surah_names"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_ayat"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/rl_surah"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/tv_ayat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/ayat"/>
+
+        <Spinner
+            android:id="@+id/ayat"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_ayat"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/sv_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/savebtn"
+        android:layout_below="@id/rl_ayat"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:id="@+id/target"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#E6E6E6">
+
+            <TextView
+                android:id="@+id/surahnayat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/surah_al_baqarah_ayat_21"
+                android:padding="5dp"/>
+
+            <TextView
+                android:id="@+id/arabic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:lineSpacingExtra="8dp"
+                android:fontFamily="@font/lpmq_isepmisbah"
+                android:padding="5dp"
+                android:textColor="#000000"
+                android:textSize="28sp"/>
+
+            <TextView
+                android:id="@+id/terjemahan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/description"
+                android:textSize="16sp"
+                android:textStyle="italic"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/savebtn"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="17dp"
+        app:srcCompat="@drawable/ic_save_black_24dp"/>
+</RelativeLayout>

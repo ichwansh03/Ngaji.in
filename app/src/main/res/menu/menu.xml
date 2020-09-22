@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/quran"
+        android:title="@string/qur_an"
+        android:icon="@drawable/ic_tajwid"
+        app:cnb_iconColor="@color/colorPrimary"/>
+
+    <item
+        android:id="@+id/tajwid"
+        android:title="@string/tajwid_aja"
+        android:icon="@drawable/ic_tahsin"
+        app:cnb_iconColor="@color/colorPrimary"/>
+
+    <item
+        android:id="@+id/tahsin"
+        android:title="@string/tahsin_aja"
+        android:icon="@drawable/ic_tahsin"
+        app:cnb_iconColor="@color/colorPrimary"/>
+
+    <item
+        android:id="@+id/pengaturan"
+        android:title="@string/pengaturan"
+        android:icon="@drawable/ic_baseline_settings_24"
+        app:cnb_iconColor="@color/colorPrimary"/>
+</menu>

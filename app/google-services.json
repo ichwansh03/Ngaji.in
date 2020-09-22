@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "531101194794",
+    "firebase_url": "https://appprojectplanb.firebaseio.com",
+    "project_id": "appprojectplanb",
+    "storage_bucket": "appprojectplanb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:531101194794:android:085ea4cfd25e81dd728153",
+        "android_client_info": {
+          "package_name": "com.rohisnatardev.ichwan.appprojectplanb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "531101194794-30n8fpoobtet8p7k7ki6s754fsa74acf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBU5AmxkmWLdaPU1WCIaqzWRLo0eJ3Puho"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "531101194794-30n8fpoobtet8p7k7ki6s754fsa74acf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

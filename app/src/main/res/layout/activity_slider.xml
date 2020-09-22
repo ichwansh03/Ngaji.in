@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#23C1E3"
+    tools:context=".Splashscreen.SliderActivity">
+
+    <ImageView
+        android:id="@+id/logoapp"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:src="@drawable/ic_logobbq"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:id="@+id/version_app"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/versi_app"
+        android:textSize="20sp"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="#FFFFFF"
+        android:layout_below="@id/logoapp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/dev_app"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dev_name"
+        android:textSize="18sp"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="8dp"
+        android:drawablePadding="3dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:drawableStartCompat="@drawable/ic_copyright" />
+</RelativeLayout>

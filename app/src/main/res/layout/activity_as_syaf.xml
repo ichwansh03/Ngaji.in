@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".Tahsin.AsSyafActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="165dp"
+        android:src="@drawable/bgarticle"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY" />
+
+    <View
+        android:id="@+id/bg_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/bg_content" />
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/as_syafatain_bibir"
+        android:textSize="24sp"
+        android:fontFamily="@font/poppins_medium"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:background="@drawable/bg_title_content"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:layout_marginTop="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textNextBtn"
+        android:text="@string/al_jauf_rongga_mulut"
+        android:background="@drawable/button_back"
+        android:textColor="@android:color/white"
+        android:layout_centerHorizontal="true"
+        android:textSize="12sp"
+        android:fontFamily="@font/poppins_regular"
+        android:layout_marginTop="12dp"
+        android:layout_below="@id/textTitle"
+        app:drawableEndCompat="@drawable/ic_arrow_forward_black_24dp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imgSyaf"
+            android:src="@drawable/assyafatain"
+            android:padding="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/textNextBtn"/>
+    <TextView
+        android:id="@+id/syaf_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/syafatain"
+        android:layout_margin="5dp"
+        android:textSize="17sp"
+        android:fontFamily="@font/poppins_regular"
+        android:layout_below="@id/imgSyaf"/>
+
+        <TextView
+            android:id="@+id/txtitlehijaiyah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/huruf_huruf_halqiyyah"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_below="@id/syaf_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_hijaiyah_syaf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtitlehijaiyah"/>
+    </RelativeLayout>
+</ScrollView>

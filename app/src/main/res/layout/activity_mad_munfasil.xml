@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".HukumMad.MadMunfasilActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="165dp"
+        android:src="@drawable/bgarticle"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <View
+        android:id="@+id/bg_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/bg_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mad_jaiz_munfasil"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@android:color/white"
+        android:background="@drawable/bg_title_content"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toTopOf="@id/image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textNextBtn"
+        android:text="@string/mad_wajib_muttasil"
+        android:background="@drawable/button_back"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:fontFamily="@font/poppins_regular"
+        android:textSize="12sp"
+        app:layout_constraintTop_toTopOf="@id/bg_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:drawableEnd="@drawable/ic_arrow_forward_black_24dp" />
+
+    <me.biubiubiu.justifytext.library.JustifyTextView
+        android:id="@+id/desc_madjaiz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:fontFamily="@font/poppins_regular"
+        android:textSize="17sp"
+        android:text="@string/mad_jaiz_mhfs_article"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textNextBtn" />
+        <TextView
+            android:id="@+id/arab_madjaiz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/madjaiz1"
+            android:textSize="30sp"
+            android:textColor="#000000"
+            android:fontFamily="@font/me_quran"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@id/desc_madjaiz"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="center_horizontal" />
+    <TextView
+        android:id="@+id/arab1_madjaiz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/madjaiz2"
+        android:textSize="30sp"
+        android:fontFamily="@font/me_quran"
+        android:textColor="#000000"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/arab_madjaiz"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/image_madjaiz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/madjaiz3"
+            android:textSize="30sp"
+            android:textColor="#000000"
+            android:fontFamily="@font/me_quran"
+            app:layout_constraintTop_toBottomOf="@id/arab1_madjaiz"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_pause_circle_outline_black_24dp"
+        android:id="@+id/play_toggle_madjaiz"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toBottomOf="@id/image_madjaiz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

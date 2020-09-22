@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#55D0E3"
+    tools:context=".Murottal.MurattalActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <View
+            android:layout_width="120dp"
+            android:layout_height="160dp"
+            android:background="@drawable/ellipse"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="30dp"/>
+        <View
+            android:layout_width="70dp"
+            android:layout_height="90dp"
+            android:background="@drawable/ellipse1"/>
+
+        <TextView
+            android:id="@+id/title_murotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:text="@string/murotal_al_fatihah"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center"
+            android:background="@drawable/bg_title"/>
+        <me.biubiubiu.justifytext.library.JustifyTextView
+            android:id="@+id/desc_murotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/desc_murotal"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp"
+            android:layout_margin="5dp"
+            android:layout_below="@id/title_murotal"/>
+        <include layout="@layout/activity_murottal_dossari"
+            android:id="@+id/dossari"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_below="@id/desc_murotal"/>
+        <include layout="@layout/activity_murottal_mishari"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_below="@id/dossari"/>
+    </RelativeLayout>
+        </ScrollView>
