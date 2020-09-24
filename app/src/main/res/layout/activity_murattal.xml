@@ -42,16 +42,11 @@
             android:textSize="17sp"
             android:layout_margin="5dp"
             android:layout_below="@id/title_murotal"/>
-        <include layout="@layout/activity_murottal_dossari"
-            android:id="@+id/dossari"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_murotal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="15dp"
+            tools:listitem="@layout/murotal_item"
             android:layout_below="@id/desc_murotal"/>
-        <include layout="@layout/activity_murottal_mishari"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:layout_below="@id/dossari"/>
     </RelativeLayout>
         </ScrollView>

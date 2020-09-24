@@ -3,6 +3,8 @@ package com.rohisnatardev.ichwan.appprojectplanb.Murottal;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.DownloadManager;
 import android.content.Context;
@@ -15,95 +17,70 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.rohisnatardev.ichwan.appprojectplanb.R;
 
+import java.util.ArrayList;
+
 import static android.os.Environment.DIRECTORY_DOWNLOADS;
 
 
-public class MurattalActivity extends AppCompatActivity implements View.OnClickListener {
+public class MurattalActivity extends AppCompatActivity {
 
-    ImageButton cvmishari, cvdossari;
-    StorageReference storageReference, ref, storageReference1, ref1;
-    FirebaseStorage firebaseStorage,firebaseStorage1;
-
+    FirebaseFirestore db;
+    RecyclerView recyclerView;
+    ArrayList<DownModel> modelArrayList = new ArrayList<>();
+    DownAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_murattal);
 
-        cvmishari = findViewById(R.id.downloadMishari);
-        cvdossari = findViewById(R.id.downloadDossari);
-        cvdossari.setOnClickListener(this);
-        cvmishari.setOnClickListener(this);
+        setRecyclerview();
+        db = FirebaseFirestore.getInstance();
 
+        dataFirebase();
     }
 
-    @Override
-    public void onClick(View view) {
-        switch (view.getId()){
-            case R.id.downloadDossari:
-                downD();
-                break;
+    private void dataFirebase(){
+        if (modelArrayList.size()>0)
+            modelArrayList.clear();
 
-            case R.id.downloadMishari:
-                downM();
-                break;
-        }
-    }
+        //db = FirebaseFirestore.getInstance();
+        db.collection("files")
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        for (DocumentSnapshot documentSnapshot:task.getResult()){
+                            DownModel downModel = new DownModel(documentSnapshot.getString("name"),
+                                    documentSnapshot.getString("link"));
+                            modelArrayList.add(downModel);
+                        }
 
-    public void downD(){
-        storageReference = firebaseStorage.getInstance().getReference();
-        ref = storageReference.child("AlDossary.mp3");
+                        adapter = new DownAdapter(MurattalActivity.this,modelArrayList);
+                        recyclerView.setAdapter(adapter);
+                    }
 
-        ref.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-            @Override
-            public void onSuccess(Uri uri) {
-                String url = uri.toString();
-                downloadFile(MurattalActivity.this,"AlDossary",".mp3",DIRECTORY_DOWNLOADS,url);
-                Toast.makeText(MurattalActivity.this,"Sedang mendownload, lihat notifikasi",Toast.LENGTH_SHORT).show();
-            }
-        }).addOnFailureListener(new OnFailureListener() {
+                }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-                Toast.makeText(MurattalActivity.this,"Download gagal",Toast.LENGTH_SHORT).show();
+                Toast.makeText(MurattalActivity.this, "Gagal mengambil data",Toast.LENGTH_SHORT).show();
             }
         });
     }
 
-    public void downM(){
-
-        storageReference1 = firebaseStorage1.getInstance().getReference();
-        ref1 = storageReference1.child("Mishari Rashid-Al Fatiha.mp3");
-
-        ref.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-            @Override
-            public void onSuccess(Uri uri) {
-                String url2 = uri.toString();
-                downloadFile(MurattalActivity.this,"Mishari Rashid-Al Fatiha",".mp3",DIRECTORY_DOWNLOADS,url2);
-                Toast.makeText(MurattalActivity.this,"Sedang mendownload, lihat notifikasi",Toast.LENGTH_SHORT).show();
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                Toast.makeText(MurattalActivity.this,"Download gagal",Toast.LENGTH_SHORT).show();
-            }
-        });
+    private void setRecyclerview(){
+        recyclerView = findViewById(R.id.rv_murotal);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
-
-    public void downloadFile(Context context, String fileName, String fileExt, String destDir, String url){
-        DownloadManager downloadManager = (DownloadManager) context.getSystemService(Context.DOWNLOAD_SERVICE);
-        Uri uri = Uri.parse(url);
-        DownloadManager.Request request = new DownloadManager.Request(uri);
-
-        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
-        request.setDestinationInExternalFilesDir(context,destDir,fileName+fileExt);
-
-        downloadManager.enqueue(request);
-    }
-
-
 }

@@ -12,17 +12,12 @@ import com.rohisnatardev.ichwan.appprojectplanb.cnbfragment.SettingFragment;
 import com.rohisnatardev.ichwan.appprojectplanb.cnbfragment.TahsinFragment;
 import com.rohisnatardev.ichwan.appprojectplanb.cnbfragment.TajwidFragment;
 
-import org.imaginativeworld.oopsnointernet.ConnectionCallback;
-import org.imaginativeworld.oopsnointernet.NoInternetDialog;
-
 import hotchemi.android.rate.AppRate;
 
 public class UtamaActivity extends AppCompatActivity {
 
     ChipNavigationBar chipNavigationBar;
     FragmentManager fragmentManager;
-
-    NoInternetDialog noInternetDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,33 +71,4 @@ public class UtamaActivity extends AppCompatActivity {
 
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-
-        // No Internet Dialog
-        NoInternetDialog.Builder builder1 = new NoInternetDialog.Builder(this);
-
-        builder1.setConnectionCallback(new ConnectionCallback() { // Optional
-            @Override
-            public void hasActiveConnection(boolean hasActiveConnection) {
-                // ...
-            }
-        });
-        builder1.setCancelable(true);
-        builder1.setNoInternetConnectionTitle("Tidak Ada Koneksi Internet");
-        builder1.setNoInternetConnectionMessage("Periksa koneksi internet anda dan coba lagi");
-        builder1.setShowInternetOnButtons(true);
-        builder1.setPleaseTurnOnText("Hidupkan");
-        builder1.setWifiOnButtonText("Wifi");
-        builder1.setMobileDataOnButtonText("Data Seluler");
-
-        builder1.setOnAirplaneModeTitle("Tidak Ada Koneksi Internet");
-        builder1.setOnAirplaneModeMessage("Anda menghidupkan mode pesawat");
-        builder1.setPleaseTurnOffText("Matikan");
-        builder1.setAirplaneModeOffButtonText("Mode Pesawat");
-        builder1.setShowAirplaneModeOffButtons(true);
-
-        noInternetDialog = builder1.build();
-    }
 }

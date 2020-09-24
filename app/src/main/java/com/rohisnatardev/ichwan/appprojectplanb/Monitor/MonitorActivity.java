@@ -24,10 +24,10 @@ import org.joda.time.DateTime;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class MonitorActivity extends AppCompatActivity implements DatePickerListener, View.OnClickListener {
+public class MonitorActivity extends AppCompatActivity implements DatePickerListener {
 
     CardView btninput, btnhapus, btninfo;
-    EditText edtData;
+    EditText editData;
     GraphView graphView;
 
     DatabaseHandler dbh;
@@ -35,6 +35,7 @@ public class MonitorActivity extends AppCompatActivity implements DatePickerList
 
     LineGraphSeries<DataPoint> dataseries = new LineGraphSeries<>(new DataPoint[0]);
 
+    @SuppressLint("SimpleDateFormat")
     SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
 
 
@@ -58,40 +59,49 @@ public class MonitorActivity extends AppCompatActivity implements DatePickerList
         picker.setBackgroundColor(Color.WHITE);
         picker.setDate(new DateTime());
 
-        edtData = findViewById(R.id.edtData);
+        editData = findViewById(R.id.edtData);
         btninput = findViewById(R.id.cv_inputdata);
-        btninput.setOnClickListener(this);
+
         btnhapus = findViewById(R.id.cv_resetdata);
-        btnhapus.setOnClickListener(this);
+        btnhapus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                removeData();
+            }
+        });
 
         graphView = findViewById(R.id.line_chart);
 
         dbh = new DatabaseHandler(this);
         sqLiteDatabase = dbh.getWritableDatabase();
 
-        graphView.addSeries(dataseries);
-        graphView.getGridLabelRenderer().setNumHorizontalLabels(7);
         insertdatagraph();
 
-
+        graphView.addSeries(dataseries);
+        graphView.getGridLabelRenderer().setNumHorizontalLabels(7);
     }
 
     public void insertdatagraph(){
-        long xValue = new Date().getTime();
-        int yValue = Integer.parseInt(String.valueOf(edtData.getText()));
-
-        dbh.insertData(xValue, yValue);
-
-        dataseries.resetData(grabData());
-
-        graphView.getGridLabelRenderer().setLabelFormatter(new DefaultLabelFormatter(){
+        btninput.setOnClickListener(new View.OnClickListener() {
             @Override
-            public String formatLabel(double value, boolean isValueX){
-                if (isValueX){
-                    return sdf.format(new Date((long) value));
-                } else {
-                    return super.formatLabel(value, isValueX);
-                }
+            public void onClick(View view) {
+                long xValue = new Date().getTime();
+                int yValue = Integer.parseInt(String.valueOf(editData.getText()));
+
+                dbh.insertData(xValue, yValue);
+
+                dataseries.resetData(grabData());
+
+                graphView.getGridLabelRenderer().setLabelFormatter(new DefaultLabelFormatter(){
+                    @Override
+                    public String formatLabel(double value, boolean isValueX){
+                        if (isValueX){
+                            return sdf.format(new Date((long) value));
+                        } else {
+                            return super.formatLabel(value, isValueX);
+                        }
+                    }
+                });
             }
         });
     }
@@ -122,15 +132,4 @@ public class MonitorActivity extends AppCompatActivity implements DatePickerList
 
     }
 
-    @Override
-    public void onClick(View view) {
-        switch (view.getId()){
-            case R.id.cv_inputdata:
-                insertdatagraph();
-                break;
-            case R.id.cv_resetdata:
-                removeData();
-                break;
-        }
-    }
 }
