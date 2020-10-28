@@ -12,6 +12,11 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.rohisnatardev.ichwan.appprojectplanb.R;
 
 import org.jsoup.Jsoup;
@@ -24,6 +29,7 @@ public class BlogQuranDetailActivity extends AppCompatActivity {
     TextView txtitle, txdesc;
     ImageView imgview;
     private ProgressBar bar;
+    private AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +42,16 @@ public class BlogQuranDetailActivity extends AppCompatActivity {
         bar = findViewById(R.id.pgb_det);
 
         bar.setVisibility(View.VISIBLE);
+
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         final Handler handler = new Handler();
 
@@ -66,7 +82,7 @@ public class BlogQuranDetailActivity extends AppCompatActivity {
                         Glide.with(BlogQuranDetailActivity.this)
                                 .load(elements.get(0).attr("src")).into(imgview);
 
-                        bar.setVisibility(View.INVISIBLE);
+                        bar.setVisibility(View.GONE);
                     }
                 });
             }

@@ -4,22 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#55D0EB"
-    tools:context=".BacaanActivity">
+    android:background="@color/colorPrimary"
+    tools:context=".Tajwid.BacaanActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <View
-            android:layout_width="120dp"
-            android:layout_height="160dp"
-            android:background="@drawable/ellipse"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="30dp"/>
-        <View
-            android:layout_width="70dp"
-            android:layout_height="90dp"
-            android:background="@drawable/ellipse1"/>
 
         <TextView
             android:id="@+id/title_bookmark"
@@ -28,10 +18,9 @@
             android:layout_marginTop="45dp"
             android:text="@string/tajwid_lanjutan"
             android:textColor="#FFFFFF"
-            android:fontFamily="@font/poppins_semibold"
+            android:fontFamily="@font/poppins_medium"
             android:textSize="24sp"
-            android:gravity="center"
-            android:background="@drawable/bg_title"/>
+            android:layout_marginStart="10dp"/>
         <include layout="@layout/activity_bacaan_lamra_item"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

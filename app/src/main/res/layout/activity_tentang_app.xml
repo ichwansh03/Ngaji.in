@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AboutApp.TentangAppActivity">
+    tools:context=".Setting.TentangAppActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -71,6 +71,7 @@
             android:layout_below="@id/tl_about3"
             android:fontFamily="@font/poppins_regular"
             android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:layout_marginStart="5dp"/>
 
     </RelativeLayout>

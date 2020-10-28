@@ -12,6 +12,11 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.rohisnatardev.ichwan.appprojectplanb.R;
 
 import org.jsoup.Jsoup;
@@ -25,7 +30,7 @@ public class BlogTajwidDetailActivity extends AppCompatActivity {
     TextView tldetTajwid, ctdetTajwid;
     private ProgressBar progressBar;
     ImageView imgview;
-
+    private AdView mAdView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +42,17 @@ public class BlogTajwidDetailActivity extends AppCompatActivity {
         imgview = findViewById(R.id.imgblogdet);
 
         progressBar.setVisibility(View.VISIBLE);
+
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
         final Handler handler = new Handler();
 
         new Thread(new Runnable() {
@@ -66,7 +82,7 @@ public class BlogTajwidDetailActivity extends AppCompatActivity {
                         Glide.with(BlogTajwidDetailActivity.this)
                                 .load(elements.get(0).attr("src")).into(imgview);
 
-                        progressBar.setVisibility(View.INVISIBLE);
+                        progressBar.setVisibility(View.GONE);
                     }
                 });
             }

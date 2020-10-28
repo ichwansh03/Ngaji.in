@@ -26,13 +26,14 @@
             android:text="@string/al_halqi_tenggorokan"
             android:textColor="@android:color/transparent"
             android:ellipsize="end"
+            android:textSize="12sp"
             android:maxLines="1"
             android:fontFamily="@font/poppins_medium"/>
         <ImageButton
             android:id="@+id/btn_download_murotal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_marginStart="5dp"
             android:src="@drawable/ic_file_download_black_24dp"
             android:background="@android:color/transparent"/>
     </LinearLayout>

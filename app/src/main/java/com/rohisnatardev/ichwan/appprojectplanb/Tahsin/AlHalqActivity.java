@@ -43,12 +43,12 @@ public class AlHalqActivity extends AppCompatActivity {
 
     private void dataHuruf() {
         mData = new ArrayList<>();
-        mData.add(new IqraItem("ا (Alif)","أَ أِ أُ بَأْ أُوْ أَنْ أَنِ أَأْنَ مِنَ لْمُؤْنِ مَأِأً أَنِأً","Makhraj = Pangkal tenggorokan\nSifat = Jahr, Syiddah, Infitah",R.raw.alif));
-        mData.add(new IqraItem("ه (Ha Dhamir)","هَ هِ هُ بَهْ هُوْ هَنْ هَنِ هَهْنَ مِنَ لْمُهْنِ مَهِهً هَنِهَ","Makhraj = Pangkal tenggorokan\nSifat = Hams, Rakhawah, Istifal, Infitah, Ishmat",R.raw.hadhomir));
-        mData.add(new IqraItem("ع (Ain)","عَ عِ عُ بَعْ عُوْ عَنْ عَنِ عَعْنَ مِنَ لْمُعْنِ مَعِعً عَنِعَ","Makhraj = Tengah tenggorokan\nSifat = Tawassuth, Istifal, Infitah, Ishmat",R.raw.ain));
-        mData.add(new IqraItem("ح (Ha)","حَ حِ حُ بَحْ حُوْ حَنْ حَنِ حَحْنَ مِنَ لْمُحْنِ مَحِحً حَنِحَ","Makhraj = Tengah tenggorokan\nSifat = Hams, Rakhawah, Istifal, Infitah, Ishmat",R.raw.ha));
-        mData.add(new IqraItem("خ (Kha)","خَ خِ خُ بَخْ خُوْ خَنْ خَنِ خَخْنَ مِنَ لْمُخْنِ مَخِخً خَنِخَ","Makhraj = Atas tenggorokan\nSifat = Hams, Rakhawah, Isti\'la, Infitah, Ishmat",R.raw.kho));
-        mData.add(new IqraItem("غ (Ghain)","غَ غِ غُ بَغْ غُوْ غَنْ غَنِ غَغْنَ مِنَ لْمُغْنِ مَغِغً غَنِغَ","Makhraj = Atas tenggorokan\nSifat = Jahr, Rakhawah, Isti\'la, Infitah, Ishmat",R.raw.ghain));
+        mData.add(new IqraItem("ا (Alif)","آ أِيْ أُوْ بَأْ أُوْ أَنْ أَنِ أَأْنَ مِنَ لْمُؤْنِ مَأِيْ أً أَنِأً","Makhraj = Pangkal tenggorokan\nSifat = Jahr, Syiddah, Infitah",R.raw.alif));
+        mData.add(new IqraItem("ه (Ha Dhamir)","هَا هِيْ هُوْ بَهْ هُوْ هَنْ هَنِ هَهْنَ مِنَ لْمُهْنِ مَهِيْ هًا هَنِهَ","Makhraj = Pangkal tenggorokan\nSifat = Hams, Rakhawah, Istifal, Infitah, Ishmat",R.raw.hadhomir));
+        mData.add(new IqraItem("ع (Ain)","عَا عِيْ عُوْ بَعْ عُوْ عَنْ عَنِ عَعْنَ مِنَ لْمُعْنِ مَعِيْ عًا عَنِعَ","Makhraj = Tengah tenggorokan\nSifat = Tawassuth, Istifal, Infitah, Ishmat",R.raw.ain));
+        mData.add(new IqraItem("ح (Ha)","حَا حِيْ حُوْ بَحْ حُوْ حَنْ حَنِ حَحْنَ مِنَ لْمُحْنِ مَحِيْ حًا حَنِحَ","Makhraj = Tengah tenggorokan\nSifat = Hams, Rakhawah, Istifal, Infitah, Ishmat",R.raw.ha));
+        mData.add(new IqraItem("خ (Kha)","خَا خِيْ خُوْ بَخْ خُوْ خَنْ خَنِ خَخْنَ مِنَ لْمُخْنِ مَخِيْ خًا خَنِخَ","Makhraj = Atas tenggorokan\nSifat = Hams, Rakhawah, Isti\'la, Infitah, Ishmat",R.raw.kho));
+        mData.add(new IqraItem("غ (Ghain)","غَا غِيْ غُوْ بَغْ غُوْ غَنْ غَنِ غَغْنَ مِنَ لْمُغْنِ مَغِيْ غًا غَنِغَ","Makhraj = Atas tenggorokan\nSifat = Jahr, Rakhawah, Isti\'la, Infitah, Ishmat",R.raw.ghain));
     }
 
     private void showRecyclerGridView(){

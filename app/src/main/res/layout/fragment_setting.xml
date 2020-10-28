@@ -7,17 +7,26 @@
     tools:context=".cnbfragment.SettingFragment">
 
     <!-- TODO: Update blank fragment layout -->
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-7454540885326938/6274037844">
+        </com.google.android.gms.ads.AdView>
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:src="@drawable/ic_logobbq"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="40dp"/>
+        android:layout_marginTop="10dp"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -108,6 +117,26 @@
             android:fontFamily="@font/poppins_medium"
             android:layout_marginTop="20dp"
             android:layout_marginStart="10dp"/>
+
+        <TextView
+            android:id="@+id/tx_consult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/konsultasi_materi"
+            android:textSize="17sp"
+            android:textColor="#000"
+            android:fontFamily="@font/poppins_medium"
+            android:drawablePadding="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            app:drawableStartCompat="@drawable/ic_baseline_help_outline_24" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#C4C4C4"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"/>
 
         <TextView
             android:id="@+id/tx_pembaruan"

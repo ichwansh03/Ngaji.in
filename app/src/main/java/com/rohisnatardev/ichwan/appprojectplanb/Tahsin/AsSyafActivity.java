@@ -43,10 +43,10 @@ public class AsSyafActivity extends AppCompatActivity {
 
     private void dataSyaf(){
         iqraItems = new ArrayList<>();
-        iqraItems.add(new IqraItem("ف (Fa)","فَ فِ فُ بَفْ فُوْ فَنْ فَنِ فَفْنَ مِنَ لْمُفْنِ مَفِفً فَنِفَ","Makhraj = Ujung gigi atas menyentuh pangkal bibir bawah bagian dalam\nSifat = Hams, Istifal, Infitah, Idzlaq",R.raw.fa));
-        iqraItems.add(new IqraItem("ب (Ba)","بَ بِ بُ بَبْ بُوْ بَنْ بَنِ بَبْنَ مِنَ لْمُبْنِ مَبِبً بَنِبَ","Makhraj = Kedua bibir saling menempel\nSifat = Jahr, Syiddah, Istifal, Infitah, Idzlaq, Qalqalah",R.raw.ba));
-        iqraItems.add(new IqraItem("م (Mim)","مَ مِ مُ بَمْ مُوْ مَنْ مَنِ مَمْنَ مِنَ لْمُمْنِ مَمِمً مَنِمَ","Makhraj = Kedua bibir saling menempel\nSifat = Jahr, Tawassuth, Istifal, Infitah, Idzlaq",R.raw.mim));
-        iqraItems.add(new IqraItem("و (Wau)","وَ وِ وُ بَوْ وُوْ وَنْ وَنِ وَوْنَ مِنَ لْمُوْنِ مَوِوً وَنِوَ","Makhraj = Kedua bibir membentuk bundaran\nSifat = Jahr, Rakhawah, Istifal, Infitah, Ishmat",R.raw.wau));
+        iqraItems.add(new IqraItem("ف (Fa)","فَا فِيْ فُوْ بَفْ فُوْ فَنْ فَنِ فَفْنَ مِنَ لْمُفْنِ مَفِيْ فًا فَنِفَ","Makhraj = Ujung gigi atas menyentuh pangkal bibir bawah bagian dalam\nSifat = Hams, Istifal, Infitah, Idzlaq",R.raw.fa));
+        iqraItems.add(new IqraItem("ب (Ba)","بَا بِيْ بُوْ بَبْ بُوْ بَنْ بَنِ بَبْنَ مِنَ لْمُبْنِ مَبِيْ بًا بَنِبَ","Makhraj = Kedua bibir saling menempel\nSifat = Jahr, Syiddah, Istifal, Infitah, Idzlaq, Qalqalah",R.raw.ba));
+        iqraItems.add(new IqraItem("م (Mim)","مَا مِيْ مُوْ بَمْ مُوْ مَنْ مَنِ مَمْنَ مِنَ لْمُمْنِ مَمِيْ مًا مَنِمَ","Makhraj = Kedua bibir saling menempel\nSifat = Jahr, Tawassuth, Istifal, Infitah, Idzlaq",R.raw.mim));
+        iqraItems.add(new IqraItem("و (Wau)","وَا وِيْ وُوْ بَوْ وُوْ وَنْ وَنِ وَوْنَ مِنَ لْمُوْنِ مَوِيْ وًا وَنِوَ","Makhraj = Kedua bibir membentuk bundaran\nSifat = Jahr, Rakhawah, Istifal, Infitah, Ishmat",R.raw.wau));
     }
 
     private void setRecyclers(){

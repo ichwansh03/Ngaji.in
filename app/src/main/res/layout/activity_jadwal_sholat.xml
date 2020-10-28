@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".JadwalSholatActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/lokasi_jadwal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/jadwal_sholat_untuk"
+            android:textSize="19sp"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_margin="10dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="12dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/img_shubuh"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/ic_shubuh"/>
+
+                <TextView
+                    android:id="@+id/shubuh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/shubuh"
+                    android:textSize="16sp"
+                    android:layout_toEndOf="@id/img_shubuh"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/colorPrimary"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_margin="5dp"/>
+                <TextView
+                    android:id="@+id/time_shubuh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/_04_05"
+                    android:textSize="16sp"
+                    android:padding="8dp"
+                    android:background="@drawable/rectangle_time"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="#fff"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_margin="5dp"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="15dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/img_dzuhur"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/ic_dzuhur"/>
+
+                <TextView
+                    android:id="@+id/dzuhur"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dzuhur"
+                    android:textSize="16sp"
+                    android:layout_toEndOf="@id/img_dzuhur"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/colorPrimary"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_margin="5dp"/>
+                <TextView
+                    android:id="@+id/time_dzuhur"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_04_05"
+                    android:textSize="16sp"
+                    android:padding="8dp"
+                    android:background="@drawable/rectangle_time"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="#fff"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_margin="5dp"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="15dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/img_ashar"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/ic_ashar"/>
+
+                <TextView
+                    android:id="@+id/ashar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ashar"
+                    android:textSize="16sp"
+                    android:layout_toEndOf="@id/img_ashar"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/colorPrimary"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_margin="5dp"/>
+                <TextView
+                    android:id="@+id/time_ashar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_04_05"
+                    android:textSize="16sp"
+                    android:padding="8dp"
+                    android:background="@drawable/rectangle_time"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="#fff"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_margin="5dp"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="15dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/img_maghrib"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/ic_maghrib"/>
+
+                <TextView
+                    android:id="@+id/maghrib"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/maghrib"
+                    android:textSize="16sp"
+                    android:layout_toEndOf="@id/img_maghrib"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/colorPrimary"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_margin="5dp"/>
+                <TextView
+                    android:id="@+id/time_maghrib"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_04_05"
+                    android:textSize="16sp"
+                    android:padding="8dp"
+                    android:background="@drawable/rectangle_time"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="#fff"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_margin="5dp"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="15dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/img_isya"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/ic_isya"/>
+
+                <TextView
+                    android:id="@+id/isya"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/isya"
+                    android:textSize="16sp"
+                    android:layout_toEndOf="@id/img_isya"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/colorPrimary"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_margin="5dp"/>
+                <TextView
+                    android:id="@+id/time_isya"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_04_05"
+                    android:textSize="16sp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="#fff"
+                    android:padding="8dp"
+                    android:background="@drawable/rectangle_time"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_margin="5dp"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <ProgressBar
+            android:id="@+id/barbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="visible"
+            style="@style/Widget.AppCompat.ProgressBar"/>
+
+    </LinearLayout>
+</ScrollView>

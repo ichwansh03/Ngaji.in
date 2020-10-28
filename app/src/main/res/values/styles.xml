@@ -7,13 +7,29 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-    <style name="FormTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="windowActionBar">true</item>
-        <item name="windowNoTitle">false</item>
-        <item name="colorPrimary">#FFFFFF</item>
-        <item name="colorPrimaryDark">#FFFFFF</item>
-        <item name="colorAccent">#23C1E3</item>
+
+    <style name="TextSet">
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">@dimen/textset_size</item>
     </style>
 
+    <style name="TextTitleSet">
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
 
+    <style name="TextButtonNextSet">
+        <item name="android:layout_margin">15dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">13sp</item>
+        <item name="drawableEndCompat">@drawable/ic_arrow_forward_black_24dp</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:layout_alignParentEnd">true</item>
+    </style>
 </resources>

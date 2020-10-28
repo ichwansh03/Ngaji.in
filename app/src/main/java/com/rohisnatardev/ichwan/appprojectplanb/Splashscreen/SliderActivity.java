@@ -3,16 +3,13 @@ package com.rohisnatardev.ichwan.appprojectplanb.Splashscreen;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.os.Bundle;
-import android.widget.TextView;
 
 import com.rohisnatardev.ichwan.appprojectplanb.R;
 import com.rohisnatardev.ichwan.appprojectplanb.UtamaActivity;
 
 public class SliderActivity extends AppCompatActivity {
 
-    TextView txversi, txdev;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

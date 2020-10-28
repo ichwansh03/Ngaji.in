@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.rohisnatardev.ichwan.appprojectplanb">
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
         android:allowBackup="true"
@@ -16,23 +18,21 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_logobbq_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".Monitor.MonitorActivity"></activity>
-        <activity android:name=".DataMonitor.MonitorBacaanActivity" />
+        android:usesCleartextTraffic="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        tools:targetApi="m">
+        <activity android:name=".JadwalSholatActivity"></activity>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-7454540885326938~4906143525" />
+
+        <activity android:name=".Monitor.MonitorActivity" />
         <activity android:name=".BlogMain.BlogQuran.BlogQuranDetailActivity" />
         <activity android:name=".BlogMain.BlogTahsin.BlogTahsinDetailActivity" />
         <activity android:name=".BlogMain.BlogTajwid.BlogTajwidDetailActivity" />
-        <activity android:name=".AboutApp.TentangAppActivity" />
-        <activity android:name=".AboutApp.PolicyActivity" />
-
-        <receiver android:name="com.allyants.notifyme.NotificationPublisher" />
-        <receiver android:name="com.allyants.notifyme.BootNotifyMe">
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-
-                <category android:name="android.intent.category.HOME" />
-            </intent-filter>
-        </receiver>
+        <activity android:name=".Setting.TentangAppActivity" />
+        <activity android:name=".Setting.PolicyActivity" />
 
         <activity
             android:name=".Splashscreen.SliderActivity"
@@ -44,10 +44,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".Notes.FormAddUpdateActivity"
-            android:theme="@style/FormTheme" />
-        <activity android:name=".Notes.NoteActivity" />
         <activity android:name=".Dzikir.doaharian.DoaHarianActivity" />
         <activity android:name=".Dzikir.dzikirpetang.DzikirPetangActivity" />
         <activity android:name=".Dzikir.dzikirpagi.DzikirPagiActivity" />
@@ -80,32 +76,32 @@
         <activity android:name=".Bookmark.HukumLamdanRa.HukumLamActivity" />
         <activity android:name=".Tahsin.SifatNonLawan.SifatTunggal" />
         <activity android:name=".Tahsin.SifatLawan.SifatJamak" />
-        <activity android:name=".BacaanActivity" />
-        <activity android:name=".Qalqalah.QalqalahKubraActivity" />
-        <activity android:name=".Qalqalah.QalqalahSughraActivity" />
-        <activity android:name=".MimMati.IdghamMislainActivity" />
-        <activity android:name=".MimMati.IkfhaSyafawiActivity" />
-        <activity android:name=".MimMati.IdzharSyafawiActivity" />
+        <activity android:name=".Tajwid.BacaanActivity" />
+        <activity android:name=".Tajwid.Qalqalah.QalqalahKubraActivity" />
+        <activity android:name=".Tajwid.Qalqalah.QalqalahSughraActivity" />
+        <activity android:name=".Tajwid.MimMati.IdghamMislainActivity" />
+        <activity android:name=".Tajwid.MimMati.IkfhaSyafawiActivity" />
+        <activity android:name=".Tajwid.MimMati.IdzharSyafawiActivity" />
         <activity android:name=".Tahsin.AlKhaisActivity" />
         <activity android:name=".Tahsin.AlJaufActivity" />
         <activity android:name=".Tahsin.AsSyafActivity" />
         <activity android:name=".Tahsin.AlLisanActivity" />
         <activity android:name=".Tahsin.AlHalqActivity" />
-        <activity android:name=".HukumMad.MadMunfasilActivity" />
-        <activity android:name=".HukumMad.MadMuttasilActivity" />
-        <activity android:name=".HukumMad.MadSlhKubraActivity" />
-        <activity android:name=".HukumMad.MadLazimActivity" />
-        <activity android:name=".HukumMad.MadAridLsActivity" />
-        <activity android:name=".HukumMad.MadLiynActivity" />
-        <activity android:name=".HukumMad.MadShilahActivity" />
-        <activity android:name=".HukumMad.MadIwadhActivity" />
-        <activity android:name=".HukumMad.MadBadalActivity" />
-        <activity android:name=".HukumMad.MadThabiiActivity" />
-        <activity android:name=".NunMati.IqlabActivity" />
-        <activity android:name=".NunMati.IkhfaActivity" />
-        <activity android:name=".NunMati.IdzharActivity" />
-        <activity android:name=".NunMati.IdghamActivity" />
-        <activity android:name=".TajwidActivity" />
+        <activity android:name=".Tajwid.HukumMad.MadMunfasilActivity" />
+        <activity android:name=".Tajwid.HukumMad.MadMuttasilActivity" />
+        <activity android:name=".Tajwid.HukumMad.MadSlhKubraActivity" />
+        <activity android:name=".Tajwid.HukumMad.MadLazimActivity" />
+        <activity android:name=".Tajwid.HukumMad.MadAridLsActivity" />
+        <activity android:name=".Tajwid.HukumMad.MadLiynActivity" />
+        <activity android:name=".Tajwid.HukumMad.MadShilahActivity" />
+        <activity android:name=".Tajwid.HukumMad.MadIwadhActivity" />
+        <activity android:name=".Tajwid.HukumMad.MadBadalActivity" />
+        <activity android:name=".Tajwid.HukumMad.MadThabiiActivity" />
+        <activity android:name=".Tajwid.NunMati.IqlabActivity" />
+        <activity android:name=".Tajwid.NunMati.IkhfaActivity" />
+        <activity android:name=".Tajwid.NunMati.IdzharActivity" />
+        <activity android:name=".Tajwid.NunMati.IdghamActivity" />
+        <activity android:name=".Tajwid.TajwidActivity" />
         <activity
             android:name=".UtamaActivity"
             android:label="@string/app_name"

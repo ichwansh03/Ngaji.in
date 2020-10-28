@@ -1,6 +1,4 @@
 package com.rohisnatardev.ichwan.appprojectplanb.cnbfragment;
-
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -91,6 +89,7 @@ public class QuranFragment extends Fragment implements View.OnClickListener {
         CardView cvMonitor = view.findViewById(R.id.tx_monitor);
         cvMonitor.setOnClickListener(this);
 
+
         return view;
     }
 
@@ -142,4 +141,5 @@ public class QuranFragment extends Fragment implements View.OnClickListener {
                 startActivity(monitor);
         }
     }
+
 }

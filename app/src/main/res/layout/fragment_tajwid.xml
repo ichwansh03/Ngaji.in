@@ -22,7 +22,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/desc_about1"
+            android:text="@string/hadist_tajwid"
             android:fontFamily="@font/poppins_medium"
             android:textColor="#000"
             android:textAlignment="center"

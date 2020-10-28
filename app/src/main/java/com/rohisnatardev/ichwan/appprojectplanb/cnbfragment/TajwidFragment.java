@@ -16,12 +16,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.facebook.shimmer.ShimmerFrameLayout;
-import com.rohisnatardev.ichwan.appprojectplanb.BacaanActivity;
+import com.rohisnatardev.ichwan.appprojectplanb.Tajwid.BacaanActivity;
 import com.rohisnatardev.ichwan.appprojectplanb.BlogMain.BlogTajwid.BlogTajwidAdapter;
 import com.rohisnatardev.ichwan.appprojectplanb.BlogMain.BlogTajwid.BlogTajwidItem;
 import com.rohisnatardev.ichwan.appprojectplanb.BlogMain.BlogTajwid.TajwidModel;
 import com.rohisnatardev.ichwan.appprojectplanb.R;
-import com.rohisnatardev.ichwan.appprojectplanb.TajwidActivity;
+import com.rohisnatardev.ichwan.appprojectplanb.Tajwid.TajwidActivity;
 
 import java.util.ArrayList;
 

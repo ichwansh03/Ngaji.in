@@ -4,89 +4,65 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
+    android:background="@color/colorPrimary"
     tools:context=".Tahsin.AlHalqActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-    <ImageView
-        android:id="@+id/image"
-        android:layout_width="match_parent"
-        android:layout_height="165dp"
-        android:src="@drawable/bgarticle"
-        android:adjustViewBounds="true"
-        android:scaleType="fitXY" />
 
-    <View
-        android:id="@+id/bg_content"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:background="@drawable/bg_content"
-        />
+        <include layout="@layout/ellipse_background"/>
+
     <TextView
         android:id="@+id/textTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/al_halqi_tenggorokan"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textAlignment="center"
-        android:textColor="@android:color/white"
-        android:fontFamily="@font/poppins_medium"
-        android:background="@drawable/bg_title_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp" />
+        style="@style/TextTitleSet" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textNextBtn"
         android:text="@string/al_lisan_lidah"
-        android:background="@drawable/button_back"
-        android:textColor="@android:color/white"
-        android:layout_centerHorizontal="true"
-        android:fontFamily="@font/poppins_regular"
-        android:textSize="12sp"
-        android:layout_marginTop="12dp"
         android:layout_below="@+id/textTitle"
-        app:drawableEndCompat="@drawable/ic_arrow_forward_black_24dp" />
+        style="@style/TextButtonNextSet"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/textNextBtn"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/rectangle_bg">
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imgHalq"
             android:src="@drawable/halqi"
-            android:layout_centerHorizontal="true"
             android:padding="10dp"
-            android:layout_below="@id/textNextBtn"/>
+            android:layout_gravity="center_horizontal"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/halqiyah_content"
         android:text="@string/halqiyah"
-        android:layout_margin="5dp"
-        android:textSize="17sp"
-        android:fontFamily="@font/poppins_regular"
-        android:ellipsize="end"
-        android:layout_below="@id/imgHalq"/>
+        style="@style/TextSet"/>
 
         <TextView
             android:id="@+id/txtitlehijaiyah"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/huruf_huruf_halqiyyah"
+            android:text="@string/huruf_huruf_al_halqi"
             android:textColor="#000"
             android:textSize="18sp"
             android:layout_marginStart="5dp"
             android:layout_marginTop="15dp"
-            android:fontFamily="@font/poppins_semibold"
-            android:layout_below="@id/halqiyah_content"/>
+            android:fontFamily="@font/poppins_semibold" />
 
      <androidx.recyclerview.widget.RecyclerView
          android:id="@+id/rv_hijaiyah_halq"
          android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:layout_below="@id/txtitlehijaiyah"/>
+         android:layout_height="wrap_content" />
+        </LinearLayout>
     </RelativeLayout>
 </ScrollView>

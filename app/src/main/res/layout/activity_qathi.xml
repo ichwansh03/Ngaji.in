@@ -4,61 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
+    android:background="@color/colorPrimary"
     tools:context=".Bookmark.Hamzah.QathiActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <ImageView
-            android:id="@+id/image"
-            android:layout_width="match_parent"
-            android:layout_height="165dp"
-            android:src="@drawable/bgarticle"
-            android:adjustViewBounds="true"
-            android:scaleType="fitXY"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
-        <View
-            android:id="@+id/bg_content"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
-            android:background="@drawable/bg_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+
+        <include
+            android:id="@+id/ellipse"
+            layout="@layout/ellipse_background"/>
+
         <TextView
             android:id="@+id/textTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/hamzah_qath_i"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:fontFamily="@font/poppins_medium"
-            android:textColor="@android:color/white"
-            android:background="@drawable/bg_title_content"
-            android:gravity="center"
-            android:layout_marginTop="30dp"
-            app:layout_constraintTop_toTopOf="@id/image"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            style="@style/TextTitleSet"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/rectangle_bg"
+            android:layout_below="@id/ellipse">
         <me.biubiubiu.justifytext.library.JustifyTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/desc_qathi"
             android:text="@string/qathi_desc"
-            android:textSize="17sp"
-            android:layout_marginStart="5dp"
-            android:layout_marginEnd="5dp"
-            android:layout_marginTop="15dp"
-            android:fontFamily="@font/poppins_regular"
-            app:layout_constraintTop_toBottomOf="@id/textTitle"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            style="@style/TextSet"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -66,18 +42,14 @@
             android:text="@string/hamqathi"
             android:textSize="30sp"
             android:textColor="#000000"
-            android:layout_marginTop="5dp"
-            app:layout_constraintTop_toBottomOf="@id/desc_qathi"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            android:layout_gravity="center_horizontal"/>
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/play_toggle_qathi"
             app:srcCompat="@drawable/ic_pause_circle_outline_black_24dp"
             android:background="@android:color/transparent"
-            app:layout_constraintTop_toBottomOf="@id/txqathiarab"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
+    </RelativeLayout>
 </ScrollView>

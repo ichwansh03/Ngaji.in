@@ -105,7 +105,7 @@
 \nf)Ujung lidah dengan gusi atas = ن\n
 \ng)Ujung lidah dekat gusi atas = ر\n
 \nh)Punggung kepala lidah dengan pangkal dua buah gigi seri atas = ت,د,ط\n
-\ni)Ujung lidah dengan pangkal gigi seri atas = ز,س,ص\n\nj)Ujung lidah dengan ujung dua buah gigi atas = ث,ذ,ظ\n</string>
+\ni)Ujung lidah bawah menyentuh gigi seri bawah = ز,س,ص\n\nj)Ujung lidah dengan ujung dua buah gigi atas = ث,ذ,ظ\n</string>
     <string name="syafatain">Berikut huruf-huruf yang keluar dari bibir :\n\na)Perut bibir bawah dengan ujung dua buah gigi muka atas = ف\n\nb)Bertemunya bibir atas dan bawah dengan rapat = ب,م\n\nc)Bertemunya bibir atas dan bawah dengan sedikit renggang = و</string>
     <string name="jauf">Al-Jauf adalah tempat keluarnya tiga huruf mad, yaitu :\n\na)Alif, yang sebelumnya berharakat fathah (ا)\n\nb)Ya sukun yang sebelumnya berharakat kasroh (ى)\n\nc)Wau sukun, yang sebelumnya berharakat dhommah (و)</string>
     <string name="khais">Berikut penjelasan tentang huruf yang keluar dari pangkal hidung :\n\na)Nun sukun atau tanwin, ketika :\n\n1)Di-idgham bigunnah-kan, atau\n\n2)Di-ikhfa-kan, atau\n\n3)Di-iqlab-kan\n\nb)Mim sukun yang di-idgham-kan pada huruf Mim dan di-ikhfa-kan pada huruf Ba.\n\nAkibat dari hukum-hukum bacaan tersebut, maka makhrajnya berpindah dari aslinya ke pangkal hidung.</string>
@@ -333,7 +333,7 @@
     <string name="ayat">Ayat</string>
     <string name="arab_konten">Arab Konten</string>
     <string name="dzikir">Dzikir</string>
-    <string name="versi_app">Versi : 2.1</string>
+    <string name="versi_app">Versi : 2.5</string>
     <string name="dev_name">Rohis Natar Dev - 2020</string>
     <string name="desc_murotal">Al-Fatihah merupakan rukun shalat yang harus dihafal dan dibaca dalam setiap rakaat sholat.\nSabda Rasulullah SAW : \"Barangsiapa yang mengerjakan sholat dan tidak membaca Ummul Qur\'an (Al-Fatihah) di dalamnya, maka sholatnya terputus dan tidak sempurna.\" Dikatakan kepada Abu Hurairah ra \"Sesungguhnya kami sholat dibelakang imam (makmum).\" Maka beliau berkata, "bacalah dalam hatimu.\"\nMaka dari itu, wajib bagi setiap muslim untuk memperbaiki bacaan Al-Fatihah agar sholat yang ditunaikannya dapat diterima oleh Allah Ta\'ala.\n</string>
     <string name="tentang_aplikasi">Tentang Aplikasi</string>
@@ -347,11 +347,8 @@
     <string name="desc_about3">Aplikasi ini tidak hanya menyediakan materi seputar Tajwid &amp; Tahsin saja, namun ada beberapa fitur penunjang pembelajaran baik offline maupun online seperti:\n
     - Info Qur\’an : Halaman ini berisi beberapa info seputar Al-Qur\’an, seperti pencarian ayat dalam Qur\’an, ayat-ayat sajadah, tanda-tanda waqaf, hingga pertanyaan-pertanyaan terkait Al-Qur\’an yang bisa menjadi penambah wawasan bagi para pengguna\n
     - Murottal Fatihah : Halaman ini berisi panduan khusus kepada para pengguna untuk mempelajari surat Al-Fatihah. Mengapa hanya surat Al-Fatihah? Karena surat Al-Fatihah merupakan rukun wajib dalam Sholat dan setiap muslim wajib menghafalkan dan membacanya dengan cara yang baik dan benar. Maka dari itu, dalam fitur ini kami menyediakan panduan Murottal dari beberapa Syeikh agar bacaannya bisa dicontoh oleh para pengguna dan InsyaAllah mampu memperbaiki rukun Sholat kita.\n
-    - Hijaiyah : Halaman ini berisi kumpulan huruf-huruf hijaiyah dan tercantum sifat-sifat hurufnya yang mana pengguna bisa mempelajari tentang sifat-sifat huruf pada halaman Tahsin.\n
     - Dzikir : Halaman ini berisi kumpulan dzikir-dzikir harian seperti dzikir al-matsurah pagi &amp; petang, dan doa-doa harian sebagai penunjang bagi para pengguna untuk menjalankan ibadah sunnah sesuai tuntunan Rasulullah SAW.\n
-    - Catatan :  Halaman ini seperti app notes/pencatatan pada umumnya, namun yang membedakan adalah adanya fitur set alarm pada setiap catatan yang dibuat pengguna dan akan mengirimkan notifikasi sesuai waktu yang diatur.\n
     - Artikel Online : Halaman ini berisi seputar info dan artikel tentang Qur\’an secara realtime dan hanya dapat diakses dalam keadaan online oleh pengguna.\n
-    - Ruang Diskusi : Halaman ini diperuntukan hanya untuk materi-materi tertentu, tujuannya adalah agar para pengguna bisa memberikan pendapat, masukan, hingga pertanyaan dan pengembangan seputar materi serta didiskusikan dengan peserta lain.\n
     - Grafik Monitoring Tilawah : Halaman ini bertujuan untuk memonitoring tilawah pengguna setiap hari\n</string>
     <string name="isymam_contoh">لَا تَأْمَنَّ۫ا</string>
     <string name="txdiskusi">biasakan menggunakan bahasa yang sopan ketika berdiskusi, hidupkan internet dan pilih materi, maka akan otomatis masuk ke ruang diskusi.</string>
@@ -369,6 +366,7 @@
     <string name="masukkan_username">Masukkan Username</string>
     <string name="kirim_materi">Kirim Materi</string>
     <string name="info_app">Info App</string>
+    <string name="hadist_tajwid">Sesungguhnya orang yang paling utama di antara kalian adalah yang belajar Al-Qur\'an dan mengajarkannya. (HR. Bukhari)</string>
 
     <string-array name="surah_names">
         <item>Al-Fatihah</item>
@@ -636,4 +634,23 @@
     <string name="lainnya">Lainnya</string>
     <string name="cek_pembaruan_aplikasi">Cek Pembaruan Aplikasi</string>
     <string name="input">Input</string>
+    <string name="teks_ask">Fitur ini berfungsi sebagai monitoring aktivitas tilawah qur\'an harian dengan tujuan untuk memotivasi diri agar selalu dekat dengan Al-Qur\'an serta senantiasa meningkatkan kuantitas bacaan perharinya. Setiap kali anda menginput data, grafik secara otomatis akan tersimpan.</string>
+    <string name="email">Email</string>
+    <string name="subjek">Subjek</string>
+    <string name="tulis_pesanmu_disini">Tulis pesanmu disini…</string>
+    <string name="konsultasi_materi">Konsultasi Materi</string>
+    <string name="huruf_huruf_al_halqi">Huruf - huruf Al-Halqi</string>
+    <string name="huruf_huruf_al_lisan">Huruf - huruf Al-Lisan</string>
+    <string name="huruf_huruf_as_syafatain">Huruf - huruf As-Syafatain</string>
+    <string name="lampung_selatan">Atur Lokasi</string>
+    <string name="lihat_jadwal">Lihat Jadwal</string>
+    <string name="senin_13_oktober_2020">Senin, 13 Oktober 2020</string>
+    <string name="_30_c">30 C</string>
+    <string name="shubuh">Shubuh</string>
+    <string name="_04_05">00:00</string>
+    <string name="jadwal_sholat_untuk">Jadwal Sholat untuk Daerah … dan Sekitarnya</string>
+    <string name="dzuhur">Dzuhur</string>
+    <string name="ashar">Ashar</string>
+    <string name="maghrib">Maghrib</string>
+    <string name="isya">Isya</string>
 </resources>

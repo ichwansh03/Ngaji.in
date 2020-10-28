@@ -1,18 +1,26 @@
 package com.rohisnatardev.ichwan.appprojectplanb.Monitor;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.annotation.SuppressLint;
+import android.content.DialogInterface;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.github.jhonnyx2012.horizontalpicker.DatePickerListener;
 import com.github.jhonnyx2012.horizontalpicker.HorizontalPicker;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.jjoe64.graphview.DefaultLabelFormatter;
 import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.series.DataPoint;
@@ -36,9 +44,9 @@ public class MonitorActivity extends AppCompatActivity implements DatePickerList
     LineGraphSeries<DataPoint> dataseries = new LineGraphSeries<>(new DataPoint[0]);
 
     @SuppressLint("SimpleDateFormat")
-    SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
+    SimpleDateFormat sdf = new SimpleDateFormat("dd MMM");
 
-
+    private AdView mAdView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,10 +74,34 @@ public class MonitorActivity extends AppCompatActivity implements DatePickerList
         btnhapus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                removeData();
+                AlertDialog.Builder builder = new AlertDialog.Builder(MonitorActivity.this);
+                builder.setTitle("Hapus Data");
+                builder.setMessage("Apakah anda yakin ingin menghapus semua data pada grafik?");
+                builder.setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        removeData();
+                    }
+                }).setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                });
+
+                AlertDialog dialog = builder.create();
+                dialog.show();
             }
         });
 
+        btninfo = findViewById(R.id.cv_helpdata);
+        btninfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AskMonitorFragment fragment = new AskMonitorFragment();
+                fragment.show(getSupportFragmentManager(),"FragmentAsk");
+            }
+        });
         graphView = findViewById(R.id.line_chart);
 
         dbh = new DatabaseHandler(this);
@@ -79,12 +111,24 @@ public class MonitorActivity extends AppCompatActivity implements DatePickerList
 
         graphView.addSeries(dataseries);
         graphView.getGridLabelRenderer().setNumHorizontalLabels(7);
+
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
     }
 
     public void insertdatagraph(){
         btninput.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Toast.makeText(MonitorActivity.this,"Data berhasil ditambahkan",Toast.LENGTH_SHORT).show();
                 long xValue = new Date().getTime();
                 int yValue = Integer.parseInt(String.valueOf(editData.getText()));
 

@@ -2,36 +2,29 @@ package com.rohisnatardev.ichwan.appprojectplanb.Murottal;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.app.DownloadManager;
 import android.content.Context;
-import android.graphics.Typeface;
+import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.net.Uri;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ImageButton;
-import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
 import com.rohisnatardev.ichwan.appprojectplanb.R;
 
 import java.util.ArrayList;
-
-import static android.os.Environment.DIRECTORY_DOWNLOADS;
-
 
 public class MurattalActivity extends AppCompatActivity {
 
@@ -39,6 +32,7 @@ public class MurattalActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     ArrayList<DownModel> modelArrayList = new ArrayList<>();
     DownAdapter adapter;
+    private AdView mAdview;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +42,19 @@ public class MurattalActivity extends AppCompatActivity {
         db = FirebaseFirestore.getInstance();
 
         dataFirebase();
+
+        cekStatus();
+
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+
+        mAdview = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdview.loadAd(adRequest);
+
     }
 
     private void dataFirebase(){
@@ -82,5 +89,14 @@ public class MurattalActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.rv_murotal);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+    }
+
+    private void cekStatus(){
+        ConnectivityManager manager = (ConnectivityManager) getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo info = manager.getActiveNetworkInfo();
+
+        if (info == null){
+            Toast.makeText(MurattalActivity.this,"Tidak ada koneksi internet",Toast.LENGTH_SHORT).show();
+        }
     }
 }

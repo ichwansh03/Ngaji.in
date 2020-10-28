@@ -96,6 +96,16 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@id/layout_datachart"
+            android:layout_above="@id/adView"
             android:layout_margin="10dp"/>
 
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-7454540885326938/6274037844">
+    </com.google.android.gms.ads.AdView>
 </RelativeLayout>

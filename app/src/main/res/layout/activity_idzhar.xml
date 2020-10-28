@@ -3,78 +3,43 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@android:color/white"
-    tools:context=".NunMati.IdzharActivity">
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".Tajwid.NunMati.IdzharActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/image"
-        android:layout_width="match_parent"
-        android:layout_height="165dp"
-        android:src="@drawable/bgarticle"
-        android:adjustViewBounds="true"
-        android:scaleType="fitXY"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-    <View
-        android:id="@+id/bg_content"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:background="@drawable/bg_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        <include layout="@layout/ellipse_background"/>
     <TextView
         android:id="@+id/textTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/hukum_idzhar"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:fontFamily="@font/poppins_medium"
-        android:textColor="@android:color/white"
-        android:background="@drawable/bg_title_content"
-        android:gravity="center"
-        android:layout_marginTop="30dp"
-        app:layout_constraintTop_toTopOf="@id/image"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        style="@style/TextTitleSet"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textNextBtn"
         android:text="@string/ikhfa"
-        android:background="@drawable/button_back"
-        android:fontFamily="@font/poppins_regular"
-        android:textColor="@android:color/white"
-        android:gravity="center"
-        android:textSize="12sp"
-        app:layout_constraintTop_toTopOf="@id/bg_content"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="12dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:drawableEnd="@drawable/ic_arrow_forward_black_24dp" />
+        android:layout_below="@id/textTitle"
+        style="@style/TextButtonNextSet"/>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/rectangle_bg"
+            android:layout_below="@id/textNextBtn"
+            android:layout_marginEnd="15dp">
     <me.biubiubiu.justifytext.library.JustifyTextView
         android:id="@+id/idzhar_desc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_regular"
-        android:text="@string/idzhar_article"
-        app:layout_constraintTop_toBottomOf="@id/textNextBtn"
-        android:layout_margin="5dp"
-        android:textSize="17sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        style="@style/TextSet"
+        android:text="@string/idzhar_article" />
     <TextView
         android:id="@+id/image_idzhar"
         android:layout_width="wrap_content"
@@ -83,9 +48,7 @@
         android:textSize="30sp"
         android:fontFamily="@font/me_quran"
         android:textColor="#000000"
-        app:layout_constraintTop_toBottomOf="@id/idzhar_desc"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        android:layout_gravity="center_horizontal"/>
         <TextView
             android:id="@+id/image_idzhar2"
             android:layout_width="wrap_content"
@@ -93,20 +56,16 @@
             android:text="@string/idzhar2"
             android:textSize="30sp"
             android:textColor="#000000"
-            android:fontFamily="@font/me_quran"
-            app:layout_constraintTop_toBottomOf="@id/image_idzhar"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/me_quran"/>
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/ic_pause_circle_outline_black_24dp"
         android:id="@+id/play_toggle_idzhar"
-        android:background="@android:color/transparent"
-        app:layout_constraintTop_toBottomOf="@id/image_idzhar2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_gravity="center_horizontal"
+        android:background="@android:color/transparent"/>
+        </LinearLayout>
+    </RelativeLayout>
 
 </ScrollView>
