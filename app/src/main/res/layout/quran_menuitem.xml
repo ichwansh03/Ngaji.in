@@ -24,9 +24,7 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:id="@+id/cari_surah"
-                    app:cardCornerRadius="12dp"
-                    android:foreground="?attr/selectableItemBackground"
-                    android:focusable="true"
+                    style="@style/CardElevations"
                     android:layout_gravity="center_horizontal">
                     <ImageView
                         android:layout_width="35dp"
@@ -38,8 +36,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/cari_surah"
-                    android:textColor="#000"
-                    android:fontFamily="@font/poppins_medium"
+                    style="@style/TextMenuSet"
                     android:layout_gravity="center_horizontal"
                     android:textAlignment="center"/>
             </LinearLayout>
@@ -47,15 +44,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginStart="25dp">
+                android:layout_marginStart="15dp">
                 <androidx.cardview.widget.CardView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:id="@+id/ayatsajdah"
-                    android:foreground="?attr/selectableItemBackground"
-                    android:focusable="true"
-                    android:layout_gravity="center_horizontal"
-                    app:cardCornerRadius="12dp">
+                    style="@style/CardElevations"
+                    android:layout_gravity="center_horizontal">
                     <ImageView
                         android:layout_width="35dp"
                         android:layout_height="35dp"
@@ -68,21 +63,18 @@
                     android:textAlignment="center"
                     android:layout_gravity="center_horizontal"
                     android:text="@string/ayat_ayat_sajdah"
-                    android:fontFamily="@font/poppins_medium"
-                    android:textColor="#000"/>
+                    style="@style/TextMenuSet"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginStart="25dp">
+                android:layout_marginStart="15dp">
                 <androidx.cardview.widget.CardView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:id="@+id/waqaf"
-                    android:foreground="?attr/selectableItemBackground"
-                    android:focusable="true"
-                    app:cardCornerRadius="12dp"
+                    style="@style/CardElevations"
                     android:layout_gravity="center_horizontal">
                     <ImageView
                         android:layout_width="35dp"
@@ -94,22 +86,20 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/tanda_tanda_waqaf"
-                    android:fontFamily="@font/poppins_medium"
-                    android:textColor="#000"
+                    android:layout_gravity="center"
+                    style="@style/TextMenuSet"
                     android:textAlignment="center"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginStart="25dp">
+                android:layout_marginStart="15dp">
                 <androidx.cardview.widget.CardView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:id="@+id/murotal"
-                    app:cardCornerRadius="12dp"
-                    android:foreground="?attr/selectableItemBackground"
-                    android:focusable="true"
+                    style="@style/CardElevations"
                     android:layout_gravity="center_horizontal">
                     <ImageView
                         android:layout_width="35dp"
@@ -121,9 +111,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/murotal_al_fatihah"
-                    android:fontFamily="@font/poppins_medium"
-                    android:textColor="#000"
-                    android:textAlignment="center"/>
+                    style="@style/TextMenuSet"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"/>
             </LinearLayout>
         </LinearLayout>
     </HorizontalScrollView>

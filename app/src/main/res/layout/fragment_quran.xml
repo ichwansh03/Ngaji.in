@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:scrollbars="none"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".cnbfragment.QuranFragment">
 
@@ -11,24 +12,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/tx_monitor"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="8dp"
-            android:foreground="?attr/selectableItemBackground"
-            android:focusable="true">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/berapa_lembar_tilawahmu_hari_ini"
-            android:textSize="17sp"
-            android:textColor="#000"
-            android:fontFamily="@font/poppins_semibold"
-            android:layout_margin="10dp"/>
-        </androidx.cardview.widget.CardView>
 
         <TextView
             android:id="@+id/txsq"
@@ -36,11 +19,9 @@
             android:layout_height="wrap_content"
             android:text="@string/seputar_qur_an"
             android:textSize="17sp"
-            android:textColor="#000"
             android:layout_marginTop="15dp"
             android:layout_marginStart="15dp"
-            android:fontFamily="@font/poppins_semibold"
-            android:layout_below="@id/tx_monitor"/>
+            style="@style/TextMenuSet"/>
         <include
             layout="@layout/quran_menuitem"
             android:layout_width="wrap_content"
@@ -54,10 +35,9 @@
             android:layout_height="wrap_content"
             android:text="@string/dzikir_dan_doa"
             android:textSize="17sp"
-            android:textColor="#000"
             android:layout_marginTop="20dp"
             android:layout_marginStart="15dp"
-            android:fontFamily="@font/poppins_semibold"
+            style="@style/TextMenuSet"
             android:layout_below="@id/layout_menuquran"/>
         <include
             layout="@layout/dzikir_menuitem"
@@ -71,10 +51,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/artikel_qur_an"
-            android:fontFamily="@font/poppins_semibold"
+            style="@style/TextMenuSet"
             android:textSize="17sp"
             android:layout_below="@id/layout_menudzikir"
-            android:textColor="#000"
             android:layout_marginStart="15dp"
             android:layout_marginTop="20dp"/>
 

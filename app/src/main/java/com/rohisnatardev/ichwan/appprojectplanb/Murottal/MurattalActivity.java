@@ -22,6 +22,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.rohisnatardev.ichwan.appprojectplanb.NoInternetFragment;
 import com.rohisnatardev.ichwan.appprojectplanb.R;
 
 import java.util.ArrayList;
@@ -96,7 +97,8 @@ public class MurattalActivity extends AppCompatActivity {
         NetworkInfo info = manager.getActiveNetworkInfo();
 
         if (info == null){
-            Toast.makeText(MurattalActivity.this,"Tidak ada koneksi internet",Toast.LENGTH_SHORT).show();
+            NoMurottalFragment nomf = new NoMurottalFragment();
+            nomf.show(getSupportFragmentManager(),"NoMurotalFragment");
         }
     }
 }

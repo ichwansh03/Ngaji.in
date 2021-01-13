@@ -123,7 +123,7 @@ public class DoaHarianActivity extends AppCompatActivity {
 
         item.add(new DoaItem("Doa Kafaratul Majlis",
                 "سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، أَشْهَدُ أَنْ لاَ إِلَـٰهَ إِلاَّ أَنْتَ، أَسْتَغْفِرُكَ، وَأَتُوْبُ إِلَيْكَ",
-                "Subhanallohumma wabihamdika asyhadu alla ilaha illa anta, astaghfiruka wa atuubuilaik",
+                "Subhanakallohumma wabihamdika asyhadu alla ilaha illa anta, astaghfiruka wa atuubuilaik",
                 "Maha Suci Engkau ya Allah, aku memujiMu. Aku bersaksi bahwa tidak ada sesembahan yang berhak disembah kecuali Engkau, aku minta ampun dan bertaubat kepada-Mu"));
 
     }

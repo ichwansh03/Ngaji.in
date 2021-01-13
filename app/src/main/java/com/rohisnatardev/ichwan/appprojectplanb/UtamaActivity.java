@@ -1,28 +1,23 @@
 package com.rohisnatardev.ichwan.appprojectplanb;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
-import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.airbnb.lottie.LottieAnimationView;
-import com.google.android.gms.location.FusedLocationProviderClient;
-import com.google.android.gms.location.LocationServices;
 import com.ismaeldivita.chipnavigation.ChipNavigationBar;
+import com.rohisnatardev.ichwan.appprojectplanb.JadwalSholat.JadwalSholatActivity;
 import com.rohisnatardev.ichwan.appprojectplanb.cnbfragment.QuranFragment;
 import com.rohisnatardev.ichwan.appprojectplanb.cnbfragment.SettingFragment;
-import com.rohisnatardev.ichwan.appprojectplanb.cnbfragment.TahsinFragment;
+import com.rohisnatardev.ichwan.appprojectplanb.cnbfragment.LatihanFragment;
 import com.rohisnatardev.ichwan.appprojectplanb.cnbfragment.TajwidFragment;
 
 import java.util.Calendar;
@@ -33,9 +28,8 @@ public class UtamaActivity extends AppCompatActivity {
 
     ChipNavigationBar chipNavigationBar;
     FragmentManager fragmentManager;
-    TextView jadwal, lokasi;
-    LottieAnimationView animationView;
-    FusedLocationProviderClient providerClient;
+    TextView jadwal, greetTx;
+    CardView cvInfo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,25 +45,17 @@ public class UtamaActivity extends AppCompatActivity {
         AppRate.showRateDialogIfMeetsConditions(this);
 
         checkStatus();
-        //changeTime();
-
-        providerClient = LocationServices.getFusedLocationProviderClient(this);
 
         chipNavigationBar = findViewById(R.id.chipbar);
         jadwal = findViewById(R.id.lihat_jadwal);
-        animationView = findViewById(R.id.lottie);
-
+        cvInfo = findViewById(R.id.cv_jadwal_sholat);
+        greetTx = findViewById(R.id.greetx);
+        cardGreet();
         jadwal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (ActivityCompat.checkSelfPermission(UtamaActivity.this,Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
-                        && ActivityCompat.checkSelfPermission(UtamaActivity.this,Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED){
-                    ActivityCompat.requestPermissions(UtamaActivity.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION},44);
-                    ActivityCompat.requestPermissions(UtamaActivity.this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION},44);
-                } else {
-                    Intent jadwalSholat = new Intent(UtamaActivity.this, JadwalSholatActivity.class);
-                    startActivity(jadwalSholat);
-                }
+                Intent jadwalSholat = new Intent(UtamaActivity.this, JadwalSholatActivity.class);
+                startActivity(jadwalSholat);
             }
         });
 
@@ -94,7 +80,7 @@ public class UtamaActivity extends AppCompatActivity {
                         fragments = new TajwidFragment();
                         break;
                     case R.id.tahsin:
-                        fragments = new TahsinFragment();
+                        fragments = new LatihanFragment();
                         break;
                     case R.id.pengaturan:
                         fragments = new SettingFragment();
@@ -110,31 +96,32 @@ public class UtamaActivity extends AppCompatActivity {
 
     }
 
-
     private void checkStatus(){
         ConnectivityManager manager = (ConnectivityManager) getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo info = manager.getActiveNetworkInfo();
 
         if (info == null){
-            Toast.makeText(UtamaActivity.this,"Tidak ada koneksi internet",Toast.LENGTH_SHORT).show();
+            NoInternetFragment internetFragment = new NoInternetFragment();
+            internetFragment.show(getSupportFragmentManager(),"NoInternetFragment");
         }
     }
 
-    /*private void changeTime(){
+    private void cardGreet(){
         Calendar calendar = Calendar.getInstance();
         int timeOut = calendar.get(Calendar.HOUR_OF_DAY);
 
-        if (timeOut >= 4 && timeOut < 10){
-            animationView.setAnimation(R.raw.pagi);
+        if(timeOut >= 3 && timeOut < 7){
+            greetTx.setText(getString(R.string.greeting_pagi));
         }
-        else if (timeOut >= 10 && timeOut < 2){
-            animationView.setAnimation(R.raw.siang);
+        else if(timeOut >= 7 && timeOut < 11){
+            greetTx.setText(getString(R.string.greeting_dhuha));
         }
-        else if (timeOut >= 2 && timeOut < 6){
-            animationView.setAnimation(R.raw.sore);
+        else if(timeOut >= 11 && timeOut < 19){
+            greetTx.setText(getString(R.string.greeting_quran));
         }
-        else {
-            animationView.setAnimation(R.raw.malam);
+        else{
+            greetTx.setText(getString(R.string.greeting_malam));
         }
-    }*/
+    }
+
 }

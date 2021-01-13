@@ -3,6 +3,8 @@ package com.rohisnatardev.ichwan.appprojectplanb.Tajwid;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
@@ -35,44 +37,30 @@ public class TajwidActivity extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tajwid);
 
-        CardView btn_idgham = findViewById(R.id.idghom);
-        btn_idgham.setOnClickListener(this);
-        CardView btn_idzhar = findViewById(R.id.idzhar);
-        btn_idzhar.setOnClickListener(this);
-        CardView btn_ikhfa = findViewById(R.id.ikhfa);
-        btn_ikhfa.setOnClickListener(this);
-        CardView btn_iqlab = findViewById(R.id.iqlab);
-        btn_iqlab.setOnClickListener(this);
-        CardView btn_idzharsyf = findViewById(R.id.idzharsyf);
-        btn_idzharsyf.setOnClickListener(this);
-        CardView btn_ikhfasyf = findViewById(R.id.ikhfasy);
-        btn_ikhfasyf.setOnClickListener(this);
-        CardView btn_idghammsln = findViewById(R.id.idghammsln);
-        btn_idghammsln.setOnClickListener(this);
-        CardView btn_madthabi = findViewById(R.id.madtabii);
-        btn_madthabi.setOnClickListener(this);
-        CardView btn_mdbadal = findViewById(R.id.madbadal);
-        btn_mdbadal.setOnClickListener(this);
-        CardView btn_mdiwadh = findViewById(R.id.madiwadh);
-        btn_mdiwadh.setOnClickListener(this);
-        CardView btn_mdsilahsughra = findViewById(R.id.madshilah);
-        btn_mdsilahsughra.setOnClickListener(this);
-        CardView btn_mdshilahkubra = findViewById(R.id.mdsilkubbra);
-        btn_mdshilahkubra.setOnClickListener(this);
-        CardView btn_mdliyn = findViewById(R.id.madliyn);
-        btn_mdliyn.setOnClickListener(this);
-        CardView btn_mdaridlskn = findViewById(R.id.md_arid_lskn);
-        btn_mdaridlskn.setOnClickListener(this);
-        CardView btn_mdlazim = findViewById(R.id.mdlazim);
-        btn_mdlazim.setOnClickListener(this);
-        CardView btn_mdjaiz = findViewById(R.id.md_jaiz);
-        btn_mdjaiz.setOnClickListener(this);
-        CardView btn_mdwajib = findViewById(R.id.md_wajib);
-        btn_mdwajib.setOnClickListener(this);
-        CardView btnqalqalahSgr = findViewById(R.id.qalqalahsughra);
-        btnqalqalahSgr.setOnClickListener(this);
-        CardView btnqalqalahKbr = findViewById(R.id.qalqalahkubra);
-        btnqalqalahKbr.setOnClickListener(this);
+        //nun mati
+        findViewById(R.id.idghom).setOnClickListener(this);
+        findViewById(R.id.idzhar).setOnClickListener(this);
+        findViewById(R.id.ikhfa).setOnClickListener(this);
+        findViewById(R.id.iqlab).setOnClickListener(this);
+
+        //mim mati
+        findViewById(R.id.idzharsyf).setOnClickListener(this);
+        findViewById(R.id.ikhfasy).setOnClickListener(this);
+        findViewById(R.id.idghammsln).setOnClickListener(this);
+
+        //mad
+        findViewById(R.id.madtabii).setOnClickListener(this);
+        findViewById(R.id.madbadal).setOnClickListener(this);
+        findViewById(R.id.madiwadh).setOnClickListener(this);
+        findViewById(R.id.madshilah).setOnClickListener(this);
+        findViewById(R.id.mdsilkubbra).setOnClickListener(this);
+        findViewById(R.id.madliyn).setOnClickListener(this);
+        findViewById(R.id.md_arid_lskn).setOnClickListener(this);
+        findViewById(R.id.mdlazim).setOnClickListener(this);
+        findViewById(R.id.md_jaiz).setOnClickListener(this);
+        findViewById(R.id.md_wajib).setOnClickListener(this);
+        findViewById(R.id.qalqalahsughra).setOnClickListener(this);
+        findViewById(R.id.qalqalahkubra).setOnClickListener(this);
 
     }
 
@@ -158,6 +146,4 @@ public class TajwidActivity extends AppCompatActivity implements View.OnClickLis
 
         }
     }
-
-
 }

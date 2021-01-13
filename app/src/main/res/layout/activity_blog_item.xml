@@ -28,8 +28,7 @@
                 android:textSize="16sp"
                 android:text="@string/adab_membaca_al_quran"
                 android:layout_margin="5dp"
-                android:fontFamily="@font/poppins_medium"
-                android:textColor="#000"
+                style="@style/TextMenuSet"
                 android:layout_toEndOf="@id/imageblog"/>
 
         </RelativeLayout>

@@ -2,7 +2,6 @@ package com.rohisnatardev.ichwan.appprojectplanb.cnbfragment;
 import android.content.Intent;
 import android.os.Bundle;
 
-import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
@@ -20,7 +19,6 @@ import com.rohisnatardev.ichwan.appprojectplanb.BlogMain.BlogQuran.QuranModel;
 import com.rohisnatardev.ichwan.appprojectplanb.Dzikir.doaharian.DoaHarianActivity;
 import com.rohisnatardev.ichwan.appprojectplanb.Dzikir.dzikirpagi.DzikirPagiActivity;
 import com.rohisnatardev.ichwan.appprojectplanb.Dzikir.dzikirpetang.DzikirPetangActivity;
-import com.rohisnatardev.ichwan.appprojectplanb.Monitor.MonitorActivity;
 import com.rohisnatardev.ichwan.appprojectplanb.Murottal.MurattalActivity;
 import com.rohisnatardev.ichwan.appprojectplanb.Quran.CariSurahActivity;
 import com.rohisnatardev.ichwan.appprojectplanb.Quran.SajdahActivity;
@@ -28,8 +26,6 @@ import com.rohisnatardev.ichwan.appprojectplanb.Quran.WaqafActivity;
 import com.rohisnatardev.ichwan.appprojectplanb.R;
 
 import java.util.ArrayList;
-
-import hotchemi.android.rate.AppRate;
 
 public class QuranFragment extends Fragment implements View.OnClickListener {
 
@@ -70,24 +66,14 @@ public class QuranFragment extends Fragment implements View.OnClickListener {
         quranModel.setBlogQuran("extra_quran");
 
 
-        CardView cvCari = view.findViewById(R.id.cari_surah);
-        cvCari.setOnClickListener(this);
-        CardView cvSajdah = view.findViewById(R.id.ayatsajdah);
-        cvSajdah.setOnClickListener(this);
-        CardView cvWaqaf = view.findViewById(R.id.waqaf);
-        cvWaqaf.setOnClickListener(this);
-        CardView cvMurotal = view.findViewById(R.id.murotal);
-        cvMurotal.setOnClickListener(this);
+        view.findViewById(R.id.cari_surah).setOnClickListener(this);
+        view.findViewById(R.id.ayatsajdah).setOnClickListener(this);
+        view.findViewById(R.id.waqaf).setOnClickListener(this);
+        view.findViewById(R.id.murotal).setOnClickListener(this);
 
-        CardView cvDzikirpagi = view.findViewById(R.id.btn_dzikirpagi);
-        cvDzikirpagi.setOnClickListener(this);
-        CardView cvDzikirpetang = view.findViewById(R.id.btn_dzikirpetang);
-        cvDzikirpetang.setOnClickListener(this);
-        CardView cvDoa = view.findViewById(R.id.btn_doa);
-        cvDoa.setOnClickListener(this);
-
-        CardView cvMonitor = view.findViewById(R.id.tx_monitor);
-        cvMonitor.setOnClickListener(this);
+        view.findViewById(R.id.btn_dzikirpagi).setOnClickListener(this);
+        view.findViewById(R.id.btn_dzikirpetang).setOnClickListener(this);
+        view.findViewById(R.id.btn_doa).setOnClickListener(this);
 
 
         return view;
@@ -136,9 +122,6 @@ public class QuranFragment extends Fragment implements View.OnClickListener {
                 Intent doa = new Intent(getActivity(), DoaHarianActivity.class);
                 startActivity(doa);
                 break;
-            case R.id.tx_monitor:
-                Intent monitor = new Intent(getActivity(), MonitorActivity.class);
-                startActivity(monitor);
         }
     }
 

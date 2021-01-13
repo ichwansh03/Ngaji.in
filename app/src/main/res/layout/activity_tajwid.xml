@@ -20,11 +20,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="45dp"
-            android:text="@string/bagian_tajwid"
+            android:text="@string/tajwid"
             android:textColor="#FFFFFF"
             android:layout_marginStart="10dp"
             android:textSize="24sp"
-            android:fontFamily="@font/poppins_medium"
+            android:fontFamily="@font/poppins_semibold"
             android:gravity="center"/>
 
         <include layout="@layout/tajwid_nunsukun_item"

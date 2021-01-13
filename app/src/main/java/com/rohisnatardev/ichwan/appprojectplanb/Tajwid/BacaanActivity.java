@@ -1,7 +1,6 @@
 package com.rohisnatardev.ichwan.appprojectplanb.Tajwid;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -32,38 +31,31 @@ public class BacaanActivity extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bacaan);
 
-        CardView hukumLam = findViewById(R.id.hukumlam);
-        hukumLam.setOnClickListener(this);
-        CardView hukumLamTarqiq = findViewById(R.id.hukumlamtarqiq);
-        hukumLamTarqiq.setOnClickListener(this);
-        CardView hukumRa = findViewById(R.id.hukumra);
-        hukumRa.setOnClickListener(this);
-        CardView hukumRaTarqiq = findViewById(R.id.hukumratarqiq);
-        hukumRaTarqiq.setOnClickListener(this);
-        CardView mutamasilain = findViewById(R.id.mutamasilan);
-        mutamasilain.setOnClickListener(this);
-        CardView mutajanisain = findViewById(R.id.mutajanisan);
-        mutajanisain.setOnClickListener(this);
-        CardView mutaqaribain = findViewById(R.id.mutaqariban);
-        mutaqaribain.setOnClickListener(this);
-        CardView imalah = findViewById(R.id.imalah);
-        imalah.setOnClickListener(this);
-        CardView naql = findViewById(R.id.naql);
-        naql.setOnClickListener(this);
-        CardView saktah = findViewById(R.id.saktah);
-        saktah.setOnClickListener(this);
-        CardView isymam = findViewById(R.id.isymam);
-        isymam.setOnClickListener(this);
-        CardView tashil = findViewById(R.id.tashil);
-        tashil.setOnClickListener(this);
-        CardView syamsi = findViewById(R.id.syamsiah);
-        syamsi.setOnClickListener(this);
-        CardView qomar = findViewById(R.id.qomariah);
-        qomar.setOnClickListener(this);
-        CardView hwasal = findViewById(R.id.hamzahwasal);
-        hwasal.setOnClickListener(this);
-        CardView hqathi = findViewById(R.id.hamzahqathi);
-        hqathi.setOnClickListener(this);
+        //lam dan ra
+        findViewById(R.id.hukumlam).setOnClickListener(this);
+        findViewById(R.id.hukumlamtarqiq).setOnClickListener(this);
+        findViewById(R.id.hukumra).setOnClickListener(this);
+        findViewById(R.id.hukumratarqiq).setOnClickListener(this);
+
+        //idgham
+        findViewById(R.id.mutamasilan).setOnClickListener(this);
+        findViewById(R.id.mutajanisan).setOnClickListener(this);
+        findViewById(R.id.mutaqariban).setOnClickListener(this);
+
+        //bacaan khusus
+        findViewById(R.id.imalah).setOnClickListener(this);
+        findViewById(R.id.naql).setOnClickListener(this);
+        findViewById(R.id.saktah).setOnClickListener(this);
+        findViewById(R.id.isymam).setOnClickListener(this);
+        findViewById(R.id.tashil).setOnClickListener(this);
+
+        //alif lam
+        findViewById(R.id.syamsiah).setOnClickListener(this);
+        findViewById(R.id.qomariah).setOnClickListener(this);
+
+        //hamzah
+        findViewById(R.id.hamzahwasal).setOnClickListener(this);
+        findViewById(R.id.hamzahqathi).setOnClickListener(this);
 
     }
 

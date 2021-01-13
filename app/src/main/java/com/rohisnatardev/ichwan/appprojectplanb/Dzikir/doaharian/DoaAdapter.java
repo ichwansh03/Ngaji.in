@@ -3,15 +3,16 @@ package com.rohisnatardev.ichwan.appprojectplanb.Dzikir.doaharian;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.rohisnatardev.ichwan.appprojectplanb.R;
 
 import java.util.List;
+
 
 public class DoaAdapter extends RecyclerView.Adapter<DoaAdapter.DoaHolder> {
 
@@ -50,7 +51,7 @@ public class DoaAdapter extends RecyclerView.Adapter<DoaAdapter.DoaHolder> {
 
         private static final String TAG = "DoaHolder";
         TextView namadoa, lafazdoa, latindoa, artidoa;
-        ConstraintLayout expandoa;
+        LinearLayout expandoa;
 
         public DoaHolder(@NonNull View itemView) {
             super(itemView);

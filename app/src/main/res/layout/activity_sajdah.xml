@@ -4,30 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#55D0E3"
+    android:background="@color/colorPrimary"
     tools:context=".Quran.SajdahActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-
-    <TextView
-        android:id="@+id/title_sajdahayat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/ayat_ayat_sajdah"
-        android:textSize="20sp"
-        android:textColor="#FFFFFF"
-        android:fontFamily="@font/poppins_semibold"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="50dp" />
-    <View
-        android:id="@+id/view_underline"
-        android:layout_width="230dp"
-        android:layout_height="3dp"
-        android:background="@drawable/underline_title"
-        android:layout_marginStart="5dp" />
 
     <me.biubiubiu.justifytext.library.JustifyTextView
         android:layout_width="match_parent"

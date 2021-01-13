@@ -10,7 +10,6 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -18,12 +17,12 @@ import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 
+import com.rohisnatardev.ichwan.appprojectplanb.Setting.KonsultasiActivity;
 import com.rohisnatardev.ichwan.appprojectplanb.Setting.PolicyActivity;
 import com.rohisnatardev.ichwan.appprojectplanb.Setting.TentangAppActivity;
 import com.rohisnatardev.ichwan.appprojectplanb.R;
 public class SettingFragment extends Fragment implements View.OnClickListener {
 
-    TextView txabout, txshare, txprivacy, txrates, txpembaruan;
     private AdView mAdView;
 
     public SettingFragment() {
@@ -36,16 +35,12 @@ public class SettingFragment extends Fragment implements View.OnClickListener {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_setting, container, false);
 
-        txabout = view.findViewById(R.id.tx_aboutapp);
-        txabout.setOnClickListener(this);
-        txshare = view.findViewById(R.id.tx_share);
-        txshare.setOnClickListener(this);
-        txprivacy = view.findViewById(R.id.tx_policy);
-        txprivacy.setOnClickListener(this);
-        txrates = view.findViewById(R.id.tx_rates);
-        txrates.setOnClickListener(this);
-        txpembaruan = view.findViewById(R.id.tx_pembaruan);
-        txpembaruan.setOnClickListener(this);
+        view.findViewById(R.id.tx_aboutapp).setOnClickListener(this);
+        view.findViewById(R.id.tx_share).setOnClickListener(this);
+        view.findViewById(R.id.tx_policy).setOnClickListener(this);
+        view.findViewById(R.id.tx_rates).setOnClickListener(this);
+        view.findViewById(R.id.tx_pembaruan).setOnClickListener(this);
+        view.findViewById(R.id.tx_consult).setOnClickListener(this);
 
         MobileAds.initialize(getContext(), new OnInitializationCompleteListener() {
             @Override
@@ -73,6 +68,10 @@ public class SettingFragment extends Fragment implements View.OnClickListener {
             case R.id.tx_policy:
                 Intent policy = new Intent(getActivity(), PolicyActivity.class);
                 startActivity(policy);
+                break;
+            case R.id.tx_consult:
+                Intent konsul = new Intent(getActivity(), KonsultasiActivity.class);
+                startActivity(konsul);
                 break;
             case R.id.tx_rates:
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.rohisnatardev.ichwan.appprojectplanb")));

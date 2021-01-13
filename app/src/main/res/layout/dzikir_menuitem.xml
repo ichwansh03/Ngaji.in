@@ -14,10 +14,9 @@
             android:id="@+id/btn_dzikirpagi"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            app:cardCornerRadius="12dp"
             android:foreground="?attr/selectableItemBackground"
             android:focusable="true"
-            app:cardElevation="8dp">
+            style="@style/CardElevations">
 
             <ImageView
                 android:layout_width="35dp"
@@ -30,7 +29,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/dzikir_pagi"
-            android:textColor="#000"
             android:textAlignment="center"
             android:layout_gravity="center_horizontal"
             android:fontFamily="@font/poppins_medium" />
@@ -40,16 +38,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginStart="20dp">
+        android:layout_marginStart="15dp">
         <androidx.cardview.widget.CardView
             android:id="@+id/btn_dzikirpetang"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            app:cardCornerRadius="12dp"
             android:foreground="?attr/selectableItemBackground"
             android:focusable="true"
             android:layout_gravity="center_horizontal"
-            app:cardElevation="8dp">
+            style="@style/CardElevations">
 
             <ImageView
                 android:layout_width="35dp"
@@ -62,7 +59,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/dzikir_petang"
-            android:textColor="#000"
             android:layout_gravity="center_horizontal"
             android:textAlignment="center"
             android:fontFamily="@font/poppins_medium" />
@@ -72,16 +68,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginStart="20dp">
+        android:layout_marginStart="15dp">
         <androidx.cardview.widget.CardView
             android:id="@+id/btn_doa"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            app:cardCornerRadius="12dp"
+            style="@style/CardElevations"
             android:foreground="?attr/selectableItemBackground"
             android:focusable="true"
-            android:layout_gravity="center_horizontal"
-            app:cardElevation="8dp">
+            android:layout_gravity="center_horizontal">
 
             <ImageView
                 android:layout_width="35dp"
@@ -94,7 +89,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/doa_harian"
-            android:textColor="#000"
             android:textAlignment="center"
             android:layout_gravity="center_horizontal"
             android:fontFamily="@font/poppins_medium" />

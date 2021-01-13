@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Setting.KonsultasiActivity">
+
+    <TextView
+        android:id="@+id/ke"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ke"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp"
+        android:textSize="17sp"
+        android:fontFamily="@font/poppins_medium"/>
+
+    <TextView
+        android:id="@+id/email_receiver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/email_app"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:textSize="16.5sp"
+        android:layout_below="@id/ke"
+        android:fontFamily="@font/poppins_medium"
+        android:background="@drawable/rectangle_edittext"
+        android:padding="8dp"/>
+
+    <TextView
+        android:id="@+id/subjek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/subjek"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp"
+        android:textSize="17sp"
+        android:layout_below="@id/email_receiver"
+        android:fontFamily="@font/poppins_medium"/>
+
+    <EditText
+        android:id="@+id/subject_mail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/masukkan_subjek"
+        android:inputType="textEmailSubject"
+        android:layout_marginStart="15dp"
+        android:layout_below="@id/subjek"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="@font/poppins_medium"
+        android:background="@drawable/rectangle_edittext"
+        android:padding="8dp"/>
+
+    <TextView
+        android:id="@+id/pesan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pesan"
+        android:textSize="17sp"
+        android:layout_below="@id/subject_mail"
+        android:fontFamily="@font/poppins_medium"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp"/>
+
+    <EditText
+        android:id="@+id/edit_text_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:hint="@string/masukkan_pesan"
+        android:fontFamily="@font/poppins_medium"
+        android:layout_marginStart="15dp"
+        android:layout_below="@id/pesan"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:padding="10dp"
+        android:background="@drawable/rectangle_edittext" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        app:cardCornerRadius="12dp"
+        android:layout_below="@id/edit_text_message"
+        app:cardElevation="15dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:focusable="true"
+        app:cardBackgroundColor="@color/colorPrimary">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/submit"
+            android:layout_margin="8dp"
+            android:textSize="17sp"
+            android:textColor="#fff"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_gravity="center_horizontal"/>
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-7454540885326938/6274037844">
+    </com.google.android.gms.ads.AdView>
+
+</RelativeLayout>

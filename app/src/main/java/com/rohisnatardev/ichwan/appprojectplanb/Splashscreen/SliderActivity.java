@@ -1,8 +1,11 @@
 package com.rohisnatardev.ichwan.appprojectplanb.Splashscreen;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 
 import com.rohisnatardev.ichwan.appprojectplanb.R;
@@ -25,7 +28,6 @@ public class SliderActivity extends AppCompatActivity {
                 }finally{
                     Intent intent = new Intent(SliderActivity.this, UtamaActivity.class);
                     startActivity(intent);
-
                 }
             }
         };

@@ -16,6 +16,13 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.facebook.shimmer.ShimmerFrameLayout;
+import com.rohisnatardev.ichwan.appprojectplanb.Tahsin.AlHalqActivity;
+import com.rohisnatardev.ichwan.appprojectplanb.Tahsin.AlJaufActivity;
+import com.rohisnatardev.ichwan.appprojectplanb.Tahsin.AlKhaisActivity;
+import com.rohisnatardev.ichwan.appprojectplanb.Tahsin.AlLisanActivity;
+import com.rohisnatardev.ichwan.appprojectplanb.Tahsin.AsSyafActivity;
+import com.rohisnatardev.ichwan.appprojectplanb.Tahsin.SifatLawan.SifatJamak;
+import com.rohisnatardev.ichwan.appprojectplanb.Tahsin.SifatNonLawan.SifatTunggal;
 import com.rohisnatardev.ichwan.appprojectplanb.Tajwid.BacaanActivity;
 import com.rohisnatardev.ichwan.appprojectplanb.BlogMain.BlogTajwid.BlogTajwidAdapter;
 import com.rohisnatardev.ichwan.appprojectplanb.BlogMain.BlogTajwid.BlogTajwidItem;
@@ -69,6 +76,14 @@ public class TajwidFragment extends Fragment implements View.OnClickListener {
         tajwidDasar.setOnClickListener(this);
         CardView tajwidLanjut = view.findViewById(R.id.btn_tajwid_lanjutan);
         tajwidLanjut.setOnClickListener(this);
+        view.findViewById(R.id.alhalq).setOnClickListener(this);
+        view.findViewById(R.id.allisan).setOnClickListener(this);
+        view.findViewById(R.id.assyafatain).setOnClickListener(this);
+        view.findViewById(R.id.aljauf).setOnClickListener(this);
+        view.findViewById(R.id.alkhaisyum).setOnClickListener(this);
+
+        view.findViewById(R.id.sifatjamak).setOnClickListener(this);
+        view.findViewById(R.id.sifattunggal).setOnClickListener(this);
 
         return view;
     }
@@ -92,6 +107,33 @@ public class TajwidFragment extends Fragment implements View.OnClickListener {
             case R.id.btn_tajwid_lanjutan:
                 Intent lanjut = new Intent(getActivity(), BacaanActivity.class);
                 startActivity(lanjut);
+            case R.id.alhalq:
+                Intent alhalq = new Intent(getActivity(), AlHalqActivity.class);
+                startActivity(alhalq);
+                break;
+            case R.id.allisan:
+                Intent allisan = new Intent(getActivity(), AlLisanActivity.class);
+                startActivity(allisan);
+                break;
+            case R.id.assyafatain:
+                Intent assyifa = new Intent(getActivity(), AsSyafActivity.class);
+                startActivity(assyifa);
+                break;
+            case R.id.aljauf:
+                Intent aljauf = new Intent(getActivity(), AlJaufActivity.class);
+                startActivity(aljauf);
+                break;
+            case R.id.alkhaisyum:
+                Intent alkhais = new Intent(getActivity(), AlKhaisActivity.class);
+                startActivity(alkhais);
+                break;
+            case R.id.sifatjamak:
+                Intent jamak = new Intent(getActivity(), SifatJamak.class);
+                startActivity(jamak);
+                break;
+            case R.id.sifattunggal:
+                Intent tunggal = new Intent(getActivity(), SifatTunggal.class);
+                startActivity(tunggal);
         }
     }
 }

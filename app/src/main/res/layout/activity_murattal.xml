@@ -21,18 +21,6 @@
         </com.google.android.gms.ads.AdView>
 
 
-        <TextView
-            android:id="@+id/title_murotal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/adView"
-            android:layout_marginTop="20dp"
-            android:text="@string/murotal_al_fatihah"
-            android:textColor="#FFFFFF"
-            android:textSize="24sp"
-            android:fontFamily="@font/poppins_semibold"
-            android:gravity="center"
-            android:background="@drawable/bg_title"/>
         <me.biubiubiu.justifytext.library.JustifyTextView
             android:id="@+id/desc_murotal"
             android:layout_width="match_parent"
@@ -41,8 +29,9 @@
             android:text="@string/desc_murotal"
             android:textColor="#FFFFFF"
             android:textSize="17sp"
-            android:layout_margin="5dp"
-            android:layout_below="@id/title_murotal"/>
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="5dp"
+            android:layout_below="@id/adView"/>
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_murotal"
             android:layout_width="match_parent"

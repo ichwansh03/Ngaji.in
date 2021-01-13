@@ -11,6 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <include layout="@layout/ellipse_background"/>
+
         <TextView
             android:id="@+id/title_bookmark"
             android:layout_width="wrap_content"
@@ -18,7 +20,7 @@
             android:layout_marginTop="45dp"
             android:text="@string/tajwid_lanjutan"
             android:textColor="#FFFFFF"
-            android:fontFamily="@font/poppins_medium"
+            android:fontFamily="@font/poppins_semibold"
             android:textSize="24sp"
             android:layout_marginStart="10dp"/>
         <include layout="@layout/activity_bacaan_lamra_item"
@@ -49,6 +51,7 @@
             android:id="@+id/title_hamzah"
             android:text="@string/bacaan_hamzah"
             android:layout_below="@id/aliflam"
+            android:fontFamily="@font/poppins_medium"
             android:textSize="20sp"
             android:textColor="@android:color/white"
             android:layout_marginTop="25dp"
@@ -92,6 +95,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:fontFamily="@font/poppins_medium"
                     android:text="@string/hamzah_wasal"
                     android:textAlignment="center"
                     android:textColor="#FFFFFF" />
@@ -122,6 +126,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/hamzah_qath_i"
                     android:layout_gravity="center"
+                    android:fontFamily="@font/poppins_medium"
                     android:textColor="#FFFFFF"
                     android:textAlignment="center"/>
             </LinearLayout>

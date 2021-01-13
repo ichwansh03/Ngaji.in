@@ -4,22 +4,51 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".JadwalSholatActivity">
+    tools:context=".JadwalSholat.JadwalSholatActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/lokasi_jadwal"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_setlokasi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/jadwal_sholat_untuk"
-            android:textSize="19sp"
-            android:textColor="@color/colorPrimary"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            app:cardCornerRadius="10dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:focusable="true"
+            app:cardElevation="5dp">
+
+        <TextView
+            android:id="@+id/atur_lokasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lok"
+            android:textSize="16sp"
+            android:layout_margin="5dp"
             android:fontFamily="@font/poppins_medium"
-            android:layout_margin="10dp"/>
+            app:drawableStartCompat="@drawable/ic_baseline_place_24" />
+        </androidx.cardview.widget.CardView>
+        <ImageView
+            android:id="@+id/compas_qibla"
+            android:layout_width="320dp"
+            android:layout_height="320dp"
+            android:src="@drawable/compass"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="20dp"/>
+
+        <TextView
+            android:id="@+id/compas_degre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_12_we"
+            android:textSize="22sp"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_gravity="center_horizontal"/>
+
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -46,7 +75,6 @@
                     android:textSize="16sp"
                     android:layout_toEndOf="@id/img_shubuh"
                     android:layout_centerVertical="true"
-                    android:textColor="@color/colorPrimary"
                     android:fontFamily="@font/poppins_medium"
                     android:layout_margin="5dp"/>
                 <TextView
@@ -56,10 +84,8 @@
                     android:text="@string/_04_05"
                     android:textSize="16sp"
                     android:padding="8dp"
-                    android:background="@drawable/rectangle_time"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
-                    android:textColor="#fff"
                     android:fontFamily="@font/poppins_medium"
                     android:layout_margin="5dp"/>
             </RelativeLayout>
@@ -90,7 +116,6 @@
                     android:textSize="16sp"
                     android:layout_toEndOf="@id/img_dzuhur"
                     android:layout_centerVertical="true"
-                    android:textColor="@color/colorPrimary"
                     android:fontFamily="@font/poppins_medium"
                     android:layout_margin="5dp"/>
                 <TextView
@@ -100,10 +125,8 @@
                     android:text="@string/_04_05"
                     android:textSize="16sp"
                     android:padding="8dp"
-                    android:background="@drawable/rectangle_time"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
-                    android:textColor="#fff"
                     android:fontFamily="@font/poppins_medium"
                     android:layout_margin="5dp"/>
             </RelativeLayout>
@@ -134,7 +157,6 @@
                     android:textSize="16sp"
                     android:layout_toEndOf="@id/img_ashar"
                     android:layout_centerVertical="true"
-                    android:textColor="@color/colorPrimary"
                     android:fontFamily="@font/poppins_medium"
                     android:layout_margin="5dp"/>
                 <TextView
@@ -144,10 +166,8 @@
                     android:text="@string/_04_05"
                     android:textSize="16sp"
                     android:padding="8dp"
-                    android:background="@drawable/rectangle_time"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
-                    android:textColor="#fff"
                     android:fontFamily="@font/poppins_medium"
                     android:layout_margin="5dp"/>
             </RelativeLayout>
@@ -178,7 +198,6 @@
                     android:textSize="16sp"
                     android:layout_toEndOf="@id/img_maghrib"
                     android:layout_centerVertical="true"
-                    android:textColor="@color/colorPrimary"
                     android:fontFamily="@font/poppins_medium"
                     android:layout_margin="5dp"/>
                 <TextView
@@ -188,10 +207,8 @@
                     android:text="@string/_04_05"
                     android:textSize="16sp"
                     android:padding="8dp"
-                    android:background="@drawable/rectangle_time"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
-                    android:textColor="#fff"
                     android:fontFamily="@font/poppins_medium"
                     android:layout_margin="5dp"/>
             </RelativeLayout>
@@ -222,7 +239,6 @@
                     android:textSize="16sp"
                     android:layout_toEndOf="@id/img_isya"
                     android:layout_centerVertical="true"
-                    android:textColor="@color/colorPrimary"
                     android:fontFamily="@font/poppins_medium"
                     android:layout_margin="5dp"/>
                 <TextView
@@ -233,20 +249,11 @@
                     android:textSize="16sp"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
-                    android:textColor="#fff"
                     android:padding="8dp"
-                    android:background="@drawable/rectangle_time"
                     android:fontFamily="@font/poppins_medium"
                     android:layout_margin="5dp"/>
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
-        <ProgressBar
-            android:id="@+id/barbar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:visibility="visible"
-            style="@style/Widget.AppCompat.ProgressBar"/>
 
     </LinearLayout>
 </ScrollView>

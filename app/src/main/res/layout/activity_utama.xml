@@ -9,7 +9,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cv_jadwal_sholat"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="wrap_content"
         app:cardCornerRadius="15dp"
         android:layout_margin="15dp"
         app:cardElevation="5dp"
@@ -17,31 +17,21 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <View
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginStart="-30dp"
-                android:background="@drawable/ellipse_bg"/>
-            <View
-                android:layout_width="60dp"
-                android:layout_height="60dp"
                 android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_margin="8dp"
+                android:layout_marginTop="-30dp"
+                android:layout_marginEnd="-10dp"
                 android:background="@drawable/ellipse_bg"/>
-        <TextView
-            android:id="@+id/lokasi"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/lampung_selatan"
-            android:textSize="16sp"
-            android:textColor="#FFF"
-            android:fontFamily="@font/poppins_medium"
-            app:drawableStartCompat="@drawable/ic_baseline_place_24"
-            android:layout_margin="5dp"/>
+
+            <View
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="-20dp"
+                android:background="@drawable/ellipse_bg"/>
 
            <TextView
                android:id="@+id/lihat_jadwal"
@@ -49,60 +39,24 @@
                android:layout_height="wrap_content"
                android:text="@string/lihat_jadwal"
                android:textColor="@color/colorPrimary"
-               android:layout_alignParentBottom="true"
                android:padding="5dp"
                android:drawablePadding="3dp"
                android:background="@drawable/rectangle_intent"
                android:fontFamily="@font/poppins_medium"
                app:drawableStartCompat="@drawable/ic_baseline_calendar_today_24" />
 
-            <com.airbnb.lottie.LottieAnimationView
-                android:id="@+id/lottie"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_alignParentEnd="true"
+            <TextView
+                android:id="@+id/greetx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="@string/greeting_quran"
+                android:textSize="14sp"
+                android:textAlignment="center"
+                android:layout_below="@id/lihat_jadwal"
                 android:layout_margin="5dp"
-                app:lottie_loop="true"
-                app:lottie_autoPlay="true"/>
-            <TextView
-                android:id="@+id/tanggal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/senin_13_oktober_2020"
-                android:textColor="#fff"
-                android:fontFamily="@font/poppins_medium"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentEnd="true"
-                android:layout_margin="5dp"/>
-            <TextView
-                android:id="@+id/suhu"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/_30_c"
-                android:textSize="18sp"
-                android:fontFamily="@font/poppins_medium"
-                android:textColor="#fff"
-                android:layout_below="@id/lokasi"
-                android:layout_marginStart="5dp"/>
-            <TextView
-                android:id="@+id/jadwal_sholat"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/shubuh"
-                android:textSize="18sp"
-                android:textColor="#fff"
-                android:layout_centerHorizontal="true"
-                android:fontFamily="@font/poppins_medium"
-                android:layout_above="@id/waktu_sholat"/>
-            <TextView
-                android:id="@+id/waktu_sholat"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/_04_05"
-                android:textSize="19sp"
-                android:textColor="#fff"
-                android:fontFamily="@font/poppins_semibold"
-                android:layout_centerInParent="true"/>
+                android:fontFamily="@font/poppins_medium"/>
+
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
@@ -111,19 +65,28 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/cv_jadwal_sholat"
-        android:layout_above="@+id/chipbar"/>
-    <com.ismaeldivita.chipnavigation.ChipNavigationBar
-        android:id="@+id/chipbar"
+        android:layout_marginBottom="80dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_chipbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:elevation="10dp"
-        android:background="#F8F8F8"
-        android:padding="5dp"
-        app:cnb_addBottomInset="true"
-        app:cnb_addLeftInset="true"
-        app:cnb_addRightInset="true"
-        app:cnb_orientationMode="horizontal"
-        app:cnb_menuResource="@menu/menu"/>
+        android:layout_margin="15dp"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="8dp"
+        android:layout_alignParentBottom="true">
+        <com.ismaeldivita.chipnavigation.ChipNavigationBar
+            android:id="@+id/chipbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="10dp"
+            android:background="#F8F8F8"
+            android:padding="5dp"
+            app:cnb_addBottomInset="true"
+            app:cnb_addLeftInset="true"
+            app:cnb_addRightInset="true"
+            app:cnb_orientationMode="horizontal"
+            app:cnb_menuResource="@menu/menu"/>
+    </androidx.cardview.widget.CardView>
 
 </RelativeLayout>
