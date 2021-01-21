@@ -37,14 +37,12 @@
             android:layout_below="@id/textNextBtn">
 
     <me.biubiubiu.justifytext.library.JustifyTextView
-        android:id="@+id/desc_madlazim"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/TextSet"
         android:text="@string/mad_lazim_article" />
 
         <TextView
-            android:id="@+id/image_madlazim1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/madlazim1"
@@ -53,7 +51,6 @@
             android:textColor="#000000"
             android:layout_gravity="center_horizontal"/>
     <TextView
-        android:id="@+id/image_madlazim"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/madlazim2"
@@ -70,7 +67,6 @@
         android:background="@android:color/transparent"
         android:layout_gravity="center_horizontal"/>
         <me.biubiubiu.justifytext.library.JustifyTextView
-            android:id="@+id/desc_madlazim2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/mad_lazim_mukhaffaf_article"
@@ -78,7 +74,6 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/madlazim_arab1"
             android:text="@string/madlazim3"
             android:textColor="#000000"
             android:textSize="30sp"
@@ -93,7 +88,6 @@
             android:background="@android:color/transparent"
             android:layout_gravity="center_horizontal"/>
         <me.biubiubiu.justifytext.library.JustifyTextView
-            android:id="@+id/desc_madlazim3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/mad_lazim_mutsaqqal2_article"
@@ -101,7 +95,6 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/madlazim_arab2"
             android:text="@string/madlazim4"
             android:textSize="30sp"
             android:fontFamily="@font/me_quran"
@@ -110,7 +103,6 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/madlazim5"
             android:text="@string/madlazim5"
             android:textColor="#000000"
             android:textSize="30sp"
@@ -124,7 +116,6 @@
             android:background="@android:color/transparent"
             android:layout_gravity="center_horizontal"/>
         <me.biubiubiu.justifytext.library.JustifyTextView
-            android:id="@+id/desc_madlazim4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/mad_lazim_mukhaffaf2_article"
@@ -132,7 +123,6 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/madlazim_arab4"
             android:text="@string/madlazim6"
             android:textSize="30sp"
             android:textColor="#000000"

@@ -38,7 +38,6 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/imgHalq"
             android:src="@drawable/halqi"
             android:padding="10dp"
             android:layout_gravity="center_horizontal"/>
@@ -49,7 +48,6 @@
         style="@style/TextSet"/>
 
         <TextView
-            android:id="@+id/txtitlehijaiyah"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/huruf_huruf_al_halqi"

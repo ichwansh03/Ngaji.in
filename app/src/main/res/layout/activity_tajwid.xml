@@ -9,7 +9,6 @@
     tools:context=".Tajwid.TajwidActivity">
 
     <RelativeLayout
-        android:id="@+id/layouttajwid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -89,7 +88,6 @@
                         android:textColor="#23C1E3"/>
                 </androidx.cardview.widget.CardView>
                 <TextView
-                    android:id="@+id/txQalqalahshugra"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/qalqalah_sughra"
@@ -118,7 +116,6 @@
                         android:textColor="#23C1E3"/>
                 </androidx.cardview.widget.CardView>
                 <TextView
-                    android:id="@+id/txQalqalahkubra"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/qalqalah_kubra"

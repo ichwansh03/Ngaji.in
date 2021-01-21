@@ -32,7 +32,6 @@
         <me.biubiubiu.justifytext.library.JustifyTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/desc_qathi"
             android:text="@string/qathi_desc"
             style="@style/TextSet"/>
         <TextView

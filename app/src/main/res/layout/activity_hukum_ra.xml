@@ -35,7 +35,6 @@
             android:layout_below="@id/textNextBtn"
             android:background="@drawable/rectangle_bg">
         <me.biubiubiu.justifytext.library.JustifyTextView
-            android:id="@+id/desc1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/hukum_ra_desc"
@@ -60,7 +59,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/hukum_ra_desc2"
-            android:id="@+id/desc2"
             style="@style/TextSet"/>
         <TextView
             android:layout_width="wrap_content"
@@ -82,7 +80,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/hukum_ra_desc3"
-            android:id="@+id/desc3"
             style="@style/TextSet"/>
         <TextView
             android:id="@+id/hukumra_image3"
@@ -104,8 +101,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/hukum_ra_desc4"
-            style="@style/TextSet"
-            android:id="@+id/desc4"/>
+            style="@style/TextSet" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -125,7 +121,6 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/desc5"
             android:text="@string/hukum_ra_desc5"
             style="@style/TextSet"/>
         <TextView
@@ -147,7 +142,6 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/desc6"
             android:text="@string/hukum_ra_desc6"
             style="@style/TextSet"/>
         <TextView

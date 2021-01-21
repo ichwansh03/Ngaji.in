@@ -38,7 +38,6 @@
     <me.biubiubiu.justifytext.library.JustifyTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/desc_isymam"
         android:text="@string/isymam_desc"
         style="@style/TextSet"/>
 

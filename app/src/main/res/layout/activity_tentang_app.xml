@@ -26,7 +26,6 @@
             android:layout_gravity="center_horizontal"/>
 
     <TextView
-        android:id="@+id/tl_about1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tl_about1"
@@ -37,7 +36,6 @@
         android:layout_marginStart="5dp"/>
 
         <me.biubiubiu.justifytext.library.JustifyTextView
-            android:id="@+id/desc_about1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/desc_about1"
@@ -46,7 +44,6 @@
             android:layout_marginStart="5dp"/>
 
         <TextView
-            android:id="@+id/tl_about2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/tl_about2"
@@ -56,7 +53,6 @@
             android:layout_marginStart="5dp" />
 
         <me.biubiubiu.justifytext.library.JustifyTextView
-            android:id="@+id/desc_about2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/desc_about2"
@@ -65,7 +61,6 @@
             android:layout_marginStart="5dp"/>
 
         <TextView
-            android:id="@+id/tl_about3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/tl_about3"
@@ -75,7 +70,6 @@
             android:layout_marginStart="5dp" />
 
         <me.biubiubiu.justifytext.library.JustifyTextView
-            android:id="@+id/desc_about3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/desc_about3"

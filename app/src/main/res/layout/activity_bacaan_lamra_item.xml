@@ -54,7 +54,6 @@
                         android:textColor="#23C1E3"/>
                 </androidx.cardview.widget.CardView>
                 <TextView
-                    android:id="@+id/txHukumlam"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/lam_tafkhim"
@@ -85,7 +84,6 @@
                         android:textColor="#23C1E3"/>
                 </androidx.cardview.widget.CardView>
                 <TextView
-                    android:id="@+id/txHukumlamtarqiq"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/lam_tarqiq"
@@ -117,7 +115,6 @@
                         android:textColor="#23C1E3"/>
                 </androidx.cardview.widget.CardView>
                 <TextView
-                    android:id="@+id/txHukumra"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/ra_tafkhim"
@@ -148,7 +145,6 @@
                         android:textColor="#23C1E3"/>
                 </androidx.cardview.widget.CardView>
                 <TextView
-                    android:id="@+id/txHukumratarqiq"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/ra_tarqiq"

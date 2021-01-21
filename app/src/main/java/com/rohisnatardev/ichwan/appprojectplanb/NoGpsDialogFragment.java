@@ -1,4 +1,4 @@
-package com.rohisnatardev.ichwan.appprojectplanb.JadwalSholat;
+package com.rohisnatardev.ichwan.appprojectplanb;
 
 import android.os.Bundle;
 

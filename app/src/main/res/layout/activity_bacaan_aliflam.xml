@@ -49,7 +49,6 @@
                 android:textColor="#23C1E3"/>
         </androidx.cardview.widget.CardView>
         <TextView
-            android:id="@+id/txSyamsiyah"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/as_syamsiyah"
@@ -79,7 +78,6 @@
                 android:textColor="#23C1E3"/>
         </androidx.cardview.widget.CardView>
         <TextView
-            android:id="@+id/txQomariah"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/al_qomariyah"

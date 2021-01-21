@@ -38,7 +38,6 @@
             android:layout_below="@id/textNextBtn">
 
     <TextView
-        android:id="@+id/desc_madwajib"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/mad_wjb_mts_article"

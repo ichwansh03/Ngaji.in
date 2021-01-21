@@ -35,7 +35,6 @@
             android:layout_marginEnd="15dp"
             android:layout_below="@id/textNextBtn">
     <TextView
-        android:id="@+id/desc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/idgham_mutamatsilaan_desc"

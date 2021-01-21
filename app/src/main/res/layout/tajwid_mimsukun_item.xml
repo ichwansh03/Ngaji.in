@@ -51,7 +51,6 @@
                         android:textColor="#23C1E3"/>
                 </androidx.cardview.widget.CardView>
                 <TextView
-                    android:id="@+id/txIdzharsyf"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/idzhar_syafawi"
@@ -80,7 +79,6 @@
                         android:textColor="#23C1E3"/>
                 </androidx.cardview.widget.CardView>
                 <TextView
-                    android:id="@+id/txIkhfasy"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/ikhfa_syafawi"
@@ -109,7 +107,6 @@
                         android:textColor="#23C1E3"/>
                 </androidx.cardview.widget.CardView>
                 <TextView
-                    android:id="@+id/txIdghammsln"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/idgham_mislain"

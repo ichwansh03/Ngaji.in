@@ -36,7 +36,6 @@
             android:layout_below="@id/textNextBtn"
             android:layout_marginEnd="15dp">
         <me.biubiubiu.justifytext.library.JustifyTextView
-            android:id="@+id/desc1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/TextSet"
@@ -67,7 +66,6 @@
             android:layout_gravity="center_horizontal"
             android:background="@android:color/transparent"/>
         <TextView
-            android:id="@+id/desc_idghamblg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/idgham_article4"
@@ -98,7 +96,6 @@
             android:id="@+id/play_toggle_idghamblg"
             android:background="@android:color/transparent"/>
         <TextView
-            android:id="@+id/pcidgham"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/pengecualian_idgham"

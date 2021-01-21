@@ -36,7 +36,6 @@
             android:background="@drawable/rectangle_bg">
 
     <me.biubiubiu.justifytext.library.JustifyTextView
-        android:id="@+id/desc_madtabi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/TextSet"

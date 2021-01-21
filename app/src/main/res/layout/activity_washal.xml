@@ -36,7 +36,6 @@
             android:layout_marginEnd="15dp"
             android:background="@drawable/rectangle_bg">
         <me.biubiubiu.justifytext.library.JustifyTextView
-            android:id="@+id/desc_washal1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/TextSet"

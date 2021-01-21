@@ -37,7 +37,6 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/desc"
         android:text="@string/idgham_mutajanisaan_desc"
         style="@style/TextSet"/>
     <TextView

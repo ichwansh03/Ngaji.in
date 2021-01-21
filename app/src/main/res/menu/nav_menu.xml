@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<group>
+    <item
+        android:id="@+id/aboutapp"
+        android:icon="@drawable/ic_info"
+        android:title="@string/tentang_aplikasi" />
+
+    <item
+        android:id="@+id/policy"
+        android:icon="@drawable/ic_policy"
+        android:title="@string/kebijakan_privasi"/>
+
+    <item
+        android:id="@+id/updateapp"
+        android:icon="@drawable/ic_baseline_update_24"
+        android:title="@string/cek_pembaruan"/>
+</group>
+    <item android:title="@string/info_lainnya">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/konsul"
+                    android:icon="@drawable/ic_consul"
+                    android:title="@string/konsultasi_materi"/>
+
+                <item
+                    android:id="@+id/shareapp"
+                    android:icon="@drawable/ic_share"
+                    android:title="@string/bagikan"/>
+
+                <item
+                    android:id="@+id/rateapp"
+                    android:icon="@drawable/ic_star"
+                    android:title="@string/beri_kami_nilai"/>
+            </group>
+        </menu>
+    </item>
+</menu>

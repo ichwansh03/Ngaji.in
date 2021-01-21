@@ -35,7 +35,6 @@
             android:layout_marginEnd="15dp"
             android:layout_below="@id/textNextBtn">
         <TextView
-            android:id="@+id/desc1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/TextSet"
@@ -66,13 +65,11 @@
             android:background="@android:color/transparent"
             android:layout_gravity="center_horizontal"/>
         <TextView
-            android:id="@+id/desc2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/mad_silah_art2"
             style="@style/TextSet" />
         <TextView
-            android:id="@+id/image2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/madshila3"
@@ -90,13 +87,11 @@
             android:layout_gravity="center_horizontal"/>
 
         <TextView
-            android:id="@+id/pcmadsilah"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/mad_silah_pengecualian"
             style="@style/TextSet" />
         <TextView
-            android:id="@+id/pcmadsilah_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/madshila4"

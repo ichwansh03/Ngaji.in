@@ -6,69 +6,58 @@
     android:layout_height="match_parent"
     tools:context=".UtamaActivity">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cv_jadwal_sholat"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardCornerRadius="15dp"
-        android:layout_margin="15dp"
-        app:cardElevation="5dp"
-        app:cardBackgroundColor="@color/colorPrimary">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <View
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_alignParentEnd="true"
-                android:layout_marginTop="-30dp"
-                android:layout_marginEnd="-10dp"
-                android:background="@drawable/ellipse_bg"/>
-
-            <View
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginStart="-20dp"
-                android:background="@drawable/ellipse_bg"/>
-
-           <TextView
-               android:id="@+id/lihat_jadwal"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:text="@string/lihat_jadwal"
-               android:textColor="@color/colorPrimary"
-               android:padding="5dp"
-               android:drawablePadding="3dp"
-               android:background="@drawable/rectangle_intent"
-               android:fontFamily="@font/poppins_medium"
-               app:drawableStartCompat="@drawable/ic_baseline_calendar_today_24" />
-
-            <TextView
-                android:id="@+id/greetx"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="#fff"
-                android:text="@string/greeting_quran"
-                android:textSize="14sp"
-                android:textAlignment="center"
-                android:layout_below="@id/lihat_jadwal"
-                android:layout_margin="5dp"
-                android:fontFamily="@font/poppins_medium"/>
-
-        </RelativeLayout>
-    </androidx.cardview.widget.CardView>
-
     <FrameLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/cv_jadwal_sholat"
+        android:layout_marginTop="150dp"
         android:layout_marginBottom="80dp"/>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/background"/>
+
+    <ImageButton
+        android:id="@+id/menu_nav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_menu"
+        android:background="@android:color/transparent"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/sd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/selamat_datang"
+        android:textSize="17sp"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@android:color/white"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:layout_below="@id/menu_nav"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/username"
+        android:textSize="20sp"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@android:color/white"
+        android:layout_marginStart="15dp"
+        android:layout_below="@id/sd"/>
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+        android:alpha="0.3"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10dp"/>
+
     <androidx.cardview.widget.CardView
-        android:id="@+id/cv_chipbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"

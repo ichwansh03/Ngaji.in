@@ -36,7 +36,6 @@
             android:background="@drawable/rectangle_bg"
             android:layout_below="@id/textNextBtn">
     <TextView
-        android:id="@+id/desc_iqlab"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/iqlab_article"

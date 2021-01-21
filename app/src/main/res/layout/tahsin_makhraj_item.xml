@@ -13,7 +13,6 @@
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp">
         <LinearLayout
-            android:id="@+id/linear_mad"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:orientation="horizontal">
@@ -37,7 +36,6 @@
                         android:textColor="#23C1E3"/>
                 </androidx.cardview.widget.CardView>
                 <TextView
-                    android:id="@+id/txAlHalq"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/al_halqi_tenggorokan"
@@ -65,7 +63,6 @@
                         android:textColor="#23C1E3"/>
                 </androidx.cardview.widget.CardView>
                 <TextView
-                    android:id="@+id/txAlLisan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAlignment="center"
@@ -94,7 +91,6 @@
                         android:textColor="#23C1E3"/>
                 </androidx.cardview.widget.CardView>
                 <TextView
-                    android:id="@+id/txAsSyafatain"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/as_syafatain_bibir"
@@ -122,7 +118,6 @@
                         android:textColor="#23C1E3"/>
                 </androidx.cardview.widget.CardView>
                 <TextView
-                    android:id="@+id/txAlJauf"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/al_jauf_rongga_mulut"
@@ -150,7 +145,6 @@
                         android:textColor="#23C1E3"/>
                 </androidx.cardview.widget.CardView>
                 <TextView
-                    android:id="@+id/txAlKhaisyum"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/al_khaisyum_pangkal_hidung"

@@ -38,19 +38,16 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/imgSyaf"
             android:layout_gravity="center_horizontal"
             android:src="@drawable/assyafatain"
             android:padding="10dp"/>
     <TextView
-        android:id="@+id/syaf_content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/syafatain"
         style="@style/TextSet"/>
 
         <TextView
-            android:id="@+id/txtitlehijaiyah"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/huruf_huruf_as_syafatain"

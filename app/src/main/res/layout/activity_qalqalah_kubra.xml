@@ -32,7 +32,6 @@
     <me.biubiubiu.justifytext.library.JustifyTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/qalqalahkubra_content"
         style="@style/TextSet"
         android:text="@string/qalqalah_kubra_content" />
     <TextView

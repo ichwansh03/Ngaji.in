@@ -37,7 +37,6 @@
     <me.biubiubiu.justifytext.library.JustifyTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/desc_izs"
         style="@style/TextSet"
         android:text="@string/idzhar_syafawi_content" />
         <TextView

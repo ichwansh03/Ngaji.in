@@ -35,7 +35,6 @@
             android:layout_below="@id/textNextBtn"
             android:background="@drawable/rectangle_bg">
     <TextView
-        android:id="@+id/desc_ra1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/ra_tarqiq_desc"
@@ -66,7 +65,6 @@
         android:background="@android:color/transparent"
         android:layout_gravity="center_horizontal"/>
     <TextView
-        android:id="@+id/desc_ra2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/ra_tarqiq_desc2"
@@ -88,7 +86,6 @@
         android:id="@+id/play_toggle_ratarqiq2"
         android:background="@android:color/transparent"/>
     <TextView
-        android:id="@+id/desc_ra3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/ra_tarqiq_desc3"

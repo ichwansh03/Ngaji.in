@@ -16,13 +16,13 @@
 
     <item
         android:id="@+id/tahsin"
-        android:title="@string/tahsin_aja"
-        android:icon="@drawable/ic_tahsin"
+        android:title="@string/latihan"
+        android:icon="@drawable/ic_latihan"
         app:cnb_iconColor="@color/colorPrimary"/>
 
     <item
         android:id="@+id/pengaturan"
-        android:title="@string/pengaturan"
-        android:icon="@drawable/ic_baseline_settings_24"
+        android:title="@string/jadwal"
+        android:icon="@drawable/ic_jadwal_sholat"
         app:cnb_iconColor="@color/colorPrimary"/>
 </menu>

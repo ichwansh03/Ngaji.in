@@ -91,7 +91,6 @@
                 </androidx.cardview.widget.CardView>
 
                 <TextView
-                    android:id="@+id/txHamzahwashal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -121,7 +120,6 @@
                         android:textColor="#23C1E3"/>
                 </androidx.cardview.widget.CardView>
                 <TextView
-                    android:id="@+id/txHamzahqathi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/hamzah_qath_i"

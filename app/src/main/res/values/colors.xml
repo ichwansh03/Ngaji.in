@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#23C1ED</color>
-    <color name="colorPrimaryDark">#23C1ED</color>
-    <color name="colorAccent">#23C1ED</color>
-
-    <color name="colorMoring">#DBA520</color>
-    <color name="colorDay">#FFBF00</color>
-    <color name="colorAfternoon">#EF7215</color>
-    <color name="colorNight">#3366FF</color>
 
 </resources>

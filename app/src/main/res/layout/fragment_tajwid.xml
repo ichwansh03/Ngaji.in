@@ -13,12 +13,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-    <include
-        layout="@layout/tajwid_menuitem"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/layout_tajwidmenu" />
+        <TextView
+            android:id="@+id/hbq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hukum_bacaan_qur_an"
+            style="@style/TextMenuSet"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:textSize="17sp"
+            android:fontFamily="@font/poppins_medium"/>
+
+        <include
+            layout="@layout/tajwid_menuitem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/layout_tajwidmenu"
+            android:layout_below="@id/hbq"/>
 
         <TextView
             android:id="@+id/tx_tahsin"
@@ -28,14 +40,15 @@
             android:textSize="17sp"
             android:layout_marginTop="20dp"
             android:layout_below="@id/layout_tajwidmenu"
-            android:layout_marginStart="20dp"
-            style="@style/TextMenuSet"/>
+            android:layout_marginStart="15dp"
+            style="@style/TextMenuSet" />
+
         <include
             layout="@layout/tahsin_makhraj_item"
             android:id="@+id/tahsin_makhraj_item"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tx_tahsin"/>
+            android:layout_below="@id/tx_tahsin" />
 
         <TextView
             android:id="@+id/tx_tahsin_sifat"
@@ -43,9 +56,9 @@
             android:layout_height="wrap_content"
             android:text="@string/pembagian_sifat_tahsin"
             android:textSize="17sp"
-            android:layout_margin="20dp"
+            android:layout_margin="15dp"
             style="@style/TextMenuSet"
-            android:layout_below="@id/tahsin_makhraj_item"/>
+            android:layout_below="@id/tahsin_makhraj_item" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/sifatjamak"
@@ -60,7 +73,6 @@
             android:layout_below="@id/tx_tahsin_sifat">
 
             <TextView
-                android:id="@+id/text_sifatHurf1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/sifat_yang_memiliki_lawan_kata"
@@ -68,6 +80,7 @@
                 style="@style/TextMenuSet"
                 android:layout_marginStart="10dp" />
         </androidx.cardview.widget.CardView>
+
         <androidx.cardview.widget.CardView
             android:id="@+id/sifattunggal"
             android:layout_width="match_parent"
@@ -82,7 +95,6 @@
             app:cardElevation="2dp">
 
             <TextView
-                android:id="@+id/text_sifatHurf2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/sifat_yang_tidak_memiliki_lawan_kata"
@@ -90,29 +102,31 @@
                 style="@style/TextMenuSet"
                 android:layout_marginStart="10dp" />
         </androidx.cardview.widget.CardView>
-    <TextView
-        android:id="@+id/tx_artikel_tajwid"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/artikel_tajwid"
-        android:fontFamily="@font/poppins_semibold"
-        android:textSize="17sp"
-        android:layout_below="@id/sifattunggal"
-        android:textColor="#000"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"/>
 
-    <com.facebook.shimmer.ShimmerFrameLayout
-        android:id="@+id/shimmer_tajwid"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tx_artikel_tajwid">
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_post"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:listitem="@layout/activity_blog_item"/>
+        <TextView
+            android:id="@+id/tx_artikel_tajwid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/artikel_tajwid"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="17sp"
+            android:layout_below="@id/sifattunggal"
+            android:textColor="#000"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp" />
 
-    </com.facebook.shimmer.ShimmerFrameLayout>
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer_tajwid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tx_artikel_tajwid">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_post"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/activity_blog_item" />
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
     </RelativeLayout>
 </ScrollView>

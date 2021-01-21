@@ -1,10 +1,4 @@
-package com.rohisnatardev.ichwan.appprojectplanb.JadwalSholat;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-import androidx.preference.PreferenceManager;
+package com.rohisnatardev.ichwan.appprojectplanb.cnbfragment;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -22,7 +16,16 @@ import android.location.LocationManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+
+import androidx.cardview.widget.CardView;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
+import androidx.preference.PreferenceManager;
+
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -32,11 +35,7 @@ import com.batoulapps.adhan.CalculationParameters;
 import com.batoulapps.adhan.Coordinates;
 import com.batoulapps.adhan.PrayerTimes;
 import com.batoulapps.adhan.data.DateComponents;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+import com.rohisnatardev.ichwan.appprojectplanb.NoGpsDialogFragment;
 import com.rohisnatardev.ichwan.appprojectplanb.R;
 
 import java.text.SimpleDateFormat;
@@ -45,18 +44,22 @@ import java.util.List;
 import java.util.Locale;
 import java.util.TimeZone;
 
-public class JadwalSholatActivity extends AppCompatActivity implements SensorEventListener, LocationListener {
+import static android.content.Context.LOCATION_SERVICE;
+
+public class JadwalFragment extends Fragment implements SensorEventListener{
 
     TextView tShubuh, tDzuhur, tAshar, tMaghrib, tIsya, lokasi;
     CardView setlokasi;
     LocationManager locationManager;
+    LocationListener listener;
 
     private double latitude, longitude;
 
     ImageView compass;
     TextView compasDegree;
     int txtDegree;
-    private SensorManager mSensorManager;
+    SensorManager mSensorManager;
+
     private Sensor mRotationV, mAccelerometer, mMagnetometer;
     boolean haveSensor = false, haveSensor2 = false;
     float[] rMat = new float[9];
@@ -67,25 +70,29 @@ public class JadwalSholatActivity extends AppCompatActivity implements SensorEve
     private boolean mLastMagnetometerSet = false;
 
 
+    public JadwalFragment() {
+        // Required empty public constructor
+    }
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_jadwal_sholat);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.fragment_jadwal, container, false);
 
-        //waktu sholat
-        tShubuh = findViewById(R.id.time_shubuh);
-        tDzuhur = findViewById(R.id.time_dzuhur);
-        tAshar = findViewById(R.id.time_ashar);
-        tMaghrib = findViewById(R.id.time_maghrib);
-        tIsya = findViewById(R.id.time_isya);
+        tShubuh = view.findViewById(R.id.time_shubuh);
+        tDzuhur = view.findViewById(R.id.time_dzuhur);
+        tAshar = view.findViewById(R.id.time_ashar);
+        tMaghrib = view.findViewById(R.id.time_maghrib);
+        tIsya = view.findViewById(R.id.time_isya);
 
-        setlokasi = findViewById(R.id.btn_setlokasi);
-        lokasi = findViewById(R.id.atur_lokasi);
+        setlokasi = view.findViewById(R.id.btn_setlokasi);
+        lokasi = view.findViewById(R.id.atur_lokasi);
 
-        if (ContextCompat.checkSelfPermission(JadwalSholatActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
-            && ContextCompat.checkSelfPermission(JadwalSholatActivity.this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED){
-            ActivityCompat.requestPermissions(JadwalSholatActivity.this,new String[]{Manifest.permission.ACCESS_FINE_LOCATION},1);
-            ActivityCompat.requestPermissions(JadwalSholatActivity.this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION},1);
+        if (ContextCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
+                && ContextCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(getActivity(),new String[]{Manifest.permission.ACCESS_FINE_LOCATION},1);
+            ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.ACCESS_COARSE_LOCATION},1);
         }
 
         checkStatus();
@@ -93,55 +100,74 @@ public class JadwalSholatActivity extends AppCompatActivity implements SensorEve
         setlokasi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(JadwalSholatActivity.this, "Mencari Lokasi...", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Mencari Lokasi...", Toast.LENGTH_SHORT).show();
                 getLocations();
             }
         });
 
-        compass = findViewById(R.id.compas_qibla);
-        compasDegree = findViewById(R.id.compas_degre);
-        mSensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
+        compass = view.findViewById(R.id.compas_qibla);
+        compasDegree = view.findViewById(R.id.compas_degre);
+        mSensorManager = (SensorManager) getActivity().getSystemService(Context.SENSOR_SERVICE);
         startSensor();
 
+        return view;
     }
 
     private void checkStatus(){
-        ConnectivityManager manager = (ConnectivityManager) getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+        ConnectivityManager manager = (ConnectivityManager) getActivity().getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo info = manager.getActiveNetworkInfo();
 
         if (info == null){
             NoGpsDialogFragment gpsDialogFragment = new NoGpsDialogFragment();
-            gpsDialogFragment.show(getSupportFragmentManager(),"NoGpsFragment");
+            gpsDialogFragment.show(getChildFragmentManager(),"NoGpsFragment");
         }
     }
 
     @SuppressLint("MissingPermission")
     private void getLocations(){
         try {
-            locationManager = (LocationManager) getApplicationContext().getSystemService(LOCATION_SERVICE);
-            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,5000,5, JadwalSholatActivity.this);
+            locListener();
+            locationManager = (LocationManager) getActivity().getApplicationContext().getSystemService(LOCATION_SERVICE);
+            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,5000,5, listener);
         } catch (Exception e){
             e.printStackTrace();
         }
     }
 
-    @Override
-    public void onLocationChanged(Location location) {
+    private void locListener(){
+        listener = new LocationListener() {
+            @Override
+            public void onLocationChanged(Location location) {
+                try {
+                    Geocoder geocoder = new Geocoder(getContext(), Locale.getDefault());
+                    List<Address> addresses = geocoder.getFromLocation(location.getLatitude(),location.getLongitude(),1);
+                    String alamat = addresses.get(0).getAddressLine(0);
+                    latitude = addresses.get(0).getLatitude();
+                    longitude = addresses.get(0).getLongitude();
+                    lokasi.setText(alamat);
+                    jadwalSholat();
+                    PreferenceManager.getDefaultSharedPreferences(getContext()).edit().putString("alamat",alamat).apply();
 
-        try {
-            Geocoder geocoder = new Geocoder(JadwalSholatActivity.this, Locale.getDefault());
-            List<Address> addresses = geocoder.getFromLocation(location.getLatitude(),location.getLongitude(),1);
-            String alamat = addresses.get(0).getAddressLine(0);
-            latitude = addresses.get(0).getLatitude();
-            longitude = addresses.get(0).getLongitude();
-            lokasi.setText(alamat);
-            jadwalSholat();
-            PreferenceManager.getDefaultSharedPreferences(this).edit().putString("alamat",alamat).apply();
+                } catch (Exception e){
+                    e.printStackTrace();
+                }
+            }
 
-        } catch (Exception e){
-            e.printStackTrace();
-        }
+            @Override
+            public void onStatusChanged(String s, int i, Bundle bundle) {
 
+            }
+
+            @Override
+            public void onProviderEnabled(String s) {
+
+            }
+
+            @Override
+            public void onProviderDisabled(String s) {
+
+            }
+        };
     }
 
     private void jadwalSholat(){
@@ -166,6 +192,7 @@ public class JadwalSholatActivity extends AppCompatActivity implements SensorEve
         tIsya.setText(isyas);
 
     }
+
 
     @Override
     public void onSensorChanged(SensorEvent event) {
@@ -246,31 +273,15 @@ public class JadwalSholatActivity extends AppCompatActivity implements SensorEve
     }
 
     @Override
-    protected void onPause() {
+    public void onPause() {
         super.onPause();
         stopSensor();
     }
 
     @Override
-    protected void onResume() {
+    public void onResume() {
         super.onResume();
         startSensor();
     }
 
-
-
-    @Override
-    public void onStatusChanged(String s, int i, Bundle bundle) {
-
-    }
-
-    @Override
-    public void onProviderEnabled(String s) {
-
-    }
-
-    @Override
-    public void onProviderDisabled(String s) {
-
-    }
 }

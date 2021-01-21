@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context=".JadwalSholat.NoGpsDialogFragment">
+    tools:context=".NoGpsDialogFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -19,7 +19,6 @@
         app:lottie_autoPlay="true"/>
 
     <TextView
-        android:id="@+id/tx_nointernet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/sedang_mencari_dimana_antum_berada"

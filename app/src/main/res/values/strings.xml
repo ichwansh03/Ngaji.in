@@ -1,13 +1,10 @@
 <resources>
     <string name="app_name">Bina Bacaan Qur\'an</string>
-
-    <string name="mim_mati">Mim Mati</string>
     <string name="idgham">Idgham</string>
     <string name="idzhar">Idzhar</string>
     <string name="ikhfa">Ikhfa</string>
     <string name="iqlab">Iqlab</string>
     <string name="tajwid">Tajwid Dasar</string>
-    <string name="tahsin">Tahsin Dasar</string>
     <string name="hukum_idgham">Hukum Idgham</string>
     <string name="idgham_article">Idgham secara bahasa yaitu memasukkan / dengung sementara menurut istilah ialah memasukkan huruf yang pertama kedalam huruf selanjutnya sehingga menjadi gabungan huruf yang bertasydid dengan panjang 2 harakat.\n\nIdgham terbagi menjadi 2 bagian, yaitu Idgham Bigunnah dan Bilagunnah.\nIdgham Bigunnah ( dengan dengung ) terdiri dari huruf:\nmim (م), nun (ن), wau (و), ya (ي)  \ncontoh:\n</string>
     <string name="idghambg1">أَجَلٍۢ مُّسَمًّۭى</string>
@@ -15,7 +12,6 @@
     <string name="idgham_article4">Idgham Bilagunnah ( tanpa dengung ) terdiri dari huruf :\nlam (ل) dan ra (ر)  \ncontoh:</string>
     <string name="idghamblg1">خَيْرًۭا لَّكُمْ ۚ</string>
     <string name="idghamblg2">وَكَانَ ٱللَّهُ غَفُورًۭا رَّحِيمًۭا</string>
-    <string name="nun_mati">Nun Mati</string>
     <string name="pengecualian_idgham">Pengecualian Idgham\nNun mati / tanwin dibaca secara jelas dan hanya ada 4 kalimat yang mengandung aturan tersebut yaitu:\nAd Dunya (ءَ ٱلدُّنْيَا), Bunyanun (بُنْيَـٰنٌۭ), Qinwanun (قِنْوَان), Sinwanun (صِنْوَان) \ncontoh:</string>
     <string name="pcidgham1">وَغَيْرُ صِنْوَان</string>
     <string name="pcidgham2">بُنْيَـٰنٌۭ مَّرْصُوصٌۭ</string>
@@ -27,7 +23,6 @@
     <string name="ikhfa_article">Apabila nun mati / tanwin bertemu dengan 15 huruf hijaiyah selain huruf idzhar, idgham dan iqlab serta nun mati / tanwin dibaca secara samar-samar dengan panjang 2 harakat. Berikut huruf-huruf ikhfa yang terangkum dalam syair dengan tujuan agar mudah dihafal.\n</string>
     <string name="hukum_iqlab">Hukum Iqlab</string>
     <string name="iqlab_article">Merubah bunyi nun mati / tanwin menjadi mim mati serta ditandai dengan mim kecil jika bertemu dengan huruf Ba (ب).  </string>
-    <string name="hukum_mim_mati">Hukum Mim Mati</string>
     <string name="idgham_mislain_content">Jika mim mati bertemu dengan huruf mim secara bersamaan dan panjangnya 2 harakat.\ncontoh :</string>
     <string name="ikhfa_syafawi_content">Jika mim mati bertemu dengan huruf ba maka dibaca panjang 2 harakat disertai dengung.\ncontoh :</string>
     <string name="idzhar_syafawi_content">Jika mim mati bertemu dengan salah satu dari semua huruf hijaiyah kecuali huruf mim dan ba, maka mim mati dibaca secara jelas tanpa dengung.\ncontoh :\n</string>
@@ -86,7 +81,6 @@
     <string name="madjaiz1">لَآ إِكْرَاهَ فِى ٱلدِّين</string>
     <string name="madjaiz2">بِٱلَّذِىٓ أُنزِلَ</string>
     <string name="madjaiz3">تُوبُوٓا۟ إِلَى ٱللَّهُ</string>
-    <string name="contoh">contoh:</string>
     <string name="bagian_ikhfa">Ikhfa sendiri terbagi menjadi 3 bagian : \nIkhfa Akrab : Cara pengucapannya ketika menyuarakan nun mati, ujung lidah hampir menyentuh pangkal dua buah gigi atas sesuai posisi makhroj\n د, ت , ط\nIkhfa Adna : Cara pengucapannya menjadi vokal (ng) ketika bertemu dengan huruf\n ك dan ق
         \nIkhfa Ausath : Cara pengucapannya jika bertemu dengan salah satu dari 10 huruf ikhfa lainnya pada saat mengucapkan nun mati, sikap lidah atau bibir dipersiapkan menempati makhroj huruf yang dihadapi.\n(ث , ض , ص , س , ش , ج , ذ , ظ , ف)\n</string>
     <string name="ikhfa1">أَمْ لَمْ تُنذِرْهُ</string>
@@ -109,12 +103,9 @@
     <string name="syafatain">Berikut huruf-huruf yang keluar dari bibir :\n\na)Perut bibir bawah dengan ujung dua buah gigi muka atas = ف\n\nb)Bertemunya bibir atas dan bawah dengan rapat = ب,م\n\nc)Bertemunya bibir atas dan bawah dengan sedikit renggang = و</string>
     <string name="jauf">Al-Jauf adalah tempat keluarnya tiga huruf mad, yaitu :\n\na)Alif, yang sebelumnya berharakat fathah (ا)\n\nb)Ya sukun yang sebelumnya berharakat kasroh (ى)\n\nc)Wau sukun, yang sebelumnya berharakat dhommah (و)</string>
     <string name="khais">Berikut penjelasan tentang huruf yang keluar dari pangkal hidung :\n\na)Nun sukun atau tanwin, ketika :\n\n1)Di-idgham bigunnah-kan, atau\n\n2)Di-ikhfa-kan, atau\n\n3)Di-iqlab-kan\n\nb)Mim sukun yang di-idgham-kan pada huruf Mim dan di-ikhfa-kan pada huruf Ba.\n\nAkibat dari hukum-hukum bacaan tersebut, maka makhrajnya berpindah dari aslinya ke pangkal hidung.</string>
-    <string name="jahr">Jahr (terang) adalah menyembunyikan huruf tertentu tanpa berdesis. Berikut beberapa huruf Jahr :</string>
-    <string name="bagian_tajwid">Bagian Tajwid</string>
     <string name="hukum_nun_sukun">Hukum Nun Sukun</string>
     <string name="hukum_mim_sukun">Hukum Mim Sukun</string>
     <string name="hukum_mad">Hukum Mad</string>
-    <string name="menu">Menu</string>
     <string name="qolqolah_sughra">Qolqolah Sughra</string>
     <string name="idzhar_syafawi">Idzhar\n Syafawi</string>
     <string name="ikhfa_syafawi">Ikhfa\n Syafawi</string>
@@ -122,29 +113,18 @@
     <string name="qalqalah">Qalqalah</string>
     <string name="qalqalah_sughra">Qalqalah\n Sughra</string>
     <string name="qalqalah_kubra">Qalqalah\n Kubra</string>
-    <string name="bagian_tahsin">Bagian Tahsin</string>
-    <string name="donasi">Donasi</string>
-    <string name="catatan">Catatan</string>
-    <string name="about_app">About App</string>
-    <string name="stop">Stop</string>
     <string name="qalqalah_sughra_content">Qalqalah adalah bacaan pada huruf\n (ب , ج , د , ط , ق)\nmembacanya dengan cara bunyi dari huruf qalqalah tersebut dipantulkan.\n\nQalqalah Sughra yaitu apabila salah satu dari huruf qalqalah itu berharakat sukun (huruf mati) dan bukan karena waqaf serta letaknya pada pertengahan ayat\n</string>
     <string name="qsugra1">إِنَّهُۥ عَلَىٰ رَجْعِهِۦ لَقَادِرٌ</string>
     <string name="qalqalah_kubra_content">Qalqalah adalah bacaan pada huruf\n (ب , ج , د , ط , ق)\nmembacanya dengan cara bunyi dari huruf qalqalah tersebut dipantulkan.\n\nQalqalah Kubra yaitu apabila salah satu dari huruf qalqalah itu berharakat sukun karena waqaf. Dalam keadaan ini, huruf qalqalah dipantulkan apabila bacaan diwaqafkan tetapi tidak dipantulkan apabila bacaan diteruskan\n</string>
     <string name="qkubra1">لَبِٱلْمِرْصَادِ</string>
-    <string name="apa_itu_sifatul_hurf">Pembagian Sifat-Sifat Huruf</string>
-    <string name="pembagian_sifat_desc">Sifat huruf terbagi menjadi 17 sifat yang masing - masing dibedakan menjadi dua bagian yaitu,\n\n1)Sifat Lemah : (Hams - Tawasuth - Istifal - Infitah - Idzlaq dan Liin)\n\n2)Sifat Kuat : (Jahr - Syiddah - Isti\'la - Ishmat - Shafir - Qolqolah - Inhiraf - Takrir - Tafasysyi dan Istitholah)\n\nSementara itu, sifat huruf dalam Al-Qur\'an terbagi menjadi dua, antara lain : \n\n1)Sifat yang memiliki lawan kata (sifat jamak), dan\n\n2)Sifat yang tidak meiliki lawan kata (sifat tunggal)</string>
     <string name="sifat_yang_memiliki_lawan_kata">Sifat Jamak</string>
     <string name="sifat_yang_tidak_memiliki_lawan_kata">Sifat Tunggal</string>
     <string name="hams_lawan_dari_jahr">Hams lawan dari Jahr</string>
     <string name="deskripsi">deskripsi</string>
-    <string name="date">Date</string>
     <string name="title">Title</string>
     <string name="description">Description</string>
-    <string name="judul">Judul</string>
     <string name="submit">Submit</string>
-    <string name="delete">Delete</string>
     <string name="pembagian_sifat_tahsin">Pembagian Sifat Tahsin</string>
-    <string name="bacaan_lainnya">Bacaan Lain</string>
     <string name="hukum_lam_dan_ra">Hukum Lam dan Ra</string>
     <string name="hukum_lam_desc">Dalam ilmu tajwid, Hukum Lam terbagi menjadi 2 macam yaitu: \n1)Lam Tafkhim\n2)Lam Tarqiq\n\nLam Tafkhim adalah apabila huruf lam berada pada lafzul jalalah (اللّه)\nyang didahului oleh huruf yang berharakat fathah ataupun dhammah maka dibaca tafkhim atau tebal.\nContoh lafzul jalalah yang didahului oleh huruf berharakat fathah dan dhommah:\n</string>
     <string name="hukum_lam_desc2">Sedangkan Lam Tarqiq adalah apabila huruf lam dalam lafzul jalalah yang didahului oleh huruf yang berharakat fathah atau kasrah maka dibaca tarqiq atau tipis</string>
@@ -170,8 +150,6 @@
     <string name="idgham_mutajanisaan_desc">Idgham Mutajanisain adalah pertemuan antara dua huruf yang sama makhrajnya namun berbeda sifat hurufnya</string>
     <string name="mutaqa1">وَقُل رَّبِّ زِدْنِى عِلْمًۭا</string>
     <string name="idgham_mutaqaribaan_desc">Idgham Mutaqaribain adalah pertemuan antara dua huruf yang hampir sama makhraj dan sifatnya</string>
-    <string name="buat_catatan">Buat Catatan</string>
-    <string name="_12_muharram_1440_h">12 Muharram 1440 H</string>
     <string name="ikhfa_test">إخف\nشفوى</string>
     <string name="idgham_arab">إدغام</string>
     <string name="idzhar_arab">إظهر</string>
@@ -204,8 +182,6 @@
     <string name="mutajanisan_arab">متجنسن</string>
     <string name="mutaqariban_arab">متقربن</string>
     <string name="murotal_al_fatihah">Murotal\nFatihah</string>
-    <string name="baca_iqra">Pengenalan Iqra</string>
-    <string name="baca_quran">Qur\'an Digital</string>
     <string name="bacaan_hamzah">Bacaan Hamzah</string>
     <string name="hamzah_wasal">Hamzah\nWashal</string>
     <string name="hamzah_qath_i">Hamzah\nQath\'i</string>
@@ -242,12 +218,6 @@
      \nBerikut contoh hamzah washal yang tampak diawal kalimah:\n</string>
     <string name="wasal_desc2">Contoh kalimah yang tidak boleh dibaca hamzah washal karena letaknya ditengah:</string>
     <string name="qathi_desc">Hamzah Qath\'i berarti hamzah yang terputus. Dalam arti cara membacanya terputus dan tidak diteruskan. Menurut pengertian para ulama adalah hamzah yang dapat diucapkan selamanya, baik di permulaan kalimat maupun ditengah-tengahnya.\n</string>
-    <string name="greeting_quran">Orang yang pandai membaca Al-Qur\'an, dia bersama para malaikat yang mulia. Sedangkan orang yang membaca Al-Qur\'an dengan terbata-bata, maka ia mendapatkan 2 pahala (membaca dan belajar).(Muttafaq Alaih)</string>
-    <string name="greeting_pagi">Jika bangun pagi lalu melakukan shalat sunnah sebelum shalat Subuh, maka Insya Allah akan mendapatkan rejeki yang berlimpah. Dari Aisyah radhiyallahu anha dari Nabi SAW. bersabda, “Dua rakaat shalat Fajar (sebelum subuh) lebih baik dari pada dunia dan seisinya,” (H.R. Muslim)</string>
-    <string name="greeting_dhuha">Barangsiapa yang selalu mengerjakan sholat dhuha niscaya akan diampuni dosa-dosanya walaupun sebanyak buih dilautan. (H.R Tirmidzi)</string>
-    <string name="greeting_malam">Ya Allah, mudahkan dan muliakan malam ini bagi orang-orang yang sedang berada dalam kesulitan dan kehinaan.</string>
-    <string name="huruf_hijaiyah">Huruf Hijaiyah</string>
-    <string name="info_qur_an">Info Qur\'an</string>
     <string name="tanda_tanda_waqaf">Tanda\nWaqaf</string>
     <string name="exiqlab">سَمِيعًۢابَصِيرًۭا</string>
     <string name="huruf_ikhfa">صِفْ ذَا ثَنَا كَمْ جَادَ شَخْصٌ قَدْ سَمَا\n دُمْ طَيِّبًا زِدْ فِي تُقًى ضَعْ ظَالِمًا</string>
@@ -257,9 +227,7 @@
     <string name="wasal2">فَصَلِّ لِرَبِّكَ وَٱنْحَرْ</string>
     <string name="lamtafkhim1">هُوَ ٱللَّه</string>
     <string name="lamtafkhim2">لَمَّا قَامَ عَبْدُ ٱللَّه</string>
-    <string name="lamtarqiq1">بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيم</string>
     <string name="lamtarqiq2">ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَـٰلَمِين</string>
-    <string name="sifat_sifat_huruf">Sifat - Sifat Huruf</string>
     <string name="tempat_keluarnya_huruf">Tempat Keluarnya Huruf</string>
     <string name="ratafkhim1">رَمَضَانَ</string>
     <string name="ratafkhim2">كَفَرُ</string>
@@ -285,30 +253,7 @@
     dan bersujud, dan kamipun ikut bersujud bersama beliau (H.R Abu Dawud). Hukum sujud tilawah yaitu sunnah menurut beberapa para sahabat. Berikut lafadz doa sujud tilawah :\n</string>
     <string name="sujudtilawah_text">سَجَدَ وَجْهِى لِلَّذِى خَلَقَهُ وَصَوَّرَهُ وَشَقَّ سَمْعَهُ وَبَصَرَهُ تَبَارَكَ اللَّهُ أَحْسَنُ الْخَالِقِينَ</string>
     <string name="sujustilawah_arti">“Sajada wajhi lilladzi kholaqohu, wa showwarohu, wa syaqqo sam’ahu, wa bashorohu. Tabarakallahu ahsanul kholiqiin.” [Wajahku bersujud kepada Penciptanya, yang Membentuknya, yang Membentuk pendengaran dan penglihatannya. Maha Suci Allah Sebaik-baik Pencipta] (HR. Abu Daud, Tirmidzi dan An Nasa-i).\n</string>
-    <string name="alif">ا</string>
-    <string name="aliftx">Alif</string>
-    <string name="hurfAlif">اَ اِ اُ اً اٍ اٌ</string>
-    <string name="sifat_huruf">Sifat Huruf</string>
-    <string name="diskusikan_materi">Diskusikan Materi</string>
-    <string name="pertanyaan_seputar_al_qur_an">FAQ Seputar Qur\'an</string>
-    <string name="chat_room_join">Chat Room JOIN</string>
-    <string name="start">Start</string>
-    <string name="display_name">display name</string>
-    <string name="placeholder_message">Placeholder message</string>
-    <string name="ahmed">Ahmed</string>
-    <string name="test">Test</string>
-    <string name="tulis_pesan">Tulis Pesan</string>
-    <string name="hijaiyah">Hijaiyah</string>
-    <string name="mishary_rashid_al_fatihah_irama_nahawand">Syekh Mishary Rashid</string>
-    <string name="time">0.00</string>
-    <string name="bbq_news">Info &amp; Artikel</string>
     <string name="adab_membaca_al_quran">Adab Membaca Al-Quran</string>
-    <string name="tgl">12 April 2020</string>
-    <string name="set_alarm">Set Alarm</string>
-    <string name="ulangi_alarm">Ulangi Alarm</string>
-    <string name="batalakan_alarm">Batalakan Alarm</string>
-    <string name="masukkan_nama">masukkan nama</string>
-    <string name="_00_00">00:00</string>
     <string name="hukum_alif_lam">Hukum Alif Lam</string>
     <string name="as_syamsiyah">As-Syamsiyah</string>
     <string name="syamsiyah_arab">الشمسية</string>
@@ -316,28 +261,16 @@
     <string name="al_qomariyah">Al-Qomariyah</string>
     <string name="desc_qomariyah">Alif lam qomariyah ialah cara pembacaan huruf alif lam (ال)\njika bertemu dengan huruf - huruf qomariyah atau disebut juga hukum idzhar qomariyah, karena pada hukum ini huruf alif lam harus dibaca secara idzhar atau jelas.\n(ب , ج , ح , خ , ع , غ , ف , ق , ك , م , و , ه , ي , أ)\n</string>
     <string name="qomariyah_arab">القمرية</string>
-    <string name="download_murottal">Download Murottal</string>
-    <string name="syekh_yasser_al_dossari_al_fatihah">Syekh Yasser Al-Dossari</string>
-    <string name="ruang">Ruang</string>
-    <string name="pilih_materi">Pilih Materi</string>
-    <string name="write">Tulis Pesan</string>
     <string name="dzikir_dan_doa">Dzikir dan Doa</string>
     <string name="doa_harian">Doa\nHarian</string>
     <string name="dzikir_petang">Dzikir\nPetang</string>
     <string name="dzikir_pagi">Dzikir\nPagi</string>
     <string name="scroll_up_untuk_penjelasan">Scroll up untuk penjelasan</string>
-    <string name="next">Next</string>
-    <string name="skip">Skip</string>
-    <string name="atur_alarm">Atur Alarm :</string>
     <string name="surah">Surah</string>
     <string name="ayat">Ayat</string>
-    <string name="arab_konten">Arab Konten</string>
-    <string name="dzikir">Dzikir</string>
     <string name="versi_app">Versi : 2.7</string>
     <string name="dev_name">Rohis Natar Dev - 2020</string>
     <string name="desc_murotal">Al-Fatihah merupakan rukun shalat yang harus dihafal dan dibaca dalam setiap rakaat sholat.\nSabda Rasulullah SAW : \"Barangsiapa yang mengerjakan sholat dan tidak membaca Ummul Qur\'an (Al-Fatihah) di dalamnya, maka sholatnya terputus dan tidak sempurna.\" Dikatakan kepada Abu Hurairah ra \"Sesungguhnya kami sholat dibelakang imam (makmum).\" Maka beliau berkata, "bacalah dalam hatimu.\"\nMaka dari itu, wajib bagi setiap muslim untuk memperbaiki bacaan Al-Fatihah agar sholat yang ditunaikannya dapat diterima oleh Allah Ta\'ala.\n</string>
-    <string name="tentang_aplikasi">Tentang Aplikasi</string>
-    <string name="kebijakan_privasi">Kebijakan Privasi</string>
     <string name="tl_about1">* Apa itu App Bina Bacaan Qur\’an?</string>
     <string name="tl_about2">* Apa Tujuan Dikembangkannya App Bina Bacaan Qur\'an?</string>
     <string name="tl_about3">* Apa Saja Fitur/Halaman yang Tersedia Dalam Aplikasi Ini?</string>
@@ -351,22 +284,9 @@
     - Artikel Online : Halaman ini berisi seputar info dan artikel tentang Qur\’an secara realtime dan hanya dapat diakses dalam keadaan online oleh pengguna.\n
     - Grafik Monitoring Tilawah : Halaman ini bertujuan untuk memonitoring tilawah pengguna setiap hari\n</string>
     <string name="isymam_contoh">لَا تَأْمَنَّ۫ا</string>
-    <string name="txdiskusi">biasakan menggunakan bahasa yang sopan ketika berdiskusi, hidupkan internet dan pilih materi, maka akan otomatis masuk ke ruang diskusi.</string>
-    <string name="bagikan_aplikasi">Bagikan Aplikasi</string>
-    <string name="dalil_dzikir">Allah Ta\'ala Berfirman, \"Hari orang–orang yang beriman, berdzikirlah (dengan nama) Allah, dengan berdzikir yang sebanyak–banyaknya. Dan bertasbihlah kepada–Nya diwaktu pagi dan petang.\" (Al–Ahzab: 41–42)</string>
     <string name="artikel_tajwid">Artikel Tajwid</string>
-    <string name="artikel_tahsin">Artikel Tahsin</string>
     <string name="artikel_qur_an">Artikel Qur\'an</string>
     <string name="surah_al_baqarah_ayat_21">Surah Al-Baqarah ayat 21</string>
-    <string name="send_file">Send File</string>
-    <string name="play">Play</string>
-    <string name="pause">Pause</string>
-    <string name="tkdua">:</string>
-    <string name="diskusi_materi">Diskusi Materi</string>
-    <string name="masukkan_username">Masukkan Username</string>
-    <string name="kirim_materi">Kirim Materi</string>
-    <string name="info_app">Info App</string>
-    <string name="hadist_tajwid">Sesungguhnya orang yang paling utama di antara kalian adalah yang belajar Al-Qur\'an dan mengajarkannya. (HR. Bukhari)</string>
 
     <string-array name="surah_names">
         <item>Al-Fatihah</item>
@@ -485,177 +405,23 @@
         <item>An-Nas</item>
     </string-array>
 
-    <string-array name="surah_names_translation">
-        <item>The Opener</item>
-        <item>The Cow</item>
-        <item>Family of Imran</item>
-        <item>The Women</item>
-        <item>The Table Spread</item>
-        <item>The Cattle</item>
-        <item>The Heights</item>
-        <item>The Spoils of War</item>
-        <item>The Repentance</item>
-        <item>Jonah</item>
-        <item>Hud</item>
-        <item>Joseph</item>
-        <item>The Thunder</item>
-        <item>Abrahim</item>
-        <item>The Rocky Tract</item>
-        <item>The Bee</item>
-        <item>The Night Journey</item>
-        <item>The Cave</item>
-        <item>Mary</item>
-        <item>Ta-Ha</item>
-        <item>The Prophets</item>
-        <item>The Pilgrimage</item>
-        <item>The Believers</item>
-        <item>The Light</item>
-        <item>The Criterian</item>
-        <item>The Poets</item>
-        <item>The Ant</item>
-        <item>The Stories</item>
-        <item>The Spider</item>
-        <item>The Romans</item>
-        <item>Luqman</item>
-        <item>The Prostration</item>
-        <item>The Combined Forces</item>
-        <item>Sheba</item>
-        <item>Originator</item>
-        <item>Ya Sin</item>
-        <item>Those who set the Ranks</item>
-        <item>The Letter &quot;Saad&quot;</item>
-        <item>The Troops</item>
-        <item>The Forgiver</item>
-        <item>Explained in Detail</item>
-        <item>The Consultation</item>
-        <item>The Ornaments of Gold</item>
-        <item>The Smoke</item>
-        <item>The Crouching</item>
-        <item>The Wind-Curved Sandhills</item>
-        <item>Muhammad</item>
-        <item>The Victory</item>
-        <item>The Rooms</item>
-        <item>The Letter &quot;Qaf&quot;</item>
-        <item>The Winnowing Winds</item>
-        <item>The Mount</item>
-        <item>The Star</item>
-        <item>The Moon</item>
-        <item>The Beneficent</item>
-        <item>The Inevitable</item>
-        <item>The Iron</item>
-        <item>The Pleading Woman</item>
-        <item>The Exile</item>
-        <item>She that is to be examined</item>
-        <item>The Ranks</item>
-        <item>The Congregation, Friday</item>
-        <item>The Hypocrites</item>
-        <item>The Mutual Disillusion</item>
-        <item>The Divorce</item>
-        <item>The Prohibtiion</item>
-        <item>The Sovereignty</item>
-        <item>The Pen</item>
-        <item>The Reality</item>
-        <item>The Ascending Stairways</item>
-        <item>Noah</item>
-        <item>The Jinn</item>
-        <item>The Enshrouded One</item>
-        <item>The Cloaked One</item>
-        <item>The Resurrection</item>
-        <item>The Man</item>
-        <item>The Emissaries</item>
-        <item>The Tidings</item>
-        <item>Those who drag forth</item>
-        <item>He Frowned</item>
-        <item>The Overthrowing</item>
-        <item>The Cleaving</item>
-        <item>The Defrauding</item>
-        <item>The Sundering</item>
-        <item>The Mansions of the Stars</item>
-        <item>The Nightcommer</item>
-        <item>The Most High</item>
-        <item>The Overwhelming</item>
-        <item>The Dawn</item>
-        <item>The City</item>
-        <item>The Sun</item>
-        <item>The Night</item>
-        <item>The Morning Hours</item>
-        <item>The Relief</item>
-        <item>The Fig</item>
-        <item>The Clot</item>
-        <item>The Power</item>
-        <item>The Clear Proof</item>
-        <item>The Earthquake</item>
-        <item>The Courser</item>
-        <item>The Calamity</item>
-        <item>The Rivalry in world increase</item>
-        <item>The Declining Day</item>
-        <item>The Traducer</item>
-        <item>The Elephant</item>
-        <item>Quraysh</item>
-        <item>The Small Kindnesses</item>
-        <item>The Abundance</item>
-        <item>The Disbelievers</item>
-        <item>The Divine Support</item>
-        <item>The Palm Fiber, Flame</item>
-        <item>The Sincerity</item>
-        <item>The Daybreak</item>
-        <item>The Mankind</item>
-    </string-array>
-
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="masukkan_data">Masukkan Data</string>
-    <string name="input_data">Input Data</string>
-    <string name="txmonitor">Monitoring Langsung Jumlah Tilawah Qur\'anmu Setiap Hari</string>
-    <string name="dsmonitor">Input data jumlah tilawah qur\'anmu per-ayat/per-lembar/per-surah setiap hari dan lihat grafik perkembangannya selama sepekan</string>
-    <string name="grafik">Grafik</string>
-    <string name="textmonitor">*Otomatis bertambah ketika anda menginput data dalam 1 hari. Input data dihari berikutnya untuk melihat perkembangan</string>
-    <string name="display_username">display username</string>
-    <string name="reset">Reset</string>
-    <string name="download_15_mb">Download : 15 MB</string>
-    <string name="pending">Pending</string>
-    <string name="tambah_list">Tambah List</string>
-    <string name="reset_data">Reset Data</string>
-    <string name="jumlah_0">Jumlah : 0</string>
-    <string name="syech_mishary_rashid_alafasy">Syech Mishary Rashid Alafasy</string>
-    <string name="syech_yasser_al_dossari">Syech Yasser Al-Dossari</string>
     <string name="qur_an">Qur\'an</string>
     <string name="tajwid_aja">Tajwid</string>
-    <string name="tahsin_aja">Tahsin</string>
-    <string name="pengaturan">Pengaturan</string>
     <string name="tajwid_lanjutan">Tajwid Lanjutan</string>
-    <string name="konsultasi_tajwid">Konsultasi\nTajwid</string>
-    <string name="berapa_lembar_tilawahmu_hari_ini">Berapa lembar tilawahmu hari ini?</string>
     <string name="seputar_qur_an">Seputar Qur\'an</string>
-    <string name="beri_kami_nilai">Beri Kami Nilai</string>
-    <string name="ketentuan_layanan">Ketentuan Layanan</string>
-    <string name="huruf_huruf_halqiyyah">Huruf-Huruf Halqiyyah</string>
-    <string name="informasi_aplikasi">Informasi Aplikasi</string>
-    <string name="lainnya">Lainnya</string>
-    <string name="cek_pembaruan_aplikasi">Cek Pembaruan Aplikasi</string>
-    <string name="input">Input</string>
-    <string name="teks_ask">Fitur ini berfungsi sebagai monitoring aktivitas tilawah qur\'an harian dengan tujuan untuk memotivasi diri agar selalu dekat dengan Al-Qur\'an serta senantiasa meningkatkan kuantitas bacaan perharinya. Setiap kali anda menginput data, grafik secara otomatis akan tersimpan.</string>
-    <string name="email">Email</string>
     <string name="subjek">Subjek :</string>
-    <string name="tulis_pesanmu_disini">Tulis pesanmu disini…</string>
-    <string name="konsultasi_materi">Konsultasi Materi</string>
     <string name="huruf_huruf_al_halqi">Huruf - huruf Al-Halqi</string>
     <string name="huruf_huruf_al_lisan">Huruf - huruf Al-Lisan</string>
     <string name="huruf_huruf_as_syafatain">Huruf - huruf As-Syafatain</string>
-    <string name="lampung_selatan">Atur Lokasi</string>
-    <string name="lihat_jadwal">Jadwal Sholat</string>
-    <string name="senin_13_oktober_2020">Senin, 13 Oktober 2020</string>
-    <string name="_30_c">30 C</string>
     <string name="shubuh">Shubuh</string>
     <string name="_04_05">00:00</string>
-    <string name="jadwal_sholat_untuk">Jadwal Sholat untuk Daerah … dan Sekitarnya</string>
     <string name="dzuhur">Dzuhur</string>
     <string name="ashar">Ashar</string>
     <string name="maghrib">Maghrib</string>
     <string name="isya">Isya</string>
     <string name="_19_artikel">19 Artikel</string>
     <string name="_16_artikel">16 Artikel</string>
-    <string name="refresh">Refresh</string>
     <string name="email_app">bbqapp.helpcenter@gmail.com</string>
     <string name="pesan">Pesan :</string>
     <string name="ke">Ke :</string>
@@ -670,5 +436,19 @@
     <string name="cari_doa">Cari Doa</string>
     <string name="murot">Hidupkan koneksi internet untuk melihat list dan mengunduh murattal</string>
     <string name="lanjutkan">Lanjutkan</string>
+    <string name="selamat_datang">Selamat Datang</string>
+    <string name="username">Username</string>
+    <string name="jadwal">Jadwal</string>
+    <string name="latihan">Latihan</string>
+    <string name="compass">compass</string>
+    <string name="hukum_bacaan_qur_an">Hukum Bacaan Qur\'an</string>
+    <string name="tentang_aplikasi">Tentang Aplikasi</string>
+    <string name="kebijakan_privasi">Kebijakan Privasi</string>
+    <string name="cek_pembaruan">Cek Pembaruan</string>
+    <string name="info_lainnya">Info Lainnya</string>
+    <string name="konsultasi_materi">Konsultasi Materi</string>
+    <string name="bagikan">Bagikan</string>
+    <string name="beri_kami_nilai">Beri Kami Nilai</string>
+    <string name="nama_anda">Nama Anda</string>
 
 </resources>
