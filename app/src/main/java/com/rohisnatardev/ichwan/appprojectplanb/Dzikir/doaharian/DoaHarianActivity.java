@@ -4,9 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.graphics.Typeface;
 import android.os.Bundle;
-import android.widget.TextView;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.widget.EditText;
 
 import com.rohisnatardev.ichwan.appprojectplanb.R;
 
@@ -16,7 +17,7 @@ import java.util.List;
 public class DoaHarianActivity extends AppCompatActivity {
 
     RecyclerView rvdoa;
-    TextView title_doa;
+    DoaAdapter doaAdapter;
     List<DoaItem> item;
 
     @Override
@@ -27,6 +28,35 @@ public class DoaHarianActivity extends AppCompatActivity {
         rvdoa = findViewById(R.id.rvdoaharian);
         dataDoa();
         setDoa();
+
+        EditText searchDoa = findViewById(R.id.search_doa);
+        searchDoa.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                filter(s.toString());
+            }
+        });
+    }
+
+    private void filter(String text){
+        List<DoaItem> filterDoa = new ArrayList<>();
+
+        for (DoaItem doaItem : item){
+            if (doaItem.getNamadoa().toLowerCase().contains(text.toLowerCase())){
+                filterDoa.add(doaItem);
+            }
+        }
+        doaAdapter.filterList(filterDoa);
     }
 
     private void dataDoa(){
@@ -129,7 +159,7 @@ public class DoaHarianActivity extends AppCompatActivity {
     }
 
     private void setDoa(){
-        DoaAdapter doaAdapter = new DoaAdapter(item);
+        doaAdapter = new DoaAdapter(item);
         rvdoa.setLayoutManager(new LinearLayoutManager(this));
         rvdoa.setAdapter(doaAdapter);
     }

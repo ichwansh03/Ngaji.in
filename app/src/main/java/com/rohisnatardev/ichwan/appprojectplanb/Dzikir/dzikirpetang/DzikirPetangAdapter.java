@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -26,7 +27,7 @@ public class DzikirPetangAdapter extends RecyclerView.Adapter<DzikirPetangAdapte
     @NonNull
     @Override
     public DzikirPetangAdapter.PetangHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_dzikir_petang_item,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_dzikir_item,parent,false);
 
         return new PetangHolder(view);
     }
@@ -59,13 +60,13 @@ public class DzikirPetangAdapter extends RecyclerView.Adapter<DzikirPetangAdapte
         public PetangHolder(@NonNull View itemView) {
             super(itemView);
 
-            title = itemView.findViewById(R.id.tlnamaDzikirpetang);
-            jumlah = itemView.findViewById(R.id.jmlBacap);
-            arabic = itemView.findViewById(R.id.dzikirPetangArab);
-            latino = itemView.findViewById(R.id.dzikirPetanglatin);
-            mean = itemView.findViewById(R.id.dzikirPetangArti);
-            expandable = itemView.findViewById(R.id.expanddzikirPetang);
-            checkBox = itemView.findViewById(R.id.checkDzikirpetang);
+            title = itemView.findViewById(R.id.tlnamaDzikir);
+            jumlah = itemView.findViewById(R.id.jmlBaca);
+            arabic = itemView.findViewById(R.id.dzikirArab);
+            latino = itemView.findViewById(R.id.dzikirlatin);
+            mean = itemView.findViewById(R.id.dzikirArti);
+            expandable = itemView.findViewById(R.id.expanddzikir);
+            checkBox = itemView.findViewById(R.id.checkDzikir);
 
             title.setOnClickListener(new View.OnClickListener() {
                 @Override

@@ -2,6 +2,7 @@ package com.rohisnatardev.ichwan.appprojectplanb.Bookmark.HukumIdgham;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.media.MediaPlayer;
@@ -22,34 +23,37 @@ ImageButton btnmutaqa;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mutaqaribain);
+        setContentView(R.layout.activity_hukum_idgham);
 
         TextView btnCallBackMq = findViewById(R.id.textNextBtn);
+        btnCallBackMq.setText(R.string.imalah);
         btnCallBackMq.setOnClickListener(this);
-        btnmutaqa = findViewById(R.id.play_toggle_mutaqaribain);
+
+        TextView title = findViewById(R.id.tlhukumidgham);
+        title.setText(R.string.idgham_mutaqaribaan);
+        TextView desc = findViewById(R.id.deschukumidgham);
+        desc.setText(R.string.idgham_mutaqaribaan_desc);
+
+        btnmutaqa = findViewById(R.id.play_toggle_hukumidgham);
         btnmutaqa.setOnClickListener(this);
         mediaPlayer = MediaPlayer.create(this,R.raw.idghammutaqarribain);
 
-        TextView mutaq = findViewById(R.id.image_mutaqaribain);
+        TextView mutaq = findViewById(R.id.examplehukumidgham);
         String tMutaqa = getString(R.string.mutaqa1);
-
         SpannableString string = new SpannableString(tMutaqa);
-
         ForegroundColorSpan fcs = new ForegroundColorSpan(Color.RED);
-
         string.setSpan(fcs,4,9, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-
         mutaq.setText(string);
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.textNextBtn:
-                Intent mutaqa = new Intent(MutaqaribainActivity.this, ImalahActivity.class);
-                startActivity(mutaqa);
+                startActivity(new Intent(this, ImalahActivity.class));
                 break;
-            case R.id.play_toggle_mutaqaribain:
+            case R.id.play_toggle_hukumidgham:
                 setmpmutaqa();
                 break;
         }

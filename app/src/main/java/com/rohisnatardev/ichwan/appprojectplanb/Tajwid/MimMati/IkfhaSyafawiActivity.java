@@ -2,6 +2,7 @@ package com.rohisnatardev.ichwan.appprojectplanb.Tajwid.MimMati;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.media.MediaPlayer;
@@ -20,24 +21,32 @@ ImageButton btniks;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ikfha_syafawi);
+        setContentView(R.layout.activity_mim_sukun);
 
-        TextView btnCallBack = findViewById(R.id.textNextBtn);
-        btnCallBack.setOnClickListener(this);
+        TextView txnext = findViewById(R.id.textNextBtn);
+        txnext.setText(R.string.idgham_mislain);
+        txnext.setOnClickListener(this);
+
+        TextView article = findViewById(R.id.text_article);
+        article.setText(R.string.ikhfa_syafawi_content);
+
         player_ikhfa = MediaPlayer.create(this,R.raw.ikhfasyafawi);
 
-        btniks = findViewById(R.id.play_toggle_iks);
+        btniks = findViewById(R.id.playpause_toggle);
         btniks.setOnClickListener(this);
 
-        TextView ikhfasyafawi = findViewById(R.id.image_iks);
+        TextView ikhfasyafawi = findViewById(R.id.text_example);
         String ikhfaArab = getString(R.string.ikhfasy1);
         SpannableString string = new SpannableString(ikhfaArab);
-
         ForegroundColorSpan frcolor = new ForegroundColorSpan(Color.RED);
         string.setSpan(frcolor,8,12, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         ikhfasyafawi.setText(string);
+
+        TextView title = findViewById(R.id.textTitle);
+        title.setText(R.string.ikhfa_syafawi);
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View view) {
         switch (view.getId()){
@@ -45,7 +54,7 @@ ImageButton btniks;
                 Intent intent = new Intent(this, IdghamMislainActivity.class);
                 startActivity(intent);
                 break;
-            case R.id.play_toggle_iks:
+            case R.id.playpause_toggle:
                 setmpiks();
                 break;
         }

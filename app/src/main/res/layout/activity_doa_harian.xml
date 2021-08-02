@@ -13,14 +13,16 @@
         android:orientation="vertical">
 
         <EditText
+            android:id="@+id/search_doa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/cari_doa"
-            android:fontFamily="@font/poppins_regular"
+            android:fontFamily="@font/poppins_medium"
             android:textSize="16sp"
+            android:inputType="textPersonName"
             android:layout_margin="15dp"
             android:background="@drawable/rectangle_edittext_white"
-            android:padding="8dp"
+            android:padding="10dp"
             android:drawableEnd="@drawable/ic_baseline_search"
             android:textColorHint="#fff"
             android:textColor="#fff"/>

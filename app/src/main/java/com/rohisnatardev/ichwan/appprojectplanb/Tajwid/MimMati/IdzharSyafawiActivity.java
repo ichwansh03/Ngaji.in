@@ -20,17 +20,21 @@ ImageButton btnidzharsy;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_idzhar_syafawi);
+        setContentView(R.layout.activity_mim_sukun);
 
-        TextView btnCallBack = findViewById(R.id.textNextBtn);
-        btnCallBack.setOnClickListener(new View.OnClickListener() {
+        TextView txnext = findViewById(R.id.textNextBtn);
+        txnext.setText(R.string.ikhfa_syafawi);
+        txnext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent idzharsy = new Intent(IdzharSyafawiActivity.this,IkfhaSyafawiActivity.class);
-                startActivity(idzharsy);
+                startActivity(new Intent(IdzharSyafawiActivity.this, IkfhaSyafawiActivity.class));
             }
         });
-        btnidzharsy = findViewById(R.id.play_toggle_izs);
+
+        TextView article = findViewById(R.id.text_article);
+        article.setText(R.string.idzhar_syafawi_content);
+
+        btnidzharsy = findViewById(R.id.playpause_toggle);
         btnidzharsy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -39,20 +43,15 @@ ImageButton btnidzharsy;
         });
         player_izhar = MediaPlayer.create(this,R.raw.izharsyafawi);
 
-        TextView idzharsy1 = findViewById(R.id.image_izs1);
+        TextView idzharsy1 = findViewById(R.id.text_example);
         String izhar1 = getString(R.string.izharsy1);
-        TextView idzharsy2 = findViewById(R.id.image_izs);
-        String izhar2 = getString(R.string.izharsy2);
-
         SpannableString stringSpan1 = new SpannableString(izhar1);
-        SpannableString stringSpan2 = new SpannableString(izhar2);
-
         ForegroundColorSpan fcspan = new ForegroundColorSpan(Color.RED);
         stringSpan1.setSpan(fcspan,4,9, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-        stringSpan2.setSpan(fcspan,2,7,Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-
         idzharsy1.setText(stringSpan1);
-        idzharsy2.setText(stringSpan2);
+
+        TextView title = findViewById(R.id.textTitle);
+        title.setText(R.string.idzhar_syafawi);
     }
 
     private void setmpizs(){

@@ -21,9 +21,9 @@ public class DzikirPagiActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dzikir_pagi);
+        setContentView(R.layout.activity_dzikir);
 
-        rvdpagi = findViewById(R.id.rvdzikirpagi);
+        rvdpagi = findViewById(R.id.rvdzikir);
 
         dataDzikirPagi();
         dataRecyclerdPagi();

@@ -113,9 +113,9 @@
     <string name="qalqalah">Qalqalah</string>
     <string name="qalqalah_sughra">Qalqalah\n Sughra</string>
     <string name="qalqalah_kubra">Qalqalah\n Kubra</string>
-    <string name="qalqalah_sughra_content">Qalqalah adalah bacaan pada huruf\n (ب , ج , د , ط , ق)\nmembacanya dengan cara bunyi dari huruf qalqalah tersebut dipantulkan.\n\nQalqalah Sughra yaitu apabila salah satu dari huruf qalqalah itu berharakat sukun (huruf mati) dan bukan karena waqaf serta letaknya pada pertengahan ayat\n</string>
+    <string name="qalqalah_sughra_content">Qalqalah adalah bacaan pada huruf\n (ب , ج , د , ط , ق)\nmembacanya dengan cara bunyi dari huruf qalqalah tersebut dipantulkan.\n\n</string>
     <string name="qsugra1">إِنَّهُۥ عَلَىٰ رَجْعِهِۦ لَقَادِرٌ</string>
-    <string name="qalqalah_kubra_content">Qalqalah adalah bacaan pada huruf\n (ب , ج , د , ط , ق)\nmembacanya dengan cara bunyi dari huruf qalqalah tersebut dipantulkan.\n\nQalqalah Kubra yaitu apabila salah satu dari huruf qalqalah itu berharakat sukun karena waqaf. Dalam keadaan ini, huruf qalqalah dipantulkan apabila bacaan diwaqafkan tetapi tidak dipantulkan apabila bacaan diteruskan\n</string>
+    <string name="qalqalah_kubra_content">Qalqalah adalah bacaan pada huruf\n (ب , ج , د , ط , ق)\nmembacanya dengan cara bunyi dari huruf qalqalah tersebut dipantulkan.\n\n</string>
     <string name="qkubra1">لَبِٱلْمِرْصَادِ</string>
     <string name="sifat_yang_memiliki_lawan_kata">Sifat Jamak</string>
     <string name="sifat_yang_tidak_memiliki_lawan_kata">Sifat Tunggal</string>
@@ -181,7 +181,6 @@
     <string name="mutamasilan_arab">متمسلن</string>
     <string name="mutajanisan_arab">متجنسن</string>
     <string name="mutaqariban_arab">متقربن</string>
-    <string name="murotal_al_fatihah">Murotal\nFatihah</string>
     <string name="bacaan_hamzah">Bacaan Hamzah</string>
     <string name="hamzah_wasal">Hamzah\nWashal</string>
     <string name="hamzah_qath_i">Hamzah\nQath\'i</string>
@@ -240,8 +239,7 @@
     <string name="ratarqiq3">فَذَكِّرْ إِنَّمَآ أَنتَ مُذَكِّرٌۭ</string>
     <string name="ratarqiq4">وَٱللَّهُ عَلَىٰ كُلِّ شَىْءٍۢ قَدِيرٌ</string>
     <string name="mislain1">وَٱللَّهُ يَعِدُكُم مَّغْفِرَةًۭ</string>
-    <string name="izharsy1">أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِعَادٍ</string>
-    <string name="izharsy2">يَمْشِى فِى ٱلْأَسْوَاق</string>
+    <string name="izharsy1">أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِعَاد . يَمْشِى فِى ٱلْأَسْوَاق</string>
     <string name="ikhfasy1">وَمَا هُم بِمُؤْمِنِينَ</string>
     <string name="imalah1">وَقَالَ ٱرْكَبُوا۟ فِيهَا بِسْمِ ٱللَّهِ مَجْر۪ىٰهَا وَمُرْسَىٰهَآ</string>
     <string name="naql1">بِئْسَ ٱلِٱسْمُ ٱلْفُسُوقُ بَعْدَ ٱلْإِيمَـٰنِ</string>
@@ -270,7 +268,6 @@
     <string name="ayat">Ayat</string>
     <string name="versi_app">Versi : 2.7</string>
     <string name="dev_name">Rohis Natar Dev - 2020</string>
-    <string name="desc_murotal">Al-Fatihah merupakan rukun shalat yang harus dihafal dan dibaca dalam setiap rakaat sholat.\nSabda Rasulullah SAW : \"Barangsiapa yang mengerjakan sholat dan tidak membaca Ummul Qur\'an (Al-Fatihah) di dalamnya, maka sholatnya terputus dan tidak sempurna.\" Dikatakan kepada Abu Hurairah ra \"Sesungguhnya kami sholat dibelakang imam (makmum).\" Maka beliau berkata, "bacalah dalam hatimu.\"\nMaka dari itu, wajib bagi setiap muslim untuk memperbaiki bacaan Al-Fatihah agar sholat yang ditunaikannya dapat diterima oleh Allah Ta\'ala.\n</string>
     <string name="tl_about1">* Apa itu App Bina Bacaan Qur\’an?</string>
     <string name="tl_about2">* Apa Tujuan Dikembangkannya App Bina Bacaan Qur\'an?</string>
     <string name="tl_about3">* Apa Saja Fitur/Halaman yang Tersedia Dalam Aplikasi Ini?</string>
@@ -279,10 +276,8 @@
         aplikasi ini sebagai media dakwah 4.0 dan yang paling penting adalah kami berikan hak sepenuhnya kepada para pengguna untuk sumbangsih ide dan ilmu/pemahaman untuk kemajuan aplikasi ini.\n</string>
     <string name="desc_about3">Aplikasi ini tidak hanya menyediakan materi seputar Tajwid &amp; Tahsin saja, namun ada beberapa fitur penunjang pembelajaran baik offline maupun online seperti:\n
     - Info Qur\’an : Halaman ini berisi beberapa info seputar Al-Qur\’an, seperti pencarian ayat dalam Qur\’an, ayat-ayat sajadah, tanda-tanda waqaf, hingga pertanyaan-pertanyaan terkait Al-Qur\’an yang bisa menjadi penambah wawasan bagi para pengguna\n
-    - Murottal Fatihah : Halaman ini berisi panduan khusus kepada para pengguna untuk mempelajari surat Al-Fatihah. Mengapa hanya surat Al-Fatihah? Karena surat Al-Fatihah merupakan rukun wajib dalam Sholat dan setiap muslim wajib menghafalkan dan membacanya dengan cara yang baik dan benar. Maka dari itu, dalam fitur ini kami menyediakan panduan Murottal dari beberapa Syeikh agar bacaannya bisa dicontoh oleh para pengguna dan InsyaAllah mampu memperbaiki rukun Sholat kita.\n
     - Dzikir : Halaman ini berisi kumpulan dzikir-dzikir harian seperti dzikir al-matsurah pagi &amp; petang, dan doa-doa harian sebagai penunjang bagi para pengguna untuk menjalankan ibadah sunnah sesuai tuntunan Rasulullah SAW.\n
-    - Artikel Online : Halaman ini berisi seputar info dan artikel tentang Qur\’an secara realtime dan hanya dapat diakses dalam keadaan online oleh pengguna.\n
-    - Grafik Monitoring Tilawah : Halaman ini bertujuan untuk memonitoring tilawah pengguna setiap hari\n</string>
+    - Artikel Online : Halaman ini berisi seputar info dan artikel tentang Qur\’an secara realtime dan hanya dapat diakses dalam keadaan online oleh pengguna.\n</string>
     <string name="isymam_contoh">لَا تَأْمَنَّ۫ا</string>
     <string name="artikel_tajwid">Artikel Tajwid</string>
     <string name="artikel_qur_an">Artikel Qur\'an</string>
@@ -434,9 +429,7 @@
     <string name="sedang_mencari_dimana_antum_berada">Mencari lokasi…</string>
     <string name="hidupkan_gps">Hidupkan Internet &amp; GPS</string>
     <string name="cari_doa">Cari Doa</string>
-    <string name="murot">Hidupkan koneksi internet untuk melihat list dan mengunduh murattal</string>
     <string name="lanjutkan">Lanjutkan</string>
-    <string name="selamat_datang">Selamat Datang</string>
     <string name="username">Username</string>
     <string name="jadwal">Jadwal</string>
     <string name="latihan">Latihan</string>
@@ -450,5 +443,22 @@
     <string name="bagikan">Bagikan</string>
     <string name="beri_kami_nilai">Beri Kami Nilai</string>
     <string name="nama_anda">Nama Anda</string>
+    <string name="agreement">Saya menyetujui segala perubahan data yang terdapat pada aplikasi ini</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="iqra_1">IQRA 1</string>
+    <string name="iqra_2">IQRA 2</string>
+    <string name="iqra_3">IQRA 3</string>
+    <string name="iqra_4">IQRA 4</string>
+    <string name="iqra_5">IQRA 5</string>
+    <string name="iqra_6">IQRA 6</string>
+    <string-array name="iqra">
+        <item>IQRA 1</item>
+        <item>IQRA 2</item>
+        <item>IQRA 3</item>
+        <item>IQRA 4</item>
+        <item>IQRA 5</item>
+        <item>IQRA 6</item>
+    </string-array>
 
 </resources>

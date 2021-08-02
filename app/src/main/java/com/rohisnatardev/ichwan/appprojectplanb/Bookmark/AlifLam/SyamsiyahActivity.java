@@ -2,6 +2,7 @@ package com.rohisnatardev.ichwan.appprojectplanb.Bookmark.AlifLam;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.media.MediaPlayer;
@@ -21,35 +22,30 @@ ImageButton btnsyamsiyah;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_syamsiyah);
+        setContentView(R.layout.activity_aliflam);
 
-        TextView next = findViewById(R.id.textNextBtn);
-        next.setOnClickListener(this);
-        btnsyamsiyah = findViewById(R.id.play_toggle_syamsiyah);
+        findViewById(R.id.textNextBtn).setOnClickListener(this);
+        btnsyamsiyah = findViewById(R.id.play_toggle);
         btnsyamsiyah.setOnClickListener(this);
         mpSyam = MediaPlayer.create(this,R.raw.assyamsiyah);
 
-        TextView contohSyam = findViewById(R.id.syamsiah_arab);
+        TextView contohSyam = findViewById(R.id.aliflam_arab);
         String mSyamsiyah = getString(R.string.madarid2);
-
         SpannableString syam_string = new SpannableString(mSyamsiyah);
-
         ForegroundColorSpan fsyam = new ForegroundColorSpan(Color.RED);
-
         syam_string.setSpan(fsyam,1,5, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-
         contohSyam.setText(syam_string);
 
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.textNextBtn:
-                Intent syamsi = new Intent(this, QomariyahActivity.class);
-                startActivity(syamsi);
+                startActivity(new Intent(this, QomariyahActivity.class));
                 break;
-            case R.id.play_toggle_syamsiyah:
+            case R.id.play_toggle:
                 setmpsyamsi();
                 break;
         }

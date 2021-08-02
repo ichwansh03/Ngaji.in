@@ -2,6 +2,7 @@ package com.rohisnatardev.ichwan.appprojectplanb.Bookmark.Khusus;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.media.MediaPlayer;
@@ -22,33 +23,38 @@ public class IsymamActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_kisymam);
+        setContentView(R.layout.activity_bkhusus);
 
         TextView btnCallBackIs = findViewById(R.id.textNextBtn);
+        btnCallBackIs.setText(R.string.tahsil);
         btnCallBackIs.setOnClickListener(this);
-        btnisymam = findViewById(R.id.play_toggle_isymam);
+
+        TextView title = findViewById(R.id.txtitle);
+        title.setText(R.string.isymam);
+
+        btnisymam = findViewById(R.id.play_toggle_bkhusus);
         btnisymam.setOnClickListener(this);
         mpIsymam = MediaPlayer.create(this,R.raw.isymam);
 
-        TextView txisymam = findViewById(R.id.cth_isymam);
+        TextView txisymam = findViewById(R.id.bkhusus_arab);
         String cthIsymam = getString(R.string.isymam_contoh);
-
         SpannableString spanIsymam = new SpannableString(cthIsymam);
         ForegroundColorSpan fcIsymam = new ForegroundColorSpan(Color.RED);
-
         spanIsymam.setSpan(fcIsymam,10,14, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-
         txisymam.setText(spanIsymam);
+
+        TextView article = findViewById(R.id.tx_article);
+        article.setText(R.string.isymam_desc);
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View view) {
        switch (view.getId()){
            case R.id.textNextBtn:
-               Intent isymam = new Intent(this, TashilActivity.class);
-               startActivity(isymam);
+               startActivity(new Intent(this, TashilActivity.class));
                break;
-           case R.id.play_toggle_isymam:
+           case R.id.play_toggle_bkhusus:
                setmpisymam();
                break;
        }

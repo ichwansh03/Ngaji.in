@@ -1,6 +1,8 @@
 package com.rohisnatardev.ichwan.appprojectplanb.Bookmark.Khusus;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.media.MediaPlayer;
@@ -19,34 +21,29 @@ ImageButton btnimalah;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_kimalah);
+        setContentView(R.layout.activity_bkhusus);
 
-        TextView btnCallBackIm = findViewById(R.id.textNextBtn);
-        btnCallBackIm.setOnClickListener(this);
-        btnimalah = findViewById(R.id.play_toggle_imalah);
+        findViewById(R.id.textNextBtn).setOnClickListener(this);
+        btnimalah = findViewById(R.id.play_toggle_bkhusus);
         btnimalah.setOnClickListener(this);
         mediaImalah = MediaPlayer.create(this,R.raw.imalah);
 
-        TextView tvImalah = findViewById(R.id.imgImalah);
+        TextView tvImalah = findViewById(R.id.bkhusus_arab);
         String txImalah = getString(R.string.imalah1);
-
         SpannableString sImalah = new SpannableString(txImalah);
-
         ForegroundColorSpan fcImalah = new ForegroundColorSpan(Color.RED);
-
         sImalah.setSpan(fcImalah,43,50, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-
         tvImalah.setText(sImalah);
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.textNextBtn:
-                Intent imalah = new Intent(ImalahActivity.this,NaqlActivity.class);
-                startActivity(imalah);
+                startActivity(new Intent(this, NaqlActivity.class));
                 break;
-            case R.id.play_toggle_imalah:
+            case R.id.play_toggle:
                 setmpimalah();
                 break;
         }

@@ -1,12 +1,11 @@
 package com.rohisnatardev.ichwan.appprojectplanb.Tajwid;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 
 import com.rohisnatardev.ichwan.appprojectplanb.R;
 import com.rohisnatardev.ichwan.appprojectplanb.Tajwid.HukumMad.MadAridLsActivity;
@@ -26,8 +25,6 @@ import com.rohisnatardev.ichwan.appprojectplanb.Tajwid.NunMati.IdghamActivity;
 import com.rohisnatardev.ichwan.appprojectplanb.Tajwid.NunMati.IdzharActivity;
 import com.rohisnatardev.ichwan.appprojectplanb.Tajwid.NunMati.IkhfaActivity;
 import com.rohisnatardev.ichwan.appprojectplanb.Tajwid.NunMati.IqlabActivity;
-import com.rohisnatardev.ichwan.appprojectplanb.Tajwid.Qalqalah.QalqalahKubraActivity;
-import com.rohisnatardev.ichwan.appprojectplanb.Tajwid.Qalqalah.QalqalahSughraActivity;
 
 public class TajwidActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -59,89 +56,63 @@ public class TajwidActivity extends AppCompatActivity implements View.OnClickLis
         findViewById(R.id.mdlazim).setOnClickListener(this);
         findViewById(R.id.md_jaiz).setOnClickListener(this);
         findViewById(R.id.md_wajib).setOnClickListener(this);
-        findViewById(R.id.qalqalahsughra).setOnClickListener(this);
-        findViewById(R.id.qalqalahkubra).setOnClickListener(this);
 
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.idghom:
-                Intent idgham = new Intent(this, IdghamActivity.class);
-                startActivity(idgham);
+                startActivity(new Intent(this, IdghamActivity.class));
                 break;
             case R.id.idzhar:
-                Intent idzhar = new Intent(this, IdzharActivity.class);
-                startActivity(idzhar);
+                startActivity(new Intent(this, IdzharActivity.class));
                 break;
             case R.id.ikhfa:
-                Intent ikhfa = new Intent(this, IkhfaActivity.class);
-                startActivity(ikhfa);
+                startActivity(new Intent(this, IkhfaActivity.class));
                 break;
             case R.id.iqlab:
-                Intent iqlab = new Intent(this, IqlabActivity.class);
-                startActivity(iqlab);
+                startActivity(new Intent(this, IqlabActivity.class));
                 break;
             case R.id.idzharsyf:
-                Intent idzharsyfw = new Intent(this, IdzharSyafawiActivity.class);
-                startActivity(idzharsyfw);
+                startActivity(new Intent(this, IdzharSyafawiActivity.class));
                 break;
             case R.id.ikhfasy:
-                Intent ikhfasyfw = new Intent(this, IkfhaSyafawiActivity.class);
-                startActivity(ikhfasyfw);
+                startActivity(new Intent(this, IkfhaSyafawiActivity.class));
                 break;
             case R.id.idghammsln:
-                Intent idghammsln = new Intent(this, IdghamMislainActivity.class);
-                startActivity(idghammsln);
+                startActivity(new Intent(this, IdghamMislainActivity.class));
                 break;
             case R.id.madtabii:
-                Intent madthabi = new Intent(this, MadThabiiActivity.class);
-                startActivity(madthabi);
+                startActivity(new Intent(this, MadThabiiActivity.class));
                 break;
             case R.id.madbadal:
-                Intent mdbadal = new Intent(this, MadBadalActivity.class);
-                startActivity(mdbadal);
+                startActivity(new Intent(this, MadBadalActivity.class));
                 break;
             case R.id.madiwadh:
-                Intent mdiwadh = new Intent(this, MadIwadhActivity.class);
-                startActivity(mdiwadh);
+                startActivity(new Intent(this, MadIwadhActivity.class));
                 break;
             case R.id.madshilah:
-                Intent mdshsughra = new Intent(this, MadShilahActivity.class);
-                startActivity(mdshsughra);
+                startActivity(new Intent(this, MadShilahActivity.class));
                 break;
             case R.id.mdsilkubbra:
-                Intent mdshkubra = new Intent(this, MadSlhKubraActivity.class);
-                startActivity(mdshkubra);
+                startActivity(new Intent(this, MadSlhKubraActivity.class));
                 break;
             case R.id.madliyn:
-                Intent mdliyn = new Intent(this, MadLiynActivity.class);
-                startActivity(mdliyn);
+                startActivity(new Intent(this, MadLiynActivity.class));
                 break;
             case R.id.md_arid_lskn:
-                Intent mdaridh = new Intent(this, MadAridLsActivity.class);
-                startActivity(mdaridh);
+                startActivity(new Intent(this, MadAridLsActivity.class));
                 break;
             case R.id.mdlazim:
-                Intent madlazim = new Intent(this, MadLazimActivity.class);
-                startActivity(madlazim);
+                startActivity(new Intent(this, MadLazimActivity.class));
                 break;
             case R.id.md_jaiz:
-                Intent madjaiz = new Intent(this, MadMunfasilActivity.class);
-                startActivity(madjaiz);
+                startActivity(new Intent(this, MadMunfasilActivity.class));
                 break;
             case R.id.md_wajib:
-                Intent madwajib = new Intent(this, MadMuttasilActivity.class);
-                startActivity(madwajib);
-                break;
-            case R.id.qalqalahsughra:
-                Intent qalqalahsgr = new Intent(this, QalqalahSughraActivity.class);
-                startActivity(qalqalahsgr);
-                break;
-            case R.id.qalqalahkubra:
-                Intent qalqalahkbr = new Intent(this, QalqalahKubraActivity.class);
-                startActivity(qalqalahkbr);
+                startActivity(new Intent(this, MadMuttasilActivity.class));
                 break;
 
         }

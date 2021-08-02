@@ -15,15 +15,16 @@ import java.util.List;
 public class DzikirPetangActivity extends AppCompatActivity {
 
     RecyclerView rvdpetang;
-    TextView title_dpetang;
     List<DzikirPetangItem> list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dzikir_petang);
+        setContentView(R.layout.activity_dzikir);
 
-        rvdpetang = findViewById(R.id.rvdzikirpetang);
+        rvdpetang = findViewById(R.id.rvdzikir);
+        TextView tlDzikir = findViewById(R.id.title_dzikir);
+        tlDzikir.setText(R.string.dzikir_petang);
         datadPetang();
         datarvPetang();
     }

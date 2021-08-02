@@ -10,7 +10,6 @@
 
     <style name="TextMenuSet">
         <item name="android:fontFamily">@font/poppins_medium</item>
-        <item name="android:textColor">#000</item>
     </style>
 
     <style name="TextTitleSet">

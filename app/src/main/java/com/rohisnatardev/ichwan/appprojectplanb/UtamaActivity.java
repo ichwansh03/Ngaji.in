@@ -5,14 +5,17 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
 
 import com.ismaeldivita.chipnavigation.ChipNavigationBar;
 import com.rohisnatardev.ichwan.appprojectplanb.cnbfragment.QuranFragment;
 import com.rohisnatardev.ichwan.appprojectplanb.cnbfragment.JadwalFragment;
-import com.rohisnatardev.ichwan.appprojectplanb.cnbfragment.LatihanFragment;
+import com.rohisnatardev.ichwan.appprojectplanb.cnbfragment.IqraFragment;
 import com.rohisnatardev.ichwan.appprojectplanb.cnbfragment.TajwidFragment;
 
 import hotchemi.android.rate.AppRate;
@@ -26,6 +29,14 @@ public class UtamaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_utama);
+
+        findViewById(R.id.menu_nav).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NavDrawerFragment navDrawer = new NavDrawerFragment();
+                navDrawer.show(getSupportFragmentManager(),"NavDrawerFragment");
+            }
+        });
 
         AppRate.with(this)
                 .setInstallDays(0)
@@ -59,7 +70,7 @@ public class UtamaActivity extends AppCompatActivity {
                         fragments = new TajwidFragment();
                         break;
                     case R.id.tahsin:
-                        fragments = new LatihanFragment();
+                        fragments = new IqraFragment();
                         break;
                     case R.id.pengaturan:
                         fragments = new JadwalFragment();
@@ -84,4 +95,5 @@ public class UtamaActivity extends AppCompatActivity {
             internetFragment.show(getSupportFragmentManager(),"NoInternetFragment");
         }
     }
+
 }

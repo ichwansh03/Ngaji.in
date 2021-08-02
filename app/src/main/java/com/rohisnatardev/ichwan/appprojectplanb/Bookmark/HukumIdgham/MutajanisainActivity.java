@@ -2,6 +2,7 @@ package com.rohisnatardev.ichwan.appprojectplanb.Bookmark.HukumIdgham;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.media.MediaPlayer;
@@ -20,34 +21,30 @@ ImageButton btnmutaja;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mutajanisain);
+        setContentView(R.layout.activity_hukum_idgham);
 
         TextView btnCallBackMj = findViewById(R.id.textNextBtn);
         btnCallBackMj.setOnClickListener(this);
-        btnmutaja = findViewById(R.id.play_toggle_mutajanisain);
+        btnmutaja = findViewById(R.id.play_toggle_hukumidgham);
         btnmutaja.setOnClickListener(this);
         mediaPlayer = MediaPlayer.create(this,R.raw.idghammutajanisain);
 
-        TextView txmutaj = findViewById(R.id.image_mutajanisain);
+        TextView txmutaj = findViewById(R.id.examplehukumidgham);
         String tMutaja = getString(R.string.mutaja1);
-
         SpannableString spmutaja = new SpannableString(tMutaja);
-
         ForegroundColorSpan foregroundColorSpan = new ForegroundColorSpan(Color.RED);
-
         spmutaja.setSpan(foregroundColorSpan,10,17, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-
         txmutaj.setText(spmutaja);
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.textNextBtn:
-                Intent mutaja = new Intent(MutajanisainActivity.this,MutaqaribainActivity.class);
-                startActivity(mutaja);
+                startActivity(new Intent(this, MutaqaribainActivity.class));
                 break;
-            case R.id.play_toggle_mutajanisain:
+            case R.id.play_toggle_hukumidgham:
                 setmpmutaja();
                 break;
         }

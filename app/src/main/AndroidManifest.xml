@@ -13,23 +13,21 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_logobbq"
+        android:icon="@mipmap/ic_logoapp"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_logobbq_round"
+        android:roundIcon="@mipmap/ic_logoapp_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
-        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".IqraPDF.Iqra1"/>
         <activity android:name=".Setting.KonsultasiActivity" />
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-7454540885326938~4906143525" />
 
-        <activity android:name=".Monitor.MonitorActivity" />
         <activity android:name=".BlogMain.BlogQuran.BlogQuranDetailActivity" />
-        <activity android:name=".BlogMain.BlogTahsin.BlogTahsinDetailActivity" />
         <activity android:name=".BlogMain.BlogTajwid.BlogTajwidDetailActivity" />
         <activity android:name=".Setting.TentangAppActivity" />
         <activity android:name=".Setting.PolicyActivity" />
@@ -49,18 +47,10 @@
         <activity android:name=".Bookmark.AlifLam.QomariyahActivity" />
         <activity android:name=".Bookmark.AlifLam.SyamsiyahActivity" />
         <activity android:name=".Quran.WaqafActivity" />
-        <activity android:name=".Murottal.MurattalActivity" />
         <activity android:name=".Bookmark.Hamzah.QathiActivity" />
         <activity android:name=".Bookmark.Hamzah.WashalActivity" />
         <activity android:name=".Quran.SajdahActivity" />
         <activity android:name=".Quran.CariSurahActivity" />
-
-        <service android:name=".MyFirebaseMessageService">
-            <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-            </intent-filter>
-        </service>
-
         <activity android:name=".Bookmark.Khusus.TashilActivity" />
         <activity android:name=".Bookmark.Khusus.SaktahActivity" />
         <activity android:name=".Bookmark.Khusus.IsymamActivity" />
@@ -73,11 +63,9 @@
         <activity android:name=".Bookmark.HukumLamdanRa.HukumLamTarqiqActivity" />
         <activity android:name=".Bookmark.HukumLamdanRa.HukumRaActivity" />
         <activity android:name=".Bookmark.HukumLamdanRa.HukumLamActivity" />
-        <activity android:name=".Tahsin.SifatNonLawan.SifatTunggal" />
-        <activity android:name=".Tahsin.SifatLawan.SifatJamak" />
-        <activity android:name=".Tajwid.BacaanActivity" />
-        <activity android:name=".Tajwid.Qalqalah.QalqalahKubraActivity" />
-        <activity android:name=".Tajwid.Qalqalah.QalqalahSughraActivity" />
+        <activity android:name=".Tahsin.SifatTunggal.SifatTunggal" />
+        <activity android:name=".Tahsin.SifatJamak.SifatJamak" />
+        <activity android:name=".Tajwid.TajwidLanjutanActivity" />
         <activity android:name=".Tajwid.MimMati.IdghamMislainActivity" />
         <activity android:name=".Tajwid.MimMati.IkfhaSyafawiActivity" />
         <activity android:name=".Tajwid.MimMati.IdzharSyafawiActivity" />
@@ -101,11 +89,10 @@
         <activity android:name=".Tajwid.NunMati.IdzharActivity" />
         <activity android:name=".Tajwid.NunMati.IdghamActivity" />
         <activity android:name=".Tajwid.TajwidActivity" />
-        <activity
-            android:name=".UtamaActivity"
+        <activity android:name=".UtamaActivity"
             android:label="@string/app_name"
             android:launchMode="singleTop"
-            android:windowSoftInputMode="stateAlwaysHidden" />
+            android:windowSoftInputMode="stateAlwaysHidden"/>
     </application>
 
 </manifest>

@@ -2,6 +2,7 @@ package com.rohisnatardev.ichwan.appprojectplanb.Bookmark.Khusus;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.media.MediaPlayer;
@@ -20,34 +21,38 @@ ImageButton btnsaktah;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ksaktah);
+        setContentView(R.layout.activity_bkhusus);
 
         TextView btnCallBackSk = findViewById(R.id.textNextBtn);
+        btnCallBackSk.setText(R.string.isymam);
         btnCallBackSk.setOnClickListener(this);
-        btnsaktah = findViewById(R.id.play_toggle_saktah);
+
+        TextView title = findViewById(R.id.txtitle);
+        title.setText(R.string.saktah);
+
+        btnsaktah = findViewById(R.id.play_toggle_bkhusus);
         btnsaktah.setOnClickListener(this);
         playerSaktah = MediaPlayer.create(this,R.raw.saktah);
 
-        TextView tvSaktah = findViewById(R.id.imgSaktah);
+        TextView tvSaktah = findViewById(R.id.bkhusus_arab);
         String txSaktah = getString(R.string.saktah1);
-
         SpannableString sSaktah = new SpannableString(txSaktah);
-
         ForegroundColorSpan fcSaktah = new ForegroundColorSpan(Color.RED);
-
         sSaktah.setSpan(fcSaktah,10,17, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-
         tvSaktah.setText(sSaktah);
+
+        TextView article = findViewById(R.id.tx_article);
+        article.setText(R.string.saktah_desc);
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.textNextBtn:
-                Intent saktah = new Intent(SaktahActivity.this,IsymamActivity.class);
-                startActivity(saktah);
+                startActivity(new Intent(this, IsymamActivity.class));
                 break;
-            case R.id.play_toggle_saktah:
+            case R.id.play_toggle_bkhusus:
                 setmpsaktah();
                 break;
         }

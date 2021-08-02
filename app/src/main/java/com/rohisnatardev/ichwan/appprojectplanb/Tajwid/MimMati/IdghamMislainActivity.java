@@ -2,6 +2,7 @@ package com.rohisnatardev.ichwan.appprojectplanb.Tajwid.MimMati;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.media.MediaPlayer;
@@ -22,34 +23,31 @@ ImageButton btnidm;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_idgham_mislain);
+        setContentView(R.layout.activity_mim_sukun);
 
-        TextView btnCallBack = findViewById(R.id.textNextBtn);
-        btnCallBack.setOnClickListener(this);
-        btnidm = findViewById(R.id.play_toggle_idm);
+        findViewById(R.id.textNextBtn).setOnClickListener(this);
+
+        btnidm = findViewById(R.id.playpause_toggle);
         btnidm.setOnClickListener(this);
         player_idgham = MediaPlayer.create(this,R.raw.idghammislain);
 
-        TextView mislain = findViewById(R.id.image_idm);
+        TextView mislain = findViewById(R.id.text_example);
         String stringIdm = getString(R.string.mislain1);
-
         SpannableString spannableString = new SpannableString(stringIdm);
-
         ForegroundColorSpan foregroundColorSpan = new ForegroundColorSpan(Color.RED);
-
         spannableString.setSpan(foregroundColorSpan,18,23, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-
         mislain.setText(spannableString);
+
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.textNextBtn:
-                Intent idghammimi = new Intent(IdghamMislainActivity.this,MadBadalActivity.class);
-                startActivity(idghammimi);
+                startActivity(new Intent(this, MadBadalActivity.class));
                 break;
-            case R.id.play_toggle_idm:
+            case R.id.playpause_toggle:
                 plaympidm();
                 break;
         }

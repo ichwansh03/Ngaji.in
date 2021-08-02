@@ -31,7 +31,6 @@
             android:text="@string/dzikir_pagi"
             android:textAlignment="center"
             android:layout_gravity="center_horizontal"
-            android:textColor="#000"
             android:fontFamily="@font/poppins_medium" />
     </LinearLayout>
 
@@ -62,7 +61,6 @@
             android:text="@string/dzikir_petang"
             android:layout_gravity="center_horizontal"
             android:textAlignment="center"
-            android:textColor="#000"
             android:fontFamily="@font/poppins_medium" />
     </LinearLayout>
 
@@ -93,7 +91,6 @@
             android:text="@string/doa_harian"
             android:textAlignment="center"
             android:layout_gravity="center_horizontal"
-            android:textColor="#000"
             android:fontFamily="@font/poppins_medium" />
     </LinearLayout>
 

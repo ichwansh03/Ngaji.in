@@ -2,6 +2,7 @@ package com.rohisnatardev.ichwan.appprojectplanb.Bookmark.HukumIdgham;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.media.MediaPlayer;
@@ -20,34 +21,37 @@ ImageButton btnmutama;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mutamasilain);
+        setContentView(R.layout.activity_hukum_idgham);
 
         TextView btnCallBackMs = findViewById(R.id.textNextBtn);
+        btnCallBackMs.setText(R.string.idgham_mutajanisaan);
         btnCallBackMs.setOnClickListener(this);
-        btnmutama = findViewById(R.id.play_toggle_mutamasilain);
+
+        TextView title = findViewById(R.id.tlhukumidgham);
+        title.setText(R.string.idgham_mutamatsilaan);
+        TextView desc = findViewById(R.id.deschukumidgham);
+        desc.setText(R.string.idgham_mutamatsilaan_desc);
+
+        btnmutama = findViewById(R.id.play_toggle_hukumidgham);
         btnmutama.setOnClickListener(this);
         mediaPlayer = MediaPlayer.create(this,R.raw.idghammutamasilain);
 
-        TextView textView = findViewById(R.id.image_mutamasilain);
+        TextView textView = findViewById(R.id.examplehukumidgham);
         String txmuta = getString(R.string.mutama1);
-
         SpannableString sptring = new SpannableString(txmuta);
-
         ForegroundColorSpan span = new ForegroundColorSpan(Color.RED);
-
         sptring.setSpan(span,10,18, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-
         textView.setText(sptring);
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.textNextBtn:
-                Intent mutama = new Intent(MutamasilainActivity.this,MutajanisainActivity.class);
-                startActivity(mutama);
+                startActivity(new Intent(this, MutajanisainActivity.class));
                 break;
-            case R.id.play_toggle_mutamasilain:
+            case R.id.play_toggle_hukumidgham:
                 setmpmutama();
                 break;
         }

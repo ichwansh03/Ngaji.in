@@ -10,7 +10,7 @@
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="170dp"
         android:layout_marginBottom="80dp"/>
 
     <View
@@ -31,23 +31,13 @@
         android:id="@+id/sd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/selamat_datang"
+        android:text="Selamat Datang\ndi Ngaji.in"
         android:textSize="17sp"
         android:fontFamily="@font/poppins_medium"
         android:textColor="@android:color/white"
         android:layout_marginStart="15dp"
         android:layout_marginTop="25dp"
         android:layout_below="@id/menu_nav"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/username"
-        android:textSize="20sp"
-        android:fontFamily="@font/poppins_semibold"
-        android:textColor="@android:color/white"
-        android:layout_marginStart="15dp"
-        android:layout_below="@id/sd"/>
 
     <ImageView
         android:layout_width="150dp"
@@ -61,7 +51,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
-        app:cardCornerRadius="25dp"
+        app:cardCornerRadius="28dp"
         app:cardElevation="8dp"
         android:layout_alignParentBottom="true">
         <com.ismaeldivita.chipnavigation.ChipNavigationBar

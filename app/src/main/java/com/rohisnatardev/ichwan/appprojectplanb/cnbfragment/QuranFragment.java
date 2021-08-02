@@ -1,4 +1,5 @@
 package com.rohisnatardev.ichwan.appprojectplanb.cnbfragment;
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -19,7 +20,6 @@ import com.rohisnatardev.ichwan.appprojectplanb.BlogMain.BlogQuran.QuranModel;
 import com.rohisnatardev.ichwan.appprojectplanb.Dzikir.doaharian.DoaHarianActivity;
 import com.rohisnatardev.ichwan.appprojectplanb.Dzikir.dzikirpagi.DzikirPagiActivity;
 import com.rohisnatardev.ichwan.appprojectplanb.Dzikir.dzikirpetang.DzikirPetangActivity;
-import com.rohisnatardev.ichwan.appprojectplanb.Murottal.MurattalActivity;
 import com.rohisnatardev.ichwan.appprojectplanb.Quran.CariSurahActivity;
 import com.rohisnatardev.ichwan.appprojectplanb.Quran.SajdahActivity;
 import com.rohisnatardev.ichwan.appprojectplanb.Quran.WaqafActivity;
@@ -69,7 +69,6 @@ public class QuranFragment extends Fragment implements View.OnClickListener {
         view.findViewById(R.id.cari_surah).setOnClickListener(this);
         view.findViewById(R.id.ayatsajdah).setOnClickListener(this);
         view.findViewById(R.id.waqaf).setOnClickListener(this);
-        view.findViewById(R.id.murotal).setOnClickListener(this);
 
         view.findViewById(R.id.btn_dzikirpagi).setOnClickListener(this);
         view.findViewById(R.id.btn_dzikirpetang).setOnClickListener(this);
@@ -91,37 +90,27 @@ public class QuranFragment extends Fragment implements View.OnClickListener {
 
 
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.cari_surah:
-                Intent carisurah = new Intent(getActivity(), CariSurahActivity.class);
-                startActivity(carisurah);
+                startActivity(new Intent(getActivity(), CariSurahActivity.class));
                 break;
             case R.id.ayatsajdah:
-                Intent sajdah = new Intent(getActivity(), SajdahActivity.class);
-                startActivity(sajdah);
+                startActivity(new Intent(getActivity(), SajdahActivity.class));
                 break;
             case R.id.waqaf:
-                Intent waqaf = new Intent(getActivity(), WaqafActivity.class);
-                startActivity(waqaf);
-                break;
-            case R.id.murotal:
-                Intent murotal = new Intent(getActivity(), MurattalActivity.class);
-                startActivity(murotal);
+                startActivity(new Intent(getActivity(), WaqafActivity.class));
                 break;
             case R.id.btn_dzikirpagi:
-                Intent dzikirpagi = new Intent(getActivity(), DzikirPagiActivity.class);
-                startActivity(dzikirpagi);
+                startActivity(new Intent(getActivity(), DzikirPagiActivity.class));
                 break;
             case R.id.btn_dzikirpetang:
-                Intent dzikirpetang = new Intent(getActivity(), DzikirPetangActivity.class);
-                startActivity(dzikirpetang);
+                startActivity(new Intent(getActivity(), DzikirPetangActivity.class));
                 break;
             case R.id.btn_doa:
-                Intent doa = new Intent(getActivity(), DoaHarianActivity.class);
-                startActivity(doa);
-                break;
+                startActivity(new Intent(getActivity(), DoaHarianActivity.class));
         }
     }
 

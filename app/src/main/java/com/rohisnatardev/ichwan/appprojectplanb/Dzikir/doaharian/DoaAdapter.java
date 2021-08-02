@@ -72,4 +72,9 @@ public class DoaAdapter extends RecyclerView.Adapter<DoaAdapter.DoaHolder> {
             });
         }
     }
+
+    public void filterList(List<DoaItem> filteredList){
+        listItem = filteredList;
+        notifyDataSetChanged();
+    }
 }

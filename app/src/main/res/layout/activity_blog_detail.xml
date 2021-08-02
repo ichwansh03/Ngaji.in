@@ -7,17 +7,20 @@
     tools:context=".BlogMain.BlogQuran.BlogQuranDetailActivity">
 
         <ProgressBar
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/pgb_det"
-            style="@style/Widget.AppCompat.ProgressBar"
-            android:layout_centerHorizontal="true"
-            android:visibility="visible"/>
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:visibility="visible"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="5dp"/>
 
         <ImageView
             android:id="@+id/imgblogdet"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pgb_det"/>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -28,7 +31,7 @@
             android:layout_marginBottom="70dp"
             android:layout_below="@id/imgblogdet"
             app:cardCornerRadius="12dp"
-            app:cardElevation="8dp">
+            app:cardElevation="4dp">
 
             <ScrollView
                 android:layout_width="match_parent"
@@ -55,7 +58,7 @@
                         android:text="@string/description"
                         android:textSize="16sp"
                         android:fontFamily="@font/poppins_regular"
-                        android:layout_margin="10dp"/>
+                        android:padding="10dp"/>
                 </LinearLayout>
             </ScrollView>
         </androidx.cardview.widget.CardView>

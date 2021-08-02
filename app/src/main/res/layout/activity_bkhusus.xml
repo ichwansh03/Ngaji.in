@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".Bookmark.Khusus.ImalahActivity">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <include layout="@layout/ellipse_background"/>
+
+    <TextView
+        android:id="@+id/txtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/imalah"
+        style="@style/TextTitleSet"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textNextBtn"
+        android:text="@string/naql"
+        style="@style/TextButtonNextSet"
+        android:layout_below="@id/txtitle"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/rectangle_bg"
+        android:layout_below="@id/textNextBtn">
+    <me.biubiubiu.justifytext.library.JustifyTextView
+        android:id="@+id/tx_article"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/imalah_desc"
+        style="@style/TextSet"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bkhusus_arab"
+        android:text="@string/imalah1"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:fontFamily="@font/me_quran"
+        android:textAlignment="center"
+        android:layout_margin="10dp" />
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_pause_circle_outline_black_24dp"
+        android:id="@+id/play_toggle_bkhusus"
+        android:background="@android:color/transparent"
+        android:layout_gravity="center_horizontal"/>
+    <TextView
+        android:id="@+id/text_article2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/imalah_desc2"
+        style="@style/TextSet" />
+    </LinearLayout>
+</RelativeLayout>
+
+</ScrollView>

@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -26,7 +27,7 @@ public class DzikirPagiAdapter extends RecyclerView.Adapter<DzikirPagiAdapter.Dz
     @NonNull
     @Override
     public DzikirPagiAdapter.DzikirPagiHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_dzikir_pagi_item,parent,false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_dzikir_item,parent,false);
 
         return new DzikirPagiHolder(v);
     }
@@ -59,13 +60,13 @@ public class DzikirPagiAdapter extends RecyclerView.Adapter<DzikirPagiAdapter.Dz
         public DzikirPagiHolder(@NonNull View itemView) {
             super(itemView);
 
-            nama = itemView.findViewById(R.id.tlnamaDzikirpagi);
+            nama = itemView.findViewById(R.id.tlnamaDzikir);
             jumlah = itemView.findViewById(R.id.jmlBaca);
-            arab = itemView.findViewById(R.id.dzikirPagiArab);
-            latin = itemView.findViewById(R.id.dzikirPagilatin);
-            arti = itemView.findViewById(R.id.dzikirPagiArti);
-            expandedConstraint = itemView.findViewById(R.id.expanddzikirPagi);
-            ckbox = itemView.findViewById(R.id.checkDzikirpagi);
+            arab = itemView.findViewById(R.id.dzikirArab);
+            latin = itemView.findViewById(R.id.dzikirlatin);
+            arti = itemView.findViewById(R.id.dzikirArti);
+            expandedConstraint = itemView.findViewById(R.id.expanddzikir);
+            ckbox = itemView.findViewById(R.id.checkDzikir);
 
             nama.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -74,6 +75,7 @@ public class DzikirPagiAdapter extends RecyclerView.Adapter<DzikirPagiAdapter.Dz
                     items.setExpand(!items.isExpand());
                     notifyItemChanged(getAdapterPosition());
                     items.setChecked(true);
+
                 }
             });
         }
