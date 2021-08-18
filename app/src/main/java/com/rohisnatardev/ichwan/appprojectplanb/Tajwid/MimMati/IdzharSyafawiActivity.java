@@ -22,11 +22,9 @@ ImageButton btnidzharsy;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mim_sukun);
 
-        TextView txnext = findViewById(R.id.textNextBtn);
-        txnext.setText(R.string.ikhfa_syafawi);
-        txnext.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.fabmimsukun).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 startActivity(new Intent(IdzharSyafawiActivity.this, IkfhaSyafawiActivity.class));
             }
         });

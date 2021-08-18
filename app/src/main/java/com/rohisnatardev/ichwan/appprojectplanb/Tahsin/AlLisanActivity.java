@@ -31,12 +31,10 @@ public class AlLisanActivity extends AppCompatActivity {
         dataLisan();
         setRecview();
 
-        TextView btnCallBack = findViewById(R.id.textNextBtn);
-        btnCallBack.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.fablisan).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent intentSyaf = new Intent(AlLisanActivity.this,AsSyafActivity.class);
-                startActivity(intentSyaf);
+            public void onClick(View v) {
+                startActivity(new Intent(AlLisanActivity.this, AsSyafActivity.class));
             }
         });
 

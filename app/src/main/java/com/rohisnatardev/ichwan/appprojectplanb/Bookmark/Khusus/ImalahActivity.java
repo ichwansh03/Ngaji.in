@@ -23,7 +23,7 @@ ImageButton btnimalah;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bkhusus);
 
-        findViewById(R.id.textNextBtn).setOnClickListener(this);
+        findViewById(R.id.fabbacaankhusus).setOnClickListener(this);
         btnimalah = findViewById(R.id.play_toggle_bkhusus);
         btnimalah.setOnClickListener(this);
         mediaImalah = MediaPlayer.create(this,R.raw.imalah);
@@ -40,7 +40,7 @@ ImageButton btnimalah;
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.textNextBtn:
+            case R.id.fabbacaankhusus:
                 startActivity(new Intent(this, NaqlActivity.class));
                 break;
             case R.id.play_toggle:

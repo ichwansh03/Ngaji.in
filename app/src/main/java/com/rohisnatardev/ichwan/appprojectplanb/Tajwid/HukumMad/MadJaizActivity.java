@@ -14,23 +14,22 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import com.rohisnatardev.ichwan.appprojectplanb.R;
 
-public class MadMunfasilActivity extends AppCompatActivity {
+public class MadJaizActivity extends AppCompatActivity {
 MediaPlayer player;
 ImageButton btnjaiz;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mad_munfasil);
+        setContentView(R.layout.activity_mad_jaiz_wajib);
 
-        TextView btnCallBack = findViewById(R.id.textNextBtn);
-        btnCallBack.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.fabmadjaizwajib).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent madwajib = new Intent(MadMunfasilActivity.this,MadMuttasilActivity.class);
-                startActivity(madwajib);
+            public void onClick(View v) {
+                startActivity(new Intent(MadJaizActivity.this, MadWajibActivity.class));
             }
         });
-        btnjaiz = findViewById(R.id.play_toggle_madjaiz);
+
+        btnjaiz = findViewById(R.id.play_toggle_jaizwajib);
         btnjaiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -39,11 +38,11 @@ ImageButton btnjaiz;
         });
         player = MediaPlayer.create(this,R.raw.madmunfasil);
 
-        TextView madjaiz1 = findViewById(R.id.arab_madjaiz);
+        TextView madjaiz1 = findViewById(R.id.example_jaizwajib);
         String munfasil1 = getString(R.string.madjaiz1);
-        TextView madjaiz2 = findViewById(R.id.arab1_madjaiz);
+        TextView madjaiz2 = findViewById(R.id.example2_jaizwajib);
         String munfasil2 = getString(R.string.madjaiz2);
-        TextView madjaiz3 = findViewById(R.id.image_madjaiz);
+        TextView madjaiz3 = findViewById(R.id.example3_jaizwajib);
         String munfasil3 = getString(R.string.madjaiz3);
 
         SpannableString span1 = new SpannableString(munfasil1);

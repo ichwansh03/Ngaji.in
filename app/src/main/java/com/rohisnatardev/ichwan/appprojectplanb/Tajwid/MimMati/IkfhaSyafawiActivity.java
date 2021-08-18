@@ -23,9 +23,7 @@ ImageButton btniks;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mim_sukun);
 
-        TextView txnext = findViewById(R.id.textNextBtn);
-        txnext.setText(R.string.idgham_mislain);
-        txnext.setOnClickListener(this);
+        findViewById(R.id.fabmimsukun).setOnClickListener(this);
 
         TextView article = findViewById(R.id.text_article);
         article.setText(R.string.ikhfa_syafawi_content);
@@ -50,9 +48,8 @@ ImageButton btniks;
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.textNextBtn:
-                Intent intent = new Intent(this, IdghamMislainActivity.class);
-                startActivity(intent);
+            case R.id.fabmimsukun:
+                startActivity(new Intent(this, IdghamMislainActivity.class));
                 break;
             case R.id.playpause_toggle:
                 setmpiks();

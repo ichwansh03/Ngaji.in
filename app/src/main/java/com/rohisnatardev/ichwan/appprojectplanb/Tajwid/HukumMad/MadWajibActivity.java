@@ -13,26 +13,30 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import com.rohisnatardev.ichwan.appprojectplanb.Tajwid.Qalqalah.QalqalahSughraActivity;
+import com.rohisnatardev.ichwan.appprojectplanb.Bookmark.AlifLam.SyamsiyahActivity;
 import com.rohisnatardev.ichwan.appprojectplanb.R;
 
-public class MadMuttasilActivity extends AppCompatActivity {
+public class MadWajibActivity extends AppCompatActivity {
 MediaPlayer player;
 ImageButton btnwajib;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mad_muttasil);
+        setContentView(R.layout.activity_mad_jaiz_wajib);
 
-        TextView tv = findViewById(R.id.textNextBtn);
-        tv.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.fabmadjaizwajib).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent madwajib = new Intent(MadMuttasilActivity.this, QalqalahSughraActivity.class);
-                startActivity(madwajib);
+            public void onClick(View v) {
+                startActivity(new Intent(MadWajibActivity.this, SyamsiyahActivity.class));
             }
         });
-        btnwajib = findViewById(R.id.play_toggle_madwajib);
+
+        TextView title = findViewById(R.id.textTitle);
+        title.setText(R.string.mad_wajib_muttasil);
+        TextView article = findViewById(R.id.article_madjaizwajib);
+        article.setText(R.string.mad_wjb_mts_article);
+
+        btnwajib = findViewById(R.id.play_toggle_jaizwajib);
         btnwajib.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -41,10 +45,11 @@ ImageButton btnwajib;
         });
         player = MediaPlayer.create(this,R.raw.madwajibmuttasil);
 
-        TextView mWajib1 = findViewById(R.id.image_madwajib);
+        TextView mWajib1 = findViewById(R.id.example_jaizwajib);
         String mString1 = getString(R.string.madwajib1);
-        TextView mWajib2 = findViewById(R.id.image_madwajib2);
+        TextView mWajib2 = findViewById(R.id.example2_jaizwajib);
         String mString2 = getString(R.string.madwajib2);
+        findViewById(R.id.example3_jaizwajib).setVisibility(View.INVISIBLE);
 
         SpannableString spaned1 = new SpannableString(mString1);
         SpannableString spaned2 = new SpannableString(mString2);

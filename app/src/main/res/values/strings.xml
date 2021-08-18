@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Bina Bacaan Qur\'an</string>
+    <string name="app_name">Ngaji In</string>
     <string name="idgham">Idgham</string>
     <string name="idzhar">Idzhar</string>
     <string name="ikhfa">Ikhfa</string>
@@ -260,16 +260,16 @@
     <string name="desc_qomariyah">Alif lam qomariyah ialah cara pembacaan huruf alif lam (ال)\njika bertemu dengan huruf - huruf qomariyah atau disebut juga hukum idzhar qomariyah, karena pada hukum ini huruf alif lam harus dibaca secara idzhar atau jelas.\n(ب , ج , ح , خ , ع , غ , ف , ق , ك , م , و , ه , ي , أ)\n</string>
     <string name="qomariyah_arab">القمرية</string>
     <string name="dzikir_dan_doa">Dzikir dan Doa</string>
-    <string name="doa_harian">Doa\nHarian</string>
-    <string name="dzikir_petang">Dzikir\nPetang</string>
-    <string name="dzikir_pagi">Dzikir\nPagi</string>
+    <string name="doa_harian">Doa Harian</string>
+    <string name="dzikir_petang">Dzikir Petang</string>
+    <string name="dzikir_pagi">Dzikir Pagi</string>
     <string name="scroll_up_untuk_penjelasan">Scroll up untuk penjelasan</string>
     <string name="surah">Surah</string>
     <string name="ayat">Ayat</string>
-    <string name="versi_app">Versi : 2.7</string>
+    <string name="versi_app">Versi : 3.0</string>
     <string name="dev_name">Rohis Natar Dev - 2020</string>
-    <string name="tl_about1">* Apa itu App Bina Bacaan Qur\’an?</string>
-    <string name="tl_about2">* Apa Tujuan Dikembangkannya App Bina Bacaan Qur\'an?</string>
+    <string name="tl_about1">* Apa itu App Ngaji.in?</string>
+    <string name="tl_about2">* Apa Tujuan Dikembangkannya App Ngaji.in?</string>
     <string name="tl_about3">* Apa Saja Fitur/Halaman yang Tersedia Dalam Aplikasi Ini?</string>
     <string name="desc_about1">Aplikasi Bina Bacaan Qur’an merupakan salah satu aplikasi mobile pembelajaran dasar Tajwid &amp; Tahsin terlengkap yang hadir di PlayStore guna menunjang kebutuhan belajar Agama terutama ilmu Tajwid &amp; Tahsin bagi seluruh umat Islam di Indonesia khususnya.\n</string>
     <string name="desc_about2">Kami menghadirkan dan mengembangkan aplikasi ini sebagai media pembelajaran Tajwid &amp; Tahsin tingkat dasar dan semata-mata untuk menggapai ridho Allah Ta\’ala. Kami sadar bahwa dengan adanya kemajuan teknologi saat ini membuat kami tergerak ikut mengembangkan
@@ -416,15 +416,15 @@
     <string name="maghrib">Maghrib</string>
     <string name="isya">Isya</string>
     <string name="_19_artikel">19 Artikel</string>
-    <string name="_16_artikel">16 Artikel</string>
+    <string name="_16_artikel">14 Artikel</string>
     <string name="email_app">bbqapp.helpcenter@gmail.com</string>
     <string name="pesan">Pesan :</string>
     <string name="ke">Ke :</string>
     <string name="masukkan_subjek">Masukkan Subjek</string>
     <string name="masukkan_pesan">Masukkan Pesan</string>
     <string name="_12_we">12 WE</string>
-    <string name="tidak_ada_koneksi_internet">Yaaahh… Tidak ada koneksi internet!</string>
-    <string name="lanjutkan_secara_offline">Okelah gakpapa, lanjut!</string>
+    <string name="tidak_ada_koneksi_internet">Tidak ada koneksi internet!</string>
+    <string name="lanjutkan_secara_offline">Lanjutkan</string>
     <string name="lok">Atur Lokasi</string>
     <string name="sedang_mencari_dimana_antum_berada">Mencari lokasi…</string>
     <string name="hidupkan_gps">Hidupkan Internet &amp; GPS</string>
@@ -442,8 +442,6 @@
     <string name="konsultasi_materi">Konsultasi Materi</string>
     <string name="bagikan">Bagikan</string>
     <string name="beri_kami_nilai">Beri Kami Nilai</string>
-    <string name="nama_anda">Nama Anda</string>
-    <string name="agreement">Saya menyetujui segala perubahan data yang terdapat pada aplikasi ini</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="iqra_1">IQRA 1</string>
@@ -452,13 +450,7 @@
     <string name="iqra_4">IQRA 4</string>
     <string name="iqra_5">IQRA 5</string>
     <string name="iqra_6">IQRA 6</string>
-    <string-array name="iqra">
-        <item>IQRA 1</item>
-        <item>IQRA 2</item>
-        <item>IQRA 3</item>
-        <item>IQRA 4</item>
-        <item>IQRA 5</item>
-        <item>IQRA 6</item>
-    </string-array>
+    <string name="sumber_ummul_qura_mekah">*Sumber : Ummul Qura-Mekah</string>
+    <string name="iqra">Iqra</string>
 
 </resources>

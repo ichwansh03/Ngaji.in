@@ -23,6 +23,8 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 
+import me.biubiubiu.justifytext.library.JustifyTextView;
+
 public class BlogQuranDetailActivity extends AppCompatActivity {
 
     public static final String EXTRA_QURAN = "extra_quran";

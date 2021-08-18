@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="#55D0EB"
+    android:background="@color/colorPrimary"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Tahsin.SifatJamak.SifatJamak">
@@ -10,6 +10,9 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
+        <include layout="@layout/ellipse_background" />
+
     <TextView
         android:id="@+id/title_sifat"
         android:layout_width="wrap_content"
@@ -22,14 +25,6 @@
         android:layout_marginTop="50dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
-    <View
-        android:id="@+id/view_underline"
-        android:layout_width="230dp"
-        android:layout_height="3dp"
-        android:background="@drawable/underline_title"
-        app:layout_constraintTop_toBottomOf="@id/title_sifat"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="15dp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvSifatHuruf"
@@ -39,7 +34,7 @@
         android:layout_marginBottom="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/view_underline"
+        app:layout_constraintTop_toBottomOf="@id/title_sifat"
         app:layout_constraintVertical_bias="0.0">
 
     </androidx.recyclerview.widget.RecyclerView>

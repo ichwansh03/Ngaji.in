@@ -16,12 +16,10 @@ public class AlJaufActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_al_jauf);
 
-        TextView btnCallBack = findViewById(R.id.textNextBtn);
-        btnCallBack.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.fabjauf).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent intentKhais = new Intent(AlJaufActivity.this,AlKhaisActivity.class);
-                startActivity(intentKhais);
+            public void onClick(View v) {
+                startActivity(new Intent(AlJaufActivity.this, AlKhaisActivity.class));
             }
         });
 

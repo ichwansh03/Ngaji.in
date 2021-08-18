@@ -22,26 +22,27 @@
             android:text="@string/hamzah_qath_i"
             style="@style/TextTitleSet"/>
 
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textTitle"
+            style="@style/cardBackground">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginEnd="15dp"
-            android:background="@drawable/rectangle_bg"
-            android:layout_below="@id/ellipse">
+            android:orientation="vertical">
         <me.biubiubiu.justifytext.library.JustifyTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/qathi_desc"
             style="@style/TextSet"/>
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/txqathiarab"
             android:text="@string/hamqathi"
-            android:textSize="30sp"
-            android:textColor="#000000"
-            android:layout_gravity="center_horizontal"/>
+            style="@style/TextArabicSet"/>
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -50,5 +51,6 @@
             android:background="@android:color/transparent"
             android:layout_gravity="center_horizontal"/>
         </LinearLayout>
+        </androidx.cardview.widget.CardView>
     </RelativeLayout>
 </ScrollView>

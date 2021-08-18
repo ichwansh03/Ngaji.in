@@ -20,7 +20,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/hams_lawan_dari_jahr"
-                android:textColor="#23C1E3"
+                android:textColor="@color/colorText"
                 android:textSize="18sp"
                 android:fontFamily="@font/poppins_medium"
                 android:padding="5dp"
@@ -39,13 +39,13 @@
                     android:textSize="17sp"
                     android:fontFamily="@font/me_quran"
                     android:textAlignment="center"
-                    android:textColor="#000000"/>
+                    android:textColor="@color/colorText"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/doaLatin"
                     android:text="@string/deskripsi"
-                    android:textColor="#000000"
+                    android:textColor="@color/colorText"
                     android:fontFamily="@font/poppins_regular"
                     android:layout_marginStart="5dp"/>
                 <TextView
@@ -54,6 +54,7 @@
                     android:id="@+id/doaArti"
                     android:text="@string/deskripsi"
                     android:textStyle="italic"
+                    android:textColor="@color/colorText"
                     android:fontFamily="@font/poppins_regular"
                     android:layout_marginStart="5dp"/>
             </LinearLayout>

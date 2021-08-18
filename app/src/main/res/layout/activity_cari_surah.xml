@@ -100,5 +100,6 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_margin="17dp"
+        app:backgroundTint="@color/colorSecondary"
         app:srcCompat="@drawable/ic_save_black_24dp"/>
 </RelativeLayout>

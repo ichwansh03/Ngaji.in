@@ -20,17 +20,15 @@ ImageButton btntabi;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mad_thabii);
+        setContentView(R.layout.activity_mad_thabii_badal);
 
-        TextView btnCallBack = findViewById(R.id.textNextBtn);
-        btnCallBack.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.fabmadthabii).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent madthabi = new Intent(MadThabiiActivity.this,MadIwadhActivity.class);
-                startActivity(madthabi);
+            public void onClick(View v) {
+                startActivity(new Intent(MadThabiiActivity.this, MadIwadhActivity.class));
             }
         });
-        btntabi = findViewById(R.id.play_toggle_madtabi);
+        btntabi = findViewById(R.id.play_toggle_mad);
         btntabi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -39,9 +37,9 @@ ImageButton btntabi;
         });
         player = MediaPlayer.create(this,R.raw.madtabii);
 
-        TextView mtabi1 = findViewById(R.id.image_madtabi);
+        TextView mtabi1 = findViewById(R.id.example_mad1);
         String txmtabi1 = getString(R.string.madtabi1);
-        TextView mtabi2 = findViewById(R.id.image_madtabi2);
+        TextView mtabi2 = findViewById(R.id.example_mad2);
         String txmtabi2 = getString(R.string.madtabi2);
 
         SpannableString span1 = new SpannableString(txmtabi1);

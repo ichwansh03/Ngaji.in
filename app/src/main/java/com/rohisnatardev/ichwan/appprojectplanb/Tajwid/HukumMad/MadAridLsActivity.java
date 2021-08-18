@@ -22,14 +22,13 @@ ImageButton btnmparidh;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mad_arid_ls);
 
-        TextView btnCallBack = findViewById(R.id.textNextBtn);
-        btnCallBack.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.fabmadaridh).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent madarid = new Intent(MadAridLsActivity.this,MadLazimActivity.class);
-                startActivity(madarid);
+            public void onClick(View v) {
+                startActivity(new Intent(MadAridLsActivity.this, MadLazimActivity.class));
             }
         });
+
         btnmparidh = findViewById(R.id.play_toggle_madarid);
         player = MediaPlayer.create(this,R.raw.madaridlisukun2harakat);
         btnmparidh.setOnClickListener(new View.OnClickListener() {

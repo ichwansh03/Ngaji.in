@@ -24,7 +24,7 @@ ImageButton btnsyamsiyah;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aliflam);
 
-        findViewById(R.id.textNextBtn).setOnClickListener(this);
+        findViewById(R.id.fabaliflam).setOnClickListener(this);
         btnsyamsiyah = findViewById(R.id.play_toggle);
         btnsyamsiyah.setOnClickListener(this);
         mpSyam = MediaPlayer.create(this,R.raw.assyamsiyah);
@@ -42,7 +42,7 @@ ImageButton btnsyamsiyah;
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.textNextBtn:
+            case R.id.fabaliflam:
                 startActivity(new Intent(this, QomariyahActivity.class));
                 break;
             case R.id.play_toggle:

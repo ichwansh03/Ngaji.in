@@ -22,14 +22,14 @@ public class IkhfaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ikhfa);
-        TextView btnCallBack = findViewById(R.id.textNextBtn);
-        btnCallBack.setOnClickListener(new View.OnClickListener() {
+
+        findViewById(R.id.fabikhfa).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent ikhfa = new Intent(IkhfaActivity.this,IqlabActivity.class);
-                startActivity(ikhfa);
+            public void onClick(View v) {
+                startActivity(new Intent(IkhfaActivity.this, IqlabActivity.class));
             }
         });
+
         btnikhfa = findViewById(R.id.play_toggle_ikhfa);
         btnikhfa.setOnClickListener(new View.OnClickListener() {
             @Override

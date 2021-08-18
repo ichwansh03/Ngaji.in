@@ -2,6 +2,7 @@ package com.rohisnatardev.ichwan.appprojectplanb.Tajwid.NunMati;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.media.MediaPlayer;
@@ -24,8 +25,7 @@ ImageButton btnplayiqlab;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_iqlab);
 
-        TextView btnCallBack = findViewById(R.id.textNextBtn);
-        btnCallBack.setOnClickListener(this);
+        findViewById(R.id.fabiqlab).setOnClickListener(this);
         btnplayiqlab = findViewById(R.id.play_toggle_iqlab);
         btnplayiqlab.setOnClickListener(this);
         player = MediaPlayer.create(this,R.raw.iqlab);
@@ -41,12 +41,12 @@ ImageButton btnplayiqlab;
 
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.textNextBtn:
-                Intent iqlab = new Intent(IqlabActivity.this,IdzharSyafawiActivity.class);
-                startActivity(iqlab);
+            case R.id.fabiqlab:
+                startActivity(new Intent(this, IdzharSyafawiActivity.class));
                 break;
             case R.id.play_toggle_iqlab:
                 setmpiqlab();

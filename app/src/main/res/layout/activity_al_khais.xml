@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,37 +10,28 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-    <include layout="@layout/ellipse_background"/>
-    <TextView
-        android:id="@+id/textTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/al_khaisyum_pangkal_hidung"
-        style="@style/TextTitleSet" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textNextBtn"
-        android:text="@string/pembagian_sifat_tahsin"
-        android:textColor="@android:color/white"
-        android:layout_alignParentEnd="true"
-        android:layout_margin="15dp"
-        android:layout_below="@id/textTitle"
-        android:fontFamily="@font/poppins_regular"
-        android:textSize="13sp"
-        app:drawableEndCompat="@drawable/ic_arrow_forward_black_24dp" />
+        <include layout="@layout/ellipse_background" />
 
         <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/khais"
-        android:background="@drawable/rectangle_bg"
-        android:textSize="@dimen/textset_size"
-        android:padding="5dp"
-        android:layout_marginEnd="15dp"
-        android:layout_below="@id/textNextBtn"
-        android:fontFamily="@font/poppins_regular"/>
+            android:id="@+id/textTitle"
+            style="@style/TextTitleSet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/al_khaisyum_pangkal_hidung" />
 
+        <androidx.cardview.widget.CardView
+            style="@style/cardBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textTitle">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:padding="5dp"
+                android:text="@string/khais"
+                android:textSize="@dimen/textset_size" />
+        </androidx.cardview.widget.CardView>
     </RelativeLayout>
 </ScrollView>

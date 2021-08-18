@@ -24,12 +24,10 @@ ImageButton imageButton;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_idzhar);
 
-        TextView btnCallBack = findViewById(R.id.textNextBtn);
-        btnCallBack.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.fabidzhar).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent idzhar = new Intent(IdzharActivity.this,IkhfaActivity.class);
-                startActivity(idzhar);
+            public void onClick(View v) {
+                startActivity(new Intent(IdzharActivity.this, IkhfaActivity.class));
             }
         });
 

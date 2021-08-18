@@ -9,7 +9,7 @@
         android:id="@+id/card_iqra1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_margin="10dp"
         app:cardCornerRadius="12dp"
         app:cardElevation="4dp">
         <TextView
@@ -26,7 +26,7 @@
         android:id="@+id/card_iqra2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_margin="10dp"
         app:cardCornerRadius="12dp"
         app:cardElevation="4dp">
         <TextView
@@ -43,7 +43,7 @@
         android:id="@+id/card_iqra3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_margin="10dp"
         app:cardCornerRadius="12dp"
         app:cardElevation="4dp">
         <TextView
@@ -60,7 +60,7 @@
         android:id="@+id/card_iqra4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_margin="10dp"
         app:cardCornerRadius="12dp"
         app:cardElevation="4dp">
         <TextView
@@ -77,7 +77,7 @@
         android:id="@+id/card_iqra5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_margin="10dp"
         app:cardCornerRadius="12dp"
         app:cardElevation="4dp">
         <TextView
@@ -94,7 +94,7 @@
         android:id="@+id/card_iqra6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_margin="10dp"
         app:cardCornerRadius="12dp"
         app:cardElevation="4dp">
         <TextView

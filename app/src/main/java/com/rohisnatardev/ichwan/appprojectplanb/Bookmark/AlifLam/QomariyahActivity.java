@@ -17,6 +17,8 @@ import android.widget.TextView;
 import com.rohisnatardev.ichwan.appprojectplanb.Bookmark.Hamzah.WashalActivity;
 import com.rohisnatardev.ichwan.appprojectplanb.R;
 
+import me.biubiubiu.justifytext.library.JustifyTextView;
+
 public class QomariyahActivity extends AppCompatActivity implements View.OnClickListener {
 MediaPlayer mpQomar;
 ImageButton btnqomar;
@@ -25,11 +27,9 @@ ImageButton btnqomar;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aliflam);
 
-        TextView txnext = findViewById(R.id.textNextBtn);
-        txnext.setText(R.string.hamzah_wasal);
-        txnext.setOnClickListener(this);
+        findViewById(R.id.fabaliflam).setOnClickListener(this);
 
-        TextView article = findViewById(R.id.text_article);
+        JustifyTextView article = findViewById(R.id.tx_article_aliflam);
         article.setText(R.string.desc_qomariyah);
 
         btnqomar = findViewById(R.id.play_toggle);
@@ -51,7 +51,7 @@ ImageButton btnqomar;
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.textNextBtn:
+            case R.id.fabaliflam:
                 startActivity(new Intent(this, WashalActivity.class));
                 break;
             case R.id.play_toggle:

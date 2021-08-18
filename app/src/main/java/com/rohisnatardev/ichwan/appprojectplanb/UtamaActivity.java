@@ -33,8 +33,8 @@ public class UtamaActivity extends AppCompatActivity {
         findViewById(R.id.menu_nav).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                NavDrawerFragment navDrawer = new NavDrawerFragment();
-                navDrawer.show(getSupportFragmentManager(),"NavDrawerFragment");
+                BottomSheetDialog dialog = new BottomSheetDialog();
+                dialog.show(getSupportFragmentManager(),"BottomSheetDialog");
             }
         });
 

@@ -1,65 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
     tools:context=".Tahsin.AlLisanActivity">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <include layout="@layout/ellipse_background"/>
-    <TextView
-        android:id="@+id/textTitle"
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fablisan"
+        style="@style/FloatingActionButtonStyle"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/al_lisan_lidah"
-        style="@style/TextTitleSet" />
+        android:layout_height="wrap_content" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textNextBtn"
-        android:text="@string/as_syafatain_bibir"
-        android:layout_below="@id/textTitle"
-        style="@style/TextButtonNextSet" />
-
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_below="@id/textNextBtn"
-        android:layout_marginEnd="15dp"
-        android:background="@drawable/rectangle_bg">
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:src="@drawable/lisan"
-            android:padding="10dp"/>
-    <me.biubiubiu.justifytext.library.JustifyTextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/lisaniyah"
-        style="@style/TextSet"/>
+        android:layout_height="match_parent">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/huruf_huruf_al_lisan"
-            android:textColor="#000"
-            android:textSize="18sp"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="15dp"
-            android:fontFamily="@font/poppins_semibold"/>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_hijaiyah_lisan"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
-    </RelativeLayout>
-</ScrollView>
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/ellipse_background" />
+
+            <TextView
+                android:id="@+id/textTitle"
+                style="@style/TextTitleSet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/al_lisan_lidah" />
+
+            <androidx.cardview.widget.CardView
+                style="@style/cardBackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textTitle">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:padding="10dp"
+                        android:src="@drawable/lisan" />
+
+                    <me.biubiubiu.justifytext.library.JustifyTextView
+                        style="@style/TextSet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lisaniyah" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="@string/huruf_huruf_al_lisan"
+                        android:textColor="#000"
+                        android:textSize="18sp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_hijaiyah_lisan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

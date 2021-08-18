@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,64 +7,69 @@
     android:background="@color/colorPrimary"
     tools:context=".Tajwid.NunMati.IdzharActivity">
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabidzhar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/FloatingActionButtonStyle"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <include layout="@layout/ellipse_background"/>
-    <TextView
-        android:id="@+id/textTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hukum_idzhar"
-        style="@style/TextTitleSet"/>
+        <include layout="@layout/ellipse_background" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textNextBtn"
-        android:text="@string/ikhfa"
-        android:layout_below="@id/textTitle"
-        style="@style/TextButtonNextSet"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@drawable/rectangle_bg"
-            android:layout_below="@id/textNextBtn"
-            android:layout_marginEnd="15dp">
-    <me.biubiubiu.justifytext.library.JustifyTextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/TextSet"
-        android:text="@string/idzhar_article" />
-    <TextView
-        android:id="@+id/image_idzhar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/idzhar1"
-        android:textSize="30sp"
-        android:fontFamily="@font/me_quran"
-        android:textColor="#000000"
-        android:layout_gravity="center_horizontal"/>
         <TextView
-            android:id="@+id/image_idzhar2"
+            android:id="@+id/textTitle"
+            style="@style/TextTitleSet"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/idzhar2"
-            android:textSize="30sp"
-            android:textColor="#000000"
-            android:layout_gravity="center_horizontal"
-            android:fontFamily="@font/me_quran"/>
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ic_pause_circle_outline_black_24dp"
-        android:id="@+id/play_toggle_idzhar"
-        android:layout_gravity="center_horizontal"
-        android:background="@android:color/transparent"/>
-        </LinearLayout>
-    </RelativeLayout>
+            android:text="@string/hukum_idzhar" />
 
-</ScrollView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textTitle"
+            style="@style/cardBackground">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="10dp">
+
+                <me.biubiubiu.justifytext.library.JustifyTextView
+                    style="@style/TextSet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/idzhar_article" />
+
+                <TextView
+                    android:id="@+id/image_idzhar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/idzhar1"
+                    style="@style/TextArabicSet"/>
+
+                <TextView
+                    android:id="@+id/image_idzhar2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/idzhar2"
+                    style="@style/TextArabicSet"/>
+
+                <ImageButton
+                    android:id="@+id/play_toggle_idzhar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@android:color/transparent"
+                    app:srcCompat="@drawable/ic_pause_circle_outline_black_24dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

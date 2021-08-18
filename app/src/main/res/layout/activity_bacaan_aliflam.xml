@@ -10,22 +10,16 @@
         android:id="@+id/title_aliflam"
         android:text="@string/hukum_alif_lam"
         android:textSize="20sp"
-        android:textColor="@android:color/white"
+        android:textColor="@color/colorText"
         android:fontFamily="@font/poppins_medium"
         android:layout_marginTop="25dp"
         android:layout_marginStart="15dp" />
-    <View
-        android:layout_width="230dp"
-        android:layout_height="3dp"
-        android:id="@+id/view_underline4"
-        android:background="@drawable/underline_title"
-        android:layout_below="@id/title_aliflam"
-        android:layout_marginStart="15dp" />
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_below="@+id/view_underline4"
+        android:layout_below="@+id/title_aliflam"
         android:layout_marginTop="15dp"
         android:layout_marginStart="15dp">
 
@@ -46,13 +40,13 @@
                 android:layout_gravity="center"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:textColor="#23C1E3"/>
+                android:textColor="@color/colorText"/>
         </androidx.cardview.widget.CardView>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/as_syamsiyah"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/colorText"
             android:fontFamily="@font/poppins_medium"
             android:textAlignment="center"
             android:layout_gravity="center"/>
@@ -75,7 +69,7 @@
                 android:layout_gravity="center"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:textColor="#23C1E3"/>
+                android:textColor="@color/colorText"/>
         </androidx.cardview.widget.CardView>
         <TextView
             android:layout_width="wrap_content"
@@ -83,7 +77,7 @@
             android:text="@string/al_qomariyah"
             android:layout_gravity="center"
             android:fontFamily="@font/poppins_medium"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/colorText"
             android:textAlignment="center"/>
     </LinearLayout>
     </LinearLayout>

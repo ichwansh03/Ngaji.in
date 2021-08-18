@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,66 +7,73 @@
     android:background="@color/colorPrimary"
     tools:context=".Bookmark.HukumLamdanRa.HukumLamActivity">
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabhukumlam"
+        style="@style/FloatingActionButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-                <include layout="@layout/ellipse_background"/>
+            <include layout="@layout/ellipse_background" />
 
-        <TextView
-            android:id="@+id/title_lamtakhim"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/lam_tafkhim"
-            style="@style/TextTitleSet" />
+            <TextView
+                android:id="@+id/title_lam"
+                style="@style/TextTitleSet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lam_tafkhim" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textNextBtn"
-            android:text="@string/lam_tarqiq"
-            android:layout_below="@id/title_lamtakhim"
-            style="@style/TextButtonNextSet" />
+            <androidx.cardview.widget.CardView
+                style="@style/cardBackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title_lam">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_below="@id/textNextBtn"
-                    android:background="@drawable/rectangle_bg"
-                    android:layout_marginEnd="15dp">
-        <me.biubiubiu.justifytext.library.JustifyTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/hukum_lam_desc"
-            style="@style/TextSet" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="3dp"
-            android:id="@+id/hukumlam_image1"
-            android:text="@string/lamtafkhim1"
-            android:layout_gravity="center_horizontal"
-            android:textColor="#000000"
-            android:fontFamily="@font/me_quran"
-            android:textSize="30sp" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="3dp"
-                    android:id="@+id/hukumlam_image2"
-                    android:text="@string/lamtafkhim2"
-                    android:layout_gravity="center_horizontal"
-                    android:textColor="#000000"
-                    android:fontFamily="@font/me_quran"
-                    android:textSize="30sp" />
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ic_pause_circle_outline_black_24dp"
-            android:id="@+id/play_toggle_hukumlam"
-            android:layout_gravity="center_horizontal"
-            android:background="@android:color/transparent" />
+                    android:orientation="vertical">
+
+                    <me.biubiubiu.justifytext.library.JustifyTextView
+                        android:id="@+id/article_lamtarqiq"
+                        style="@style/TextSet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hukum_lam_desc" />
+
+                    <TextView
+                        android:id="@+id/example_hukumlam"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/TextArabicSet"
+                        android:padding="3dp"
+                        android:text="@string/lamtafkhim1" />
+
+                    <TextView
+                        android:id="@+id/exampl2_hukumlam"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/TextArabicSet"
+                        android:padding="3dp"
+                        android:text="@string/lamtafkhim2" />
+
+                    <ImageButton
+                        android:id="@+id/play_toggle_hukumlam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="10dp"
+                        android:background="@android:color/transparent"
+                        app:srcCompat="@drawable/ic_pause_circle_outline_black_24dp" />
                 </LinearLayout>
+            </androidx.cardview.widget.CardView>
         </RelativeLayout>
     </ScrollView>
+</RelativeLayout>

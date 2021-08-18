@@ -36,6 +36,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/cari_surah"
                     style="@style/TextMenuSet"
+                    android:textColor="@color/colorText"
                     android:layout_gravity="center_horizontal"
                     android:textAlignment="center"/>
             </LinearLayout>
@@ -60,6 +61,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAlignment="center"
+                    android:textColor="@color/colorText"
                     android:layout_gravity="center_horizontal"
                     android:text="@string/ayat_ayat_sajdah"
                     style="@style/TextMenuSet"/>
@@ -86,6 +88,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/tanda_tanda_waqaf"
                     android:layout_gravity="center"
+                    android:textColor="@color/colorText"
                     style="@style/TextMenuSet"
                     android:textAlignment="center"/>
             </LinearLayout>

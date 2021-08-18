@@ -31,12 +31,10 @@ public class AlHalqActivity extends AppCompatActivity {
         dataHuruf();
         showRecyclerGridView();
 
-        TextView btnCallBack = findViewById(R.id.textNextBtn);
-        btnCallBack.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.fabhalqi).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent intentLisan = new Intent(AlHalqActivity.this, AlLisanActivity.class);
-                startActivity(intentLisan);
+            public void onClick(View v) {
+                startActivity(new Intent(AlHalqActivity.this, AlLisanActivity.class));
             }
         });
     }

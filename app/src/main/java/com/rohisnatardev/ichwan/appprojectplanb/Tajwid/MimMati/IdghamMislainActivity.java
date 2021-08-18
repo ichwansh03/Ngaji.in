@@ -25,7 +25,7 @@ ImageButton btnidm;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mim_sukun);
 
-        findViewById(R.id.textNextBtn).setOnClickListener(this);
+        findViewById(R.id.fabmimsukun).setOnClickListener(this);
 
         btnidm = findViewById(R.id.playpause_toggle);
         btnidm.setOnClickListener(this);
@@ -44,7 +44,7 @@ ImageButton btnidm;
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.textNextBtn:
+            case R.id.fabmimsukun:
                 startActivity(new Intent(this, MadBadalActivity.class));
                 break;
             case R.id.playpause_toggle:

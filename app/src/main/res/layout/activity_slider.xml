@@ -11,7 +11,7 @@
         android:id="@+id/logoapp"
         android:layout_width="125dp"
         android:layout_height="125dp"
-        android:src="@drawable/ic_logobbq"
+        android:src="@drawable/ic_logoapp"
         android:layout_centerInParent="true"/>
 
     <TextView

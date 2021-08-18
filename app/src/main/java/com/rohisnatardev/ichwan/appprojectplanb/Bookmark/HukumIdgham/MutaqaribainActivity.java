@@ -25,9 +25,7 @@ ImageButton btnmutaqa;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hukum_idgham);
 
-        TextView btnCallBackMq = findViewById(R.id.textNextBtn);
-        btnCallBackMq.setText(R.string.imalah);
-        btnCallBackMq.setOnClickListener(this);
+        findViewById(R.id.fabhukumidgham).setOnClickListener(this);
 
         TextView title = findViewById(R.id.tlhukumidgham);
         title.setText(R.string.idgham_mutaqaribaan);
@@ -50,7 +48,7 @@ ImageButton btnmutaqa;
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.textNextBtn:
+            case R.id.fabhukumidgham:
                 startActivity(new Intent(this, ImalahActivity.class));
                 break;
             case R.id.play_toggle_hukumidgham:

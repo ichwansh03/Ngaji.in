@@ -22,12 +22,10 @@ ImageButton btn1, btn2, btn3;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mad_shilah);
 
-        TextView btnCallBack = findViewById(R.id.textNextBtn);
-        btnCallBack.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.fabshilahsugra).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent madshilahs = new Intent(MadShilahActivity.this,MadSlhKubraActivity.class);
-                startActivity(madshilahs);
+            public void onClick(View v) {
+                startActivity(new Intent(MadShilahActivity.this, MadSlhKubraActivity.class));
             }
         });
         btn1 = findViewById(R.id.play_toggle_madshilah);

@@ -15,6 +15,8 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import com.rohisnatardev.ichwan.appprojectplanb.R;
 
+import me.biubiubiu.justifytext.library.JustifyTextView;
+
 public class IsymamActivity extends AppCompatActivity implements View.OnClickListener {
 
     MediaPlayer mpIsymam;
@@ -25,9 +27,7 @@ public class IsymamActivity extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bkhusus);
 
-        TextView btnCallBackIs = findViewById(R.id.textNextBtn);
-        btnCallBackIs.setText(R.string.tahsil);
-        btnCallBackIs.setOnClickListener(this);
+        findViewById(R.id.fabbacaankhusus).setOnClickListener(this);
 
         TextView title = findViewById(R.id.txtitle);
         title.setText(R.string.isymam);
@@ -43,15 +43,16 @@ public class IsymamActivity extends AppCompatActivity implements View.OnClickLis
         spanIsymam.setSpan(fcIsymam,10,14, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         txisymam.setText(spanIsymam);
 
-        TextView article = findViewById(R.id.tx_article);
+        JustifyTextView article = findViewById(R.id.tx_article);
         article.setText(R.string.isymam_desc);
+        findViewById(R.id.text_article2).setVisibility(View.INVISIBLE);
     }
 
     @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View view) {
        switch (view.getId()){
-           case R.id.textNextBtn:
+           case R.id.fabbacaankhusus:
                startActivity(new Intent(this, TashilActivity.class));
                break;
            case R.id.play_toggle_bkhusus:

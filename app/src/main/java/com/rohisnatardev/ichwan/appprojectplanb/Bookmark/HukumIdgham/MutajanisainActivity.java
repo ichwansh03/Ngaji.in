@@ -23,8 +23,7 @@ ImageButton btnmutaja;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hukum_idgham);
 
-        TextView btnCallBackMj = findViewById(R.id.textNextBtn);
-        btnCallBackMj.setOnClickListener(this);
+        findViewById(R.id.fabhukumidgham).setOnClickListener(this);
         btnmutaja = findViewById(R.id.play_toggle_hukumidgham);
         btnmutaja.setOnClickListener(this);
         mediaPlayer = MediaPlayer.create(this,R.raw.idghammutajanisain);
@@ -41,7 +40,7 @@ ImageButton btnmutaja;
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.textNextBtn:
+            case R.id.fabhukumidgham:
                 startActivity(new Intent(this, MutaqaribainActivity.class));
                 break;
             case R.id.play_toggle_hukumidgham:

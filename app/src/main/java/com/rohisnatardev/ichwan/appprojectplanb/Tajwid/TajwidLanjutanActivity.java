@@ -50,10 +50,6 @@ public class TajwidLanjutanActivity extends AppCompatActivity implements View.On
         findViewById(R.id.isymam).setOnClickListener(this);
         findViewById(R.id.tashil).setOnClickListener(this);
 
-        //alif lam
-        findViewById(R.id.syamsiah).setOnClickListener(this);
-        findViewById(R.id.qomariah).setOnClickListener(this);
-
         //hamzah
         findViewById(R.id.hamzahwasal).setOnClickListener(this);
         findViewById(R.id.hamzahqathi).setOnClickListener(this);
@@ -99,12 +95,6 @@ public class TajwidLanjutanActivity extends AppCompatActivity implements View.On
                 break;
             case R.id.tashil:
                 startActivity(new Intent(this, TashilActivity.class));
-                break;
-            case R.id.syamsiah:
-                startActivity(new Intent(this, SyamsiyahActivity.class));
-                break;
-            case R.id.qomariah:
-                startActivity(new Intent(this, QomariyahActivity.class));
                 break;
             case R.id.hamzahwasal:
                 startActivity(new Intent(this, WashalActivity.class));

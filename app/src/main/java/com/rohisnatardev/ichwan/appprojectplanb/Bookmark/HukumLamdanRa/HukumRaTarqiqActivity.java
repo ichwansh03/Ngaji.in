@@ -2,6 +2,7 @@ package com.rohisnatardev.ichwan.appprojectplanb.Bookmark.HukumLamdanRa;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.media.MediaPlayer;
@@ -27,6 +28,12 @@ ImageButton btn1, btn2, btn3;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hukum_ra_tarqiq);
 
+        findViewById(R.id.fabratarqiq).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HukumRaTarqiqActivity.this, MutamasilainActivity.class));
+            }
+        });
 
         btn1 = findViewById(R.id.play_toggle_ratarqiq1);
         btn1.setOnClickListener(this);
@@ -41,13 +48,10 @@ ImageButton btn1, btn2, btn3;
     }
 
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.textNextBtn:
-                Intent intentMutama = new Intent(HukumRaTarqiqActivity.this,MutamasilainActivity.class);
-                startActivity(intentMutama);
-                break;
             case R.id.play_toggle_ratarqiq1:
                 playMusic1();
                 break;
@@ -105,9 +109,6 @@ ImageButton btn1, btn2, btn3;
     }
 
     private void type(){
-        TextView btnCallBackRt = findViewById(R.id.textNextBtn);
-
-        btnCallBackRt.setOnClickListener(this);
 
         TextView ratarqiq1 = findViewById(R.id.ratarqiq_image1);
         String stringRa1 = getString(R.string.ratarqiq1);

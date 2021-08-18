@@ -31,12 +31,10 @@ public class AsSyafActivity extends AppCompatActivity {
         dataSyaf();
         setRecyclers();
 
-        TextView btnCallBack = findViewById(R.id.textNextBtn);
-        btnCallBack.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.fabsyafatain).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent intentJauf = new Intent(AsSyafActivity.this,AlJaufActivity.class);
-                startActivity(intentJauf);
+            public void onClick(View v) {
+                startActivity(new Intent(AsSyafActivity.this, AlJaufActivity.class));
             }
         });
     }

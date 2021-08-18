@@ -2,6 +2,7 @@ package com.rohisnatardev.ichwan.appprojectplanb.Tajwid.HukumMad;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -18,14 +19,7 @@ ImageButton btn, btn2, btn3, btn4;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mad_lazim);
 
-        TextView btnCallBack = findViewById(R.id.textNextBtn);
-        btnCallBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent madlazim = new Intent(MadLazimActivity.this,MadMunfasilActivity.class);
-                startActivity(madlazim);
-            }
-        });
+        findViewById(R.id.fabmadlazim).setOnClickListener(this);
 
         btn = findViewById(R.id.play_toggle_madlazim);
         btn.setOnClickListener(this);
@@ -46,6 +40,7 @@ ImageButton btn, btn2, btn3, btn4;
     }
 
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View view) {
         switch (view.getId()){
@@ -60,6 +55,9 @@ ImageButton btn, btn2, btn3, btn4;
                 break;
             case R.id.play_toggle_madlazim4:
                 setmplazim4();
+                break;
+            case R.id.fabmadlazim:
+                startActivity(new Intent(this, MadJaizActivity.class));
                 break;
         }
     }

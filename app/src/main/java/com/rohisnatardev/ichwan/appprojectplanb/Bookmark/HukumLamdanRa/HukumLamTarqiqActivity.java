@@ -20,17 +20,15 @@ ImageButton btnplayltarqiq;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_hukum_lam_tarqiq);
+        setContentView(R.layout.activity_hukum_lam);
 
-        TextView btnCallBackLt = findViewById(R.id.textNextBtn);
-        btnCallBackLt.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.fabhukumlam).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent intentRtafkhim = new Intent(HukumLamTarqiqActivity.this,HukumRaActivity.class);
-                startActivity(intentRtafkhim);
+            public void onClick(View v) {
+                startActivity(new Intent(HukumLamTarqiqActivity.this, HukumRaActivity.class));
             }
         });
-        btnplayltarqiq = findViewById(R.id.play_toggle_hukumlam1);
+        btnplayltarqiq = findViewById(R.id.play_toggle_hukumlam);
         mediaPlayer2 = MediaPlayer.create(this,R.raw.alqomariyah);
         btnplayltarqiq.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,7 +37,13 @@ ImageButton btnplayltarqiq;
             }
         });
 
-        TextView lamtarqiq2 = findViewById(R.id.hukumlam_image4);
+        TextView title = findViewById(R.id.title_lam);
+        title.setText(R.string.lam_tarqiq);
+        TextView article = findViewById(R.id.article_lamtarqiq);
+        article.setText(R.string.hukum_lam_desc2);
+
+        TextView lamtarqiq2 = findViewById(R.id.example_hukumlam);
+        findViewById(R.id.exampl2_hukumlam).setVisibility(View.INVISIBLE);
         String tarqiq2 = getString(R.string.lamtarqiq2);
 
         SpannableString spanString2 = new SpannableString(tarqiq2);

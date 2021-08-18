@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
     tools:context=".Bookmark.HukumIdgham.MutajanisainActivity">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabhukumidgham"
+        style="@style/FloatingActionButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -19,21 +29,17 @@
         android:layout_height="wrap_content"
         android:text="@string/idgham_mutajanisaan"
         style="@style/TextTitleSet"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textNextBtn"
-        android:text="@string/idgham_mutaqaribaan"
-        style="@style/TextButtonNextSet"
-        android:layout_below="@id/tlhukumidgham"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tlhukumidgham"
+            style="@style/cardBackground">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginEnd="15dp"
-            android:background="@drawable/rectangle_bg"
-            android:layout_below="@id/textNextBtn">
+            android:orientation="vertical">
     <TextView
         android:id="@+id/deschukumidgham"
         android:layout_width="match_parent"
@@ -41,14 +47,11 @@
         android:text="@string/idgham_mutajanisaan_desc"
         style="@style/TextSet"/>
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/examplehukumidgham"
         android:text="@string/mutaja1"
-        android:textColor="#000000"
-        android:textSize="30sp"
-        android:fontFamily="@font/lpmq_isepmisbah"
-        android:layout_gravity="center_horizontal"/>
+        style="@style/TextArabicSet"/>
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -57,6 +60,7 @@
         android:background="@android:color/transparent"
         android:layout_gravity="center_horizontal"/>
         </LinearLayout>
+        </androidx.cardview.widget.CardView>
     </RelativeLayout>
-
-</ScrollView>
+    </ScrollView>
+</RelativeLayout>

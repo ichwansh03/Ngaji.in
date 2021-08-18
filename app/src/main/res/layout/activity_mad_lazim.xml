@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,6 +7,14 @@
     android:background="@color/colorPrimary"
     tools:context=".Tajwid.HukumMad.MadLazimActivity">
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabmadlazim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/FloatingActionButtonStyle"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -20,21 +28,15 @@
         android:text="@string/mad_lazim"
         style="@style/TextTitleSet"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textNextBtn"
-        android:text="@string/mad_jaiz_munfasil"
-        android:layout_below="@id/textTitle"
-        style="@style/TextButtonNextSet"/>
-
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textTitle"
+            style="@style/cardBackground">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginEnd="15dp"
-            android:background="@drawable/rectangle_bg"
-            android:layout_below="@id/textNextBtn">
+            android:orientation="vertical">
 
     <me.biubiubiu.justifytext.library.JustifyTextView
         android:layout_width="match_parent"
@@ -43,21 +45,15 @@
         android:text="@string/mad_lazim_article" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/madlazim1"
-            android:textSize="30sp"
-            android:fontFamily="@font/me_quran"
-            android:textColor="#000000"
-            android:layout_gravity="center_horizontal"/>
+            style="@style/TextArabicSet"/>
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/madlazim2"
-        android:textSize="30sp"
-        android:fontFamily="@font/me_quran"
-        android:textColor="#000000"
-        android:layout_gravity="center_horizontal"/>
+        style="@style/TextArabicSet"/>
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -72,14 +68,10 @@
             android:text="@string/mad_lazim_mukhaffaf_article"
             style="@style/TextSet"/>
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/madlazim3"
-            android:textColor="#000000"
-            android:textSize="30sp"
-            android:lineSpacingExtra="3dp"
-            android:fontFamily="@font/me_quran"
-            android:layout_gravity="center_horizontal"/>
+            style="@style/TextArabicSet"/>
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -93,21 +85,15 @@
             android:text="@string/mad_lazim_mutsaqqal2_article"
             style="@style/TextSet"/>
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/madlazim4"
-            android:textSize="30sp"
-            android:fontFamily="@font/me_quran"
-            android:textColor="#000000"
-            android:layout_gravity="center_horizontal"/>
+            style="@style/TextArabicSet"/>
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/madlazim5"
-            android:textColor="#000000"
-            android:textSize="30sp"
-            android:fontFamily="@font/me_quran"
-            android:layout_gravity="center_horizontal"/>
+            style="@style/TextArabicSet"/>
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -121,13 +107,10 @@
             android:text="@string/mad_lazim_mukhaffaf2_article"
             style="@style/TextSet"/>
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/madlazim6"
-            android:textSize="30sp"
-            android:textColor="#000000"
-            android:fontFamily="@font/me_quran"
-            android:layout_gravity="center_horizontal"/>
+            style="@style/TextArabicSet"/>
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -136,5 +119,7 @@
             android:background="@android:color/transparent"
             android:layout_gravity="center_horizontal"/>
         </LinearLayout>
+        </androidx.cardview.widget.CardView>
     </RelativeLayout>
-</ScrollView>
+    </ScrollView>
+</RelativeLayout>

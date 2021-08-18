@@ -12,13 +12,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-
         <TextView
             android:id="@+id/txsq"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/seputar_qur_an"
             android:textSize="17sp"
+            android:textColor="@color/colorText"
             android:layout_marginTop="15dp"
             android:layout_marginStart="15dp"
             style="@style/TextMenuSet"/>
@@ -34,6 +34,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/dzikir_dan_doa"
+            android:textColor="@color/colorText"
             android:textSize="17sp"
             android:layout_marginTop="20dp"
             android:layout_marginStart="15dp"
@@ -52,6 +53,7 @@
             android:layout_height="wrap_content"
             android:text="@string/artikel_qur_an"
             style="@style/TextMenuSet"
+            android:textColor="@color/colorText"
             android:textSize="17sp"
             android:layout_below="@id/layout_menudzikir"
             android:layout_marginStart="15dp"

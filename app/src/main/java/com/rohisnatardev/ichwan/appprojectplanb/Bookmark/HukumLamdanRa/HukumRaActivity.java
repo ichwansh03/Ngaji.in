@@ -20,14 +20,12 @@ ImageButton btn, btn2, btn3, btn4, btn5, btn6;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_hukum_ra);
+        setContentView(R.layout.activity_hukum_ra_tafkhim);
 
-        TextView btnCallBackRf = findViewById(R.id.textNextBtn);
-        btnCallBackRf.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.fabratafkhim).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent intentRtarqiq = new Intent(HukumRaActivity.this,HukumRaTarqiqActivity.class);
-                startActivity(intentRtarqiq);
+            public void onClick(View v) {
+                startActivity(new Intent(HukumRaActivity.this, HukumRaTarqiqActivity.class));
             }
         });
 

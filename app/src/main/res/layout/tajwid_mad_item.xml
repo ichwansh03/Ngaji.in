@@ -11,21 +11,14 @@
         android:text="@string/hukum_mad"
         android:textSize="20sp"
         android:fontFamily="@font/poppins_medium"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/colorText"
         android:layout_marginStart="15dp"
         android:layout_marginTop="25dp"/>
-    <View
-        android:id="@+id/view_underline3"
-        android:layout_width="230dp"
-        android:layout_height="3dp"
-        android:background="@drawable/underline_title"
-        android:layout_below="@+id/title_mad"
-        android:layout_marginStart="15dp" />
     <HorizontalScrollView
         android:id="@+id/scroll3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/view_underline3"
+        android:layout_below="@+id/title_mad"
         android:layout_marginTop="15dp"
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp">
@@ -49,7 +42,7 @@
                         android:layout_gravity="center"
                         android:textSize="20sp"
                         android:textStyle="bold"
-                        android:textColor="#23C1E3"/>
+                        android:textColor="@color/colorText"/>
                 </androidx.cardview.widget.CardView>
                 <TextView
                     android:layout_width="wrap_content"
@@ -57,7 +50,7 @@
                     android:text="@string/mad_badal"
                     android:fontFamily="@font/poppins_medium"
                     android:layout_gravity="center"
-                    android:textColor="#FFFFFF"/>
+                    android:textColor="@color/colorText"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -76,7 +69,7 @@
                         android:layout_gravity="center"
                         android:textSize="20sp"
                         android:textStyle="bold"
-                        android:textColor="#23C1E3"/>
+                        android:textColor="@color/colorText"/>
                 </androidx.cardview.widget.CardView>
                 <TextView
                     android:layout_width="wrap_content"
@@ -84,7 +77,7 @@
                     android:text="@string/mad_thabi_i"
                     android:fontFamily="@font/poppins_medium"
                     android:layout_gravity="center"
-                    android:textColor="#FFFFFF"/>
+                    android:textColor="@color/colorText"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -103,7 +96,7 @@
                         android:layout_gravity="center"
                         android:textSize="20sp"
                         android:textStyle="bold"
-                        android:textColor="#23C1E3"/>
+                        android:textColor="@color/colorText"/>
                 </androidx.cardview.widget.CardView>
                 <TextView
                     android:layout_width="wrap_content"
@@ -111,7 +104,7 @@
                     android:text="@string/mad_iwadh"
                     android:layout_gravity="center"
                     android:fontFamily="@font/poppins_medium"
-                    android:textColor="#FFFFFF"/>
+                    android:textColor="@color/colorText"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -131,7 +124,7 @@
                         android:layout_gravity="center"
                         android:textSize="20sp"
                         android:textStyle="bold"
-                        android:textColor="#23C1E3"/>
+                        android:textColor="@color/colorText"/>
                 </androidx.cardview.widget.CardView>
                 <TextView
                     android:layout_width="wrap_content"
@@ -139,7 +132,7 @@
                     android:text="@string/mad_shilah"
                     android:layout_gravity="center"
                     android:fontFamily="@font/poppins_medium"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/colorText"
                     android:textAlignment="center"/>
             </LinearLayout>
             <LinearLayout
@@ -160,14 +153,14 @@
                         android:layout_gravity="center"
                         android:textSize="20sp"
                         android:textStyle="bold"
-                        android:textColor="#23C1E3"/>
+                        android:textColor="@color/colorText"/>
                 </androidx.cardview.widget.CardView>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/mad_shilah_kubra"
                     android:layout_gravity="center"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/colorText"
                     android:fontFamily="@font/poppins_medium"
                     android:textAlignment="center"/>
             </LinearLayout>
@@ -188,7 +181,7 @@
                         android:layout_gravity="center"
                         android:textSize="20sp"
                         android:textStyle="bold"
-                        android:textColor="#23C1E3"/>
+                        android:textColor="@color/colorText"/>
                 </androidx.cardview.widget.CardView>
                 <TextView
                     android:layout_width="wrap_content"
@@ -196,7 +189,7 @@
                     android:text="@string/mad_liyn"
                     android:layout_gravity="center"
                     android:fontFamily="@font/poppins_medium"
-                    android:textColor="#FFFFFF"/>
+                    android:textColor="@color/colorText"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -215,14 +208,14 @@
                         android:layout_gravity="center"
                         android:textSize="20sp"
                         android:textStyle="bold"
-                        android:textColor="#23C1E3"/>
+                        android:textColor="@color/colorText"/>
                 </androidx.cardview.widget.CardView>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/mad_aridh_lissukun"
                     android:layout_gravity="center"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/colorText"
                     android:fontFamily="@font/poppins_medium"
                     android:textAlignment="center"/>
             </LinearLayout>
@@ -243,7 +236,7 @@
                         android:layout_gravity="center"
                         android:textSize="20sp"
                         android:textStyle="bold"
-                        android:textColor="#23C1E3"/>
+                        android:textColor="@color/colorText"/>
                 </androidx.cardview.widget.CardView>
                 <TextView
                     android:layout_width="wrap_content"
@@ -251,7 +244,7 @@
                     android:text="@string/mad_lazim"
                     android:fontFamily="@font/poppins_medium"
                     android:layout_gravity="center"
-                    android:textColor="#FFFFFF"/>
+                    android:textColor="@color/colorText"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -270,14 +263,14 @@
                         android:layout_gravity="center"
                         android:textSize="20sp"
                         android:textStyle="bold"
-                        android:textColor="#23C1E3"/>
+                        android:textColor="@color/colorText"/>
                 </androidx.cardview.widget.CardView>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/mad_jaiz_munfasil"
                     android:layout_gravity="center"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/colorText"
                     android:fontFamily="@font/poppins_medium"
                     android:textAlignment="center"/>
             </LinearLayout>
@@ -299,7 +292,7 @@
                         android:layout_gravity="center"
                         android:textSize="20sp"
                         android:textStyle="bold"
-                        android:textColor="#23C1E3"/>
+                        android:textColor="@color/colorText"/>
                 </androidx.cardview.widget.CardView>
                 <TextView
                     android:layout_width="wrap_content"
@@ -307,7 +300,7 @@
                     android:text="@string/mad_wajib_muttasil"
                     android:layout_gravity="center"
                     android:fontFamily="@font/poppins_medium"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/colorText"
                     android:textAlignment="center"/>
             </LinearLayout>
         </LinearLayout>

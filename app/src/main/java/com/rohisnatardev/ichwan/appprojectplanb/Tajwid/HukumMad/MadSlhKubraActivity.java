@@ -22,12 +22,10 @@ ImageButton btnkubra;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mad_slh_kubra);
 
-        TextView btnCallBack = findViewById(R.id.textNextBtn);
-        btnCallBack.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.fabshilahkubra).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent madkubra = new Intent(MadSlhKubraActivity.this,MadLiynActivity.class);
-                startActivity(madkubra);
+            public void onClick(View v) {
+                startActivity(new Intent(MadSlhKubraActivity.this,MadLiynActivity.class));
             }
         });
         btnkubra = findViewById(R.id.play_toggle_madslhkubra);

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,76 +7,82 @@
     android:background="@color/colorPrimary"
     tools:context=".Tajwid.NunMati.IkhfaActivity">
 
-    <RelativeLayout
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabikhfa"
+        style="@style/FloatingActionButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <include layout="@layout/ellipse_background"/>
-        <TextView
-            android:id="@+id/textTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/hukum_ikhfa"
-            style="@style/TextTitleSet"/>
+        android:layout_height="match_parent">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textNextBtn"
-            android:text="@string/iqlab"
-            style="@style/TextButtonNextSet"
-            android:layout_below="@id/textTitle"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginEnd="15dp"
-            android:background="@drawable/rectangle_bg"
-            android:layout_below="@id/textNextBtn">
-        <me.biubiubiu.justifytext.library.JustifyTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/ikhfa_article"
-            style="@style/TextSet"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/huruf_ikhfa"
-            android:textSize="30sp"
-            android:textColor="#000000"
-            android:fontFamily="@font/me_quran"
-            android:textAlignment="center"
-            android:layout_gravity="center_horizontal"/>
-        <me.biubiubiu.justifytext.library.JustifyTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/bagian_ikhfa"
-            style="@style/TextSet"/>
-        <TextView
-            android:id="@+id/contoh_ikhfa"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/ikhfa1"
-            android:textColor="#000000"
-            android:textSize="30sp"
-            android:fontFamily="@font/me_quran"
-            android:layout_gravity="center_horizontal"/>
-        <TextView
-            android:id="@+id/contoh_ikhfa2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/ikhfa2"
-            android:textColor="#000000"
-            android:textSize="30sp"
-            android:fontFamily="@font/me_quran"
-            android:layout_gravity="center_horizontal"/>
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ic_pause_circle_outline_black_24dp"
-            android:id="@+id/play_toggle_ikhfa"
-            android:background="@android:color/transparent"
-            android:layout_gravity="center_horizontal"/>
-        </LinearLayout>
-    </RelativeLayout>
-</ScrollView>
+            <include layout="@layout/ellipse_background" />
+
+            <TextView
+                android:id="@+id/textTitle"
+                style="@style/TextTitleSet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hukum_ikhfa" />
+
+            <androidx.cardview.widget.CardView
+                style="@style/cardBackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textTitle">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="10dp">
+
+                    <me.biubiubiu.justifytext.library.JustifyTextView
+                        style="@style/TextSet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ikhfa_article" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/TextArabicSet"
+                        android:text="@string/huruf_ikhfa" />
+
+                    <me.biubiubiu.justifytext.library.JustifyTextView
+                        style="@style/TextSet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bagian_ikhfa" />
+
+                    <TextView
+                        android:id="@+id/contoh_ikhfa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/TextArabicSet"
+                        android:text="@string/ikhfa1" />
+
+                    <TextView
+                        android:id="@+id/contoh_ikhfa2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ikhfa2"
+                        style="@style/TextArabicSet" />
+
+                    <ImageButton
+                        android:id="@+id/play_toggle_ikhfa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@android:color/transparent"
+                        app:srcCompat="@drawable/ic_pause_circle_outline_black_24dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

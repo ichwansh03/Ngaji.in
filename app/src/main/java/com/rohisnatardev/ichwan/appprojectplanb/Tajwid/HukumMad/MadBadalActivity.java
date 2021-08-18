@@ -14,6 +14,8 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import com.rohisnatardev.ichwan.appprojectplanb.R;
 
+import me.biubiubiu.justifytext.library.JustifyTextView;
+
 
 public class MadBadalActivity extends AppCompatActivity {
 MediaPlayer player;
@@ -21,18 +23,22 @@ ImageButton btnbadal;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mad_badal);
+        setContentView(R.layout.activity_mad_thabii_badal);
 
-        TextView btnCallBack = findViewById(R.id.textNextBtn);
-        btnCallBack.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.fabmadthabii).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent madbadal = new Intent(MadBadalActivity.this,MadThabiiActivity.class);
-                startActivity(madbadal);
+            public void onClick(View v) {
+                startActivity(new Intent(MadBadalActivity.this,MadThabiiActivity.class));
             }
         });
 
-        btnbadal = findViewById(R.id.play_toggle_madbadal);
+        TextView title = findViewById(R.id.textTitle);
+        title.setText(R.string.mad_badal);
+        JustifyTextView article = findViewById(R.id.mad_article1);
+        article.setText(R.string.mbadal_article);
+        findViewById(R.id.mad_article2).setVisibility(View.INVISIBLE);
+
+        btnbadal = findViewById(R.id.play_toggle_mad);
         player = MediaPlayer.create(this,R.raw.madbadal);
         btnbadal.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,9 +47,9 @@ ImageButton btnbadal;
             }
         });
 
-        TextView badal1 = findViewById(R.id.image_madbadal1);
+        TextView badal1 = findViewById(R.id.example_mad1);
         String string = getString(R.string.madbadal1);
-        TextView badal2 = findViewById(R.id.image_madbadal);
+        TextView badal2 = findViewById(R.id.example_mad2);
         String string2 = getString(R.string.madbadal2);
 
         SpannableString sBadal = new SpannableString(string);

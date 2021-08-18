@@ -7,14 +7,16 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.rohisnatardev.ichwan.appprojectplanb.Bookmark.AlifLam.QomariyahActivity;
+import com.rohisnatardev.ichwan.appprojectplanb.Bookmark.AlifLam.SyamsiyahActivity;
 import com.rohisnatardev.ichwan.appprojectplanb.R;
 import com.rohisnatardev.ichwan.appprojectplanb.Tajwid.HukumMad.MadAridLsActivity;
 import com.rohisnatardev.ichwan.appprojectplanb.Tajwid.HukumMad.MadBadalActivity;
 import com.rohisnatardev.ichwan.appprojectplanb.Tajwid.HukumMad.MadIwadhActivity;
 import com.rohisnatardev.ichwan.appprojectplanb.Tajwid.HukumMad.MadLazimActivity;
 import com.rohisnatardev.ichwan.appprojectplanb.Tajwid.HukumMad.MadLiynActivity;
-import com.rohisnatardev.ichwan.appprojectplanb.Tajwid.HukumMad.MadMunfasilActivity;
-import com.rohisnatardev.ichwan.appprojectplanb.Tajwid.HukumMad.MadMuttasilActivity;
+import com.rohisnatardev.ichwan.appprojectplanb.Tajwid.HukumMad.MadJaizActivity;
+import com.rohisnatardev.ichwan.appprojectplanb.Tajwid.HukumMad.MadWajibActivity;
 import com.rohisnatardev.ichwan.appprojectplanb.Tajwid.HukumMad.MadShilahActivity;
 import com.rohisnatardev.ichwan.appprojectplanb.Tajwid.HukumMad.MadSlhKubraActivity;
 import com.rohisnatardev.ichwan.appprojectplanb.Tajwid.HukumMad.MadThabiiActivity;
@@ -56,6 +58,10 @@ public class TajwidActivity extends AppCompatActivity implements View.OnClickLis
         findViewById(R.id.mdlazim).setOnClickListener(this);
         findViewById(R.id.md_jaiz).setOnClickListener(this);
         findViewById(R.id.md_wajib).setOnClickListener(this);
+
+        //alif lam
+        findViewById(R.id.syamsiah).setOnClickListener(this);
+        findViewById(R.id.qomariah).setOnClickListener(this);
 
     }
 
@@ -109,10 +115,16 @@ public class TajwidActivity extends AppCompatActivity implements View.OnClickLis
                 startActivity(new Intent(this, MadLazimActivity.class));
                 break;
             case R.id.md_jaiz:
-                startActivity(new Intent(this, MadMunfasilActivity.class));
+                startActivity(new Intent(this, MadJaizActivity.class));
                 break;
             case R.id.md_wajib:
-                startActivity(new Intent(this, MadMuttasilActivity.class));
+                startActivity(new Intent(this, MadWajibActivity.class));
+                break;
+            case R.id.syamsiah:
+                startActivity(new Intent(this, SyamsiyahActivity.class));
+                break;
+            case R.id.qomariah:
+                startActivity(new Intent(this, QomariyahActivity.class));
                 break;
 
         }

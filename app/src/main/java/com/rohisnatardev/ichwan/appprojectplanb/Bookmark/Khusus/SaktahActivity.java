@@ -15,6 +15,8 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import com.rohisnatardev.ichwan.appprojectplanb.R;
 
+import me.biubiubiu.justifytext.library.JustifyTextView;
+
 public class SaktahActivity extends AppCompatActivity implements View.OnClickListener {
 MediaPlayer playerSaktah;
 ImageButton btnsaktah;
@@ -23,9 +25,7 @@ ImageButton btnsaktah;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bkhusus);
 
-        TextView btnCallBackSk = findViewById(R.id.textNextBtn);
-        btnCallBackSk.setText(R.string.isymam);
-        btnCallBackSk.setOnClickListener(this);
+        findViewById(R.id.fabbacaankhusus).setOnClickListener(this);
 
         TextView title = findViewById(R.id.txtitle);
         title.setText(R.string.saktah);
@@ -41,15 +41,16 @@ ImageButton btnsaktah;
         sSaktah.setSpan(fcSaktah,10,17, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         tvSaktah.setText(sSaktah);
 
-        TextView article = findViewById(R.id.tx_article);
+        JustifyTextView article = findViewById(R.id.tx_article);
         article.setText(R.string.saktah_desc);
+        findViewById(R.id.text_article2).setVisibility(View.INVISIBLE);
     }
 
     @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.textNextBtn:
+            case R.id.fabbacaankhusus:
                 startActivity(new Intent(this, IsymamActivity.class));
                 break;
             case R.id.play_toggle_bkhusus:

@@ -17,8 +17,7 @@
             android:id="@+id/btn_setlokasi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="40dp"
+            android:layout_margin="20dp"
             app:cardCornerRadius="10dp"
             android:foreground="?attr/selectableItemBackground"
             android:focusable="true"
@@ -29,7 +28,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/lok"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:layout_margin="5dp"
                 android:fontFamily="@font/poppins_medium"
                 app:drawableStartCompat="@drawable/ic_baseline_place_24" />
@@ -37,8 +36,8 @@
 
         <ImageView
             android:id="@+id/compas_qibla"
-            android:layout_width="320dp"
-            android:layout_height="320dp"
+            android:layout_width="280dp"
+            android:layout_height="280dp"
             android:src="@drawable/compass"
             android:layout_gravity="center_horizontal"
             android:layout_margin="20dp"
@@ -49,7 +48,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/_12_we"
-            android:textSize="22sp"
+            android:textSize="20sp"
             android:fontFamily="@font/poppins_semibold"
             android:layout_gravity="center_horizontal" />
 
@@ -264,5 +263,13 @@
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sumber_ummul_qura_mekah"
+            android:textSize="12sp"
+            android:fontFamily="@font/poppins_regular"
+            android:textStyle="italic"
+            android:layout_margin="10dp"/>
     </LinearLayout>
 </ScrollView>

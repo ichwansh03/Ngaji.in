@@ -20,17 +20,21 @@ ImageButton btniwadh;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mad_iwadh);
+        setContentView(R.layout.activity_mad_liyn_iwadh);
 
-        TextView btnCallBack = findViewById(R.id.textNextBtn);
-        btnCallBack.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.fabmadliyniwadh).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent madiwadh = new Intent(MadIwadhActivity.this,MadShilahActivity.class);
-                startActivity(madiwadh);
+            public void onClick(View v) {
+                startActivity(new Intent(MadIwadhActivity.this, MadShilahActivity.class));
             }
         });
-        btniwadh = findViewById(R.id.play_toggle_madiwad);
+
+        TextView title = findViewById(R.id.textTitle);
+        title.setText(R.string.mad_iwadh);
+        TextView article = findViewById(R.id.article_liyniwadh);
+        article.setText(R.string.miwadh_article);
+
+        btniwadh = findViewById(R.id.play_toggle_liyniwadh);
         btniwadh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -39,10 +43,11 @@ ImageButton btniwadh;
         });
         player = MediaPlayer.create(this,R.raw.madiwadh);
 
-        TextView txiwadh1 = findViewById(R.id.image_madiwad1);
+        TextView txiwadh1 = findViewById(R.id.example_liyniwadh);
         String iwadh = getString(R.string.madiwadh1);
-        TextView txiwadh2 = findViewById(R.id.image_madiwad);
+        TextView txiwadh2 = findViewById(R.id.example2_liyniwadh);
         String iwadh2 = getString(R.string.madiwadh2);
+        findViewById(R.id.example3_liyniwadh).setVisibility(View.INVISIBLE);
 
         SpannableString spanIwadh1 = new SpannableString(iwadh);
         SpannableString spanIwadh2 = new SpannableString(iwadh2);

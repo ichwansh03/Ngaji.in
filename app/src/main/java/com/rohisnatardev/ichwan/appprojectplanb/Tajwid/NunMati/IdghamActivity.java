@@ -12,6 +12,8 @@ import android.text.style.ForegroundColorSpan;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.rohisnatardev.ichwan.appprojectplanb.R;
 
 public class IdghamActivity extends AppCompatActivity implements View.OnClickListener {
@@ -23,12 +25,10 @@ ImageButton btnbg, btnblg, btnpc;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_idgham);
 
-        TextView btnCallBack = findViewById(R.id.textNextBtn);
-        btnCallBack.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.fabidgham).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent idgham = new Intent(IdghamActivity.this,IdzharActivity.class);
-                startActivity(idgham);
+            public void onClick(View v) {
+                startActivity(new Intent(IdghamActivity.this, IdzharActivity.class));
             }
         });
 

@@ -20,17 +20,16 @@ public class MadLiynActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mad_liyn);
+        setContentView(R.layout.activity_mad_liyn_iwadh);
 
-        TextView btnCallBack = findViewById(R.id.textNextBtn);
-        btnCallBack.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.fabmadliyniwadh).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent madlin = new Intent(MadLiynActivity.this,MadAridLsActivity.class);
-                startActivity(madlin);
+            public void onClick(View v) {
+                startActivity(new Intent(MadLiynActivity.this, MadAridLsActivity.class));
             }
         });
-        btnliyn = findViewById(R.id.play_toggle_madliyn);
+
+        btnliyn = findViewById(R.id.play_toggle_liyniwadh);
         player = MediaPlayer.create(this,R.raw.madliyn);
         btnliyn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,11 +38,11 @@ public class MadLiynActivity extends AppCompatActivity {
             }
         });
 
-        TextView txmadlin1 = findViewById(R.id.arab_madliyn1);
+        TextView txmadlin1 = findViewById(R.id.example_liyniwadh);
         String sLiyn1 = getString(R.string.madlin1);
-        TextView txmadlin2 = findViewById(R.id.arab_madliyn);
+        TextView txmadlin2 = findViewById(R.id.example2_liyniwadh);
         String sLiyn2 = getString(R.string.madlin2);
-        TextView txmadlin3 = findViewById(R.id.image_madliyn);
+        TextView txmadlin3 = findViewById(R.id.example3_liyniwadh);
         String sLiyn3 = getString(R.string.madlin3);
 
         SpannableString span1 = new SpannableString(sLiyn1);

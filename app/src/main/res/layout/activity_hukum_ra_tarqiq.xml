@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,107 +7,112 @@
     android:background="@color/colorPrimary"
     tools:context=".Bookmark.HukumLamdanRa.HukumRaTarqiqActivity">
 
-    <RelativeLayout
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabratarqiq"
+        style="@style/FloatingActionButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
-        <include layout="@layout/ellipse_background"/>
-    <TextView
-        android:id="@+id/textTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/ra_tarqiq"
-        style="@style/TextTitleSet"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textNextBtn"
-        android:text="@string/idgham_mutamatsilaan"
-        android:layout_below="@id/textTitle"
-        style="@style/TextButtonNextSet"/>
-
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginEnd="15dp"
-            android:layout_below="@id/textNextBtn"
-            android:background="@drawable/rectangle_bg">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/ra_tarqiq_desc"
-        style="@style/TextSet"/>
-    <TextView
-        android:id="@+id/ratarqiq_image1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/ratarqiq1"
-        android:textColor="#000000"
-        android:textSize="30sp"
-        android:fontFamily="@font/me_quran"
-        android:layout_gravity="center_horizontal"/>
-        <TextView
-            android:id="@+id/ratarqiq_image2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/ratarqiq2"
-            android:textColor="#000000"
-            android:textSize="30sp"
-            android:fontFamily="@font/me_quran"
-            android:layout_gravity="center_horizontal"/>
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ic_pause_circle_outline_black_24dp"
-        android:id="@+id/play_toggle_ratarqiq1"
-        android:background="@android:color/transparent"
-        android:layout_gravity="center_horizontal"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/ra_tarqiq_desc2"
-        style="@style/TextSet"/>
-    <TextView
-        android:id="@+id/ratarqiq_image3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/ratarqiq3"
-        android:textSize="30sp"
-        android:layout_gravity="center_horizontal"
-        android:fontFamily="@font/me_quran"
-        android:textColor="#000000"/>
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        app:srcCompat="@drawable/ic_pause_circle_outline_black_24dp"
-        android:id="@+id/play_toggle_ratarqiq2"
-        android:background="@android:color/transparent"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/ra_tarqiq_desc3"
-        style="@style/TextSet"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/ratarqiq4"
-            android:textColor="#000000"
-            android:textSize="30sp"
-            android:layout_gravity="center_horizontal"
-            android:fontFamily="@font/me_quran"
-            android:id="@+id/ratarqiq_image4"/>
+            android:layout_height="wrap_content">
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ic_pause_circle_outline_black_24dp"
-            android:id="@+id/play_toggle_ratarqiq3"
-            android:layout_gravity="center_horizontal"
-            android:background="@android:color/transparent"/>
-        </LinearLayout>
+            <include layout="@layout/ellipse_background" />
 
-    </RelativeLayout>
-</ScrollView>
+            <TextView
+                android:id="@+id/textTitle"
+                style="@style/TextTitleSet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ra_tarqiq" />
+
+            <androidx.cardview.widget.CardView
+                style="@style/cardBackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textTitle">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/TextSet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ra_tarqiq_desc" />
+
+                    <TextView
+                        android:id="@+id/ratarqiq_image1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ratarqiq1"
+                        style="@style/TextArabicSet"/>
+
+                    <TextView
+                        android:id="@+id/ratarqiq_image2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ratarqiq2"
+                        style="@style/TextArabicSet"/>
+
+                    <ImageButton
+                        android:id="@+id/play_toggle_ratarqiq1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@android:color/transparent"
+                        app:srcCompat="@drawable/ic_pause_circle_outline_black_24dp" />
+
+                    <TextView
+                        style="@style/TextSet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ra_tarqiq_desc2" />
+
+                    <TextView
+                        android:id="@+id/ratarqiq_image3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ratarqiq3"
+                        style="@style/TextArabicSet" />
+
+                    <ImageButton
+                        android:id="@+id/play_toggle_ratarqiq2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@android:color/transparent"
+                        app:srcCompat="@drawable/ic_pause_circle_outline_black_24dp" />
+
+                    <TextView
+                        style="@style/TextSet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ra_tarqiq_desc3" />
+
+                    <TextView
+                        android:id="@+id/ratarqiq_image4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ratarqiq4"
+                        style="@style/TextArabicSet"/>
+
+                    <ImageButton
+                        android:id="@+id/play_toggle_ratarqiq3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="10dp"
+                        android:background="@android:color/transparent"
+                        app:srcCompat="@drawable/ic_pause_circle_outline_black_24dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

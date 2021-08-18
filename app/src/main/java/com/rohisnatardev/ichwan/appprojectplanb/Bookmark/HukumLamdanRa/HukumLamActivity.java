@@ -22,12 +22,10 @@ ImageButton btnplaylam;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hukum_lam);
 
-        TextView btnCallBackLf = findViewById(R.id.textNextBtn);
-        btnCallBackLf.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.fabhukumlam).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent intentLtarqiq = new Intent(HukumLamActivity.this,HukumLamTarqiqActivity.class);
-                startActivity(intentLtarqiq);
+            public void onClick(View v) {
+                startActivity(new Intent(HukumLamActivity.this, HukumLamTarqiqActivity.class));
             }
         });
 
@@ -40,9 +38,9 @@ ImageButton btnplaylam;
             }
         });
 
-        TextView lamtafkhim1 = findViewById(R.id.hukumlam_image1);
+        TextView lamtafkhim1 = findViewById(R.id.example_hukumlam);
         String stringLam1 = getString(R.string.lamtafkhim1);
-        TextView lamtafkhim2 = findViewById(R.id.hukumlam_image2);
+        TextView lamtafkhim2 = findViewById(R.id.exampl2_hukumlam);
         String stringLam2 = getString(R.string.lamtafkhim2);
 
         SpannableString lamtaf1 = new SpannableString(stringLam1);

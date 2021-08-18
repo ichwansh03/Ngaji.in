@@ -23,12 +23,10 @@ ImageButton btn1, btn2;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_washal);
 
-        TextView textView = findViewById(R.id.textNextBtn);
-        textView.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.fabwashal).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(WashalActivity.this,QathiActivity.class);
-                startActivity(intent);
+            public void onClick(View v) {
+                startActivity(new Intent(WashalActivity.this, QathiActivity.class));
             }
         });
         btn1 = findViewById(R.id.play_toggle_washal1);

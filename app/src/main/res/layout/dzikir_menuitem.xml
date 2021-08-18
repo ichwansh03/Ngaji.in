@@ -22,7 +22,7 @@
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_gravity="center"
-                android:src="@drawable/ic_dzikir" />
+                android:src="@drawable/ic_dzikir_pagi" />
         </androidx.cardview.widget.CardView>
 
         <TextView
@@ -30,6 +30,7 @@
             android:layout_height="wrap_content"
             android:text="@string/dzikir_pagi"
             android:textAlignment="center"
+            android:textColor="@color/colorText"
             android:layout_gravity="center_horizontal"
             android:fontFamily="@font/poppins_medium" />
     </LinearLayout>
@@ -52,7 +53,7 @@
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_gravity="center"
-                android:src="@drawable/ic_dzikir" />
+                android:src="@drawable/ic_dzikir_petang" />
         </androidx.cardview.widget.CardView>
 
         <TextView
@@ -61,6 +62,7 @@
             android:text="@string/dzikir_petang"
             android:layout_gravity="center_horizontal"
             android:textAlignment="center"
+            android:textColor="@color/colorText"
             android:fontFamily="@font/poppins_medium" />
     </LinearLayout>
 
@@ -90,6 +92,7 @@
             android:layout_height="wrap_content"
             android:text="@string/doa_harian"
             android:textAlignment="center"
+            android:textColor="@color/colorText"
             android:layout_gravity="center_horizontal"
             android:fontFamily="@font/poppins_medium" />
     </LinearLayout>

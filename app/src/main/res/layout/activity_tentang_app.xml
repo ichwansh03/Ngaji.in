@@ -14,7 +14,7 @@
         <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/ic_logobbq"
+            android:src="@drawable/ic_logoapp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"/>
         <TextView

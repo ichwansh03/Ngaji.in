@@ -15,7 +15,10 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.rohisnatardev.ichwan.appprojectplanb.Bookmark.AlifLam.SyamsiyahActivity;
+import com.rohisnatardev.ichwan.appprojectplanb.Bookmark.Hamzah.WashalActivity;
 import com.rohisnatardev.ichwan.appprojectplanb.R;
+
+import me.biubiubiu.justifytext.library.JustifyTextView;
 
 public class TashilActivity extends AppCompatActivity implements View.OnClickListener {
 MediaPlayer playerTashil;
@@ -25,9 +28,7 @@ ImageButton btntashil;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bkhusus);
 
-        TextView textView = findViewById(R.id.textNextBtn);
-        textView.setText(R.string.as_syamsiyah);
-        textView.setOnClickListener(this);
+        findViewById(R.id.fabbacaankhusus).setOnClickListener(this);
 
         TextView title = findViewById(R.id.txtitle);
         title.setText(R.string.tahsil);
@@ -43,7 +44,7 @@ ImageButton btntashil;
         sTashil.setSpan(fcTashil,91,97, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         tvTashil.setText(sTashil);
 
-        TextView article1 = findViewById(R.id.tx_article);
+        JustifyTextView article1 = findViewById(R.id.tx_article);
         article1.setText(R.string.tashil_desc);
         TextView article2 = findViewById(R.id.text_article2);
         article2.setText(R.string.tashil_desc2);
@@ -53,8 +54,8 @@ ImageButton btntashil;
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.textNextBtn:
-                startActivity(new Intent(this, SyamsiyahActivity.class));
+            case R.id.fabbacaankhusus:
+                startActivity(new Intent(this, WashalActivity.class));
                 break;
             case R.id.play_toggle_bkhusus:
                 setmptashil();

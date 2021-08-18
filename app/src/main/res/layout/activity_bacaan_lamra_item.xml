@@ -11,21 +11,15 @@
         android:text="@string/hukum_lam_dan_ra"
         android:textSize="20sp"
         android:fontFamily="@font/poppins_medium"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/colorText"
         android:layout_marginStart="15dp"
         android:layout_marginTop="30dp"/>
-    <View
-        android:id="@+id/view_underline"
-        android:layout_width="230dp"
-        android:layout_height="3dp"
-        android:background="@drawable/underline_title"
-        android:layout_below="@+id/title_hukumlamra"
-        android:layout_marginStart="15dp" />
+
     <HorizontalScrollView
         android:id="@+id/scroll1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/view_underline"
+        android:layout_below="@+id/title_hukumlamra"
         android:layout_marginTop="15dp"
         android:layout_marginStart="15dp">
         <LinearLayout
@@ -51,14 +45,14 @@
                         android:textAlignment="center"
                         android:textSize="20sp"
                         android:textStyle="bold"
-                        android:textColor="#23C1E3"/>
+                        android:textColor="@color/colorText"/>
                 </androidx.cardview.widget.CardView>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/lam_tafkhim"
                     android:fontFamily="@font/poppins_medium"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/colorText"
                     android:textAlignment="center"
                     android:layout_gravity="center"/>
             </LinearLayout>
@@ -81,14 +75,14 @@
                         android:textAlignment="center"
                         android:textSize="20sp"
                         android:textStyle="bold"
-                        android:textColor="#23C1E3"/>
+                        android:textColor="@color/colorText"/>
                 </androidx.cardview.widget.CardView>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/lam_tarqiq"
                     android:fontFamily="@font/poppins_medium"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/colorText"
                     android:textAlignment="center"
                     android:layout_gravity="center"/>
             </LinearLayout>
@@ -112,7 +106,7 @@
                         android:textAlignment="center"
                         android:textSize="20sp"
                         android:textStyle="bold"
-                        android:textColor="#23C1E3"/>
+                        android:textColor="@color/colorText"/>
                 </androidx.cardview.widget.CardView>
                 <TextView
                     android:layout_width="wrap_content"
@@ -120,7 +114,7 @@
                     android:text="@string/ra_tafkhim"
                     android:fontFamily="@font/poppins_medium"
                     android:layout_gravity="center"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/colorText"
                     android:textAlignment="center"/>
             </LinearLayout>
             <LinearLayout
@@ -142,7 +136,7 @@
                         android:textAlignment="center"
                         android:textSize="20sp"
                         android:textStyle="bold"
-                        android:textColor="#23C1E3"/>
+                        android:textColor="@color/colorText"/>
                 </androidx.cardview.widget.CardView>
                 <TextView
                     android:layout_width="wrap_content"
@@ -150,7 +144,7 @@
                     android:text="@string/ra_tarqiq"
                     android:fontFamily="@font/poppins_medium"
                     android:layout_gravity="center"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/colorText"
                     android:textAlignment="center"/>
             </LinearLayout>
         </LinearLayout>
